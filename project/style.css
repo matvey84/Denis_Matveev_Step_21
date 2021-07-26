@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  height: 100vh;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 512px;
+}
+.header {
+  display: flex;
+  position: fixed;
+  background-color: rgba(178, 178, 209, 0);
+  width: 100%;
+  height: 8%;
+}
+.header-logo {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  position: relative;  
+}
+.logo-text {
+  font-size: 26px;
+  align-self: center;
+  color: rgb(58, 57, 57);
+  position: absolute;
+  left: 22%;
+}
+.header-nav {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link {
+  text-decoration: none;
+  color: grey;
+}
+.home {
+  color: yellowgreen;
+}
+.home,
+.about,
+.experiences,
+.testimonial {
+  margin-right: 5%;
+}
+.main-page-info {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.main-image {
+  width: 50%;
+  height: 100%;
+  background-image: url(images/home-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(243, 231, 211);
+}
+.top-text,
+.bottom-text {
+  color: gray;
+  margin-left: 10px;
+}
+.middle-text {
+  font-size: 30px;
+  margin: 20px 0 20px 10px;
+}
+.btn {
+  width: 130px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin: 10px 0 0 10px;
+  background-color: rgba(243, 231, 211, 0.363);
+}
+/*second block*/
+.skills-block {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+.skills-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: whitesmoke;
+  width: 50%;
+  height: 100%;
+}
+
+.top-skills-text {
+  height: 45px;
+  color: rgb(58, 57, 57);
+}
+.middle-skills-text{
+  height: 20px;
+  color: tomato;
+}
+.bottom-skills-text {
+  color: gray;
+  margin: 0 5px 0 10px;
+}
+.scale {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.skills-image {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-image: url(images/about-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center 10%;
+}
+.scale-block {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: orange;
+}
+.my-skills,
+.skills-preview {
+  color: whitesmoke;
+}
+.skills-preview {
+  margin: 2% 6% 0 6%;
+}
+.my-skills {
+  font-size: 30px;
+  height: 45px;
+  margin: 6% 6% 0 6%;
+}
+.skill-name {
+  font-weight: 700;
+  width: 40%;
+  height: auto;
+}
+.level {
+  width: 100%;
+  height: 5px;
+  margin: 4px 0 16px;
+  padding: 0;
+  font-size: 0;
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+.width-level {
+  margin: 1px;
+  height: 5px;
+  background-color: black;
+  border-radius: 6px;
+  color: black;
+}
+.width-fe {
+  width: 90%;
+}
+.width-be {
+  width: 70%;
+}
+.width-html-css {
+  width: 80%;
+}
+.skill-percent {
+  font-weight: 700;
+  margin-right: 10%;
+}
+.degree{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+/*third block*/
+.skills-cards {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+ .card{
+  display: flex;
+  width: 25%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+.monitor,
+.paper-plane,
+.smartphone,
+.html,
+.star {
+  margin: 0 0 7% 0;
+}
+.design {
+  background-color: orange;
+}
+.media {
+  background-color: tomato;
+}
+.mobil {
+  background-color: black;
+}
+.coding {
+  background-color: whitesmoke;
+  color: black;
+}
+.skills-card-topic {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 5% 5% 0 5%;
+}
+.card-text {
+  text-align: center;
+  margin: 5% 5% 0 5%;
+}
+/*fourth block education and experience*/
+.fourth-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.experience {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  background-color: tomato;
+}
+.experience-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100%;
+}
+.image-desktop {
+  width: 50%;
+  height: 100%;
+  background-color: aquamarine;
+  background-image: url(images/experience-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.education {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 50%;
+  background-color: orange;
+}
+.image-phone {
+  width: 50%;
+  height: 100%;
+  background-image: url(images/education-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.education-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100%;
+}
+.experience-text,
+.education-text {
+  margin: 0 15% 0 7%;
+}
+.text {
+  margin: 2% 5% 0 7%;
+}
+
+.period {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  justify-content: space-evenly;
+}
+
+.description-list {
+  display: flex;
+}
+.description {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.description-text,
+.some-text {
+  padding: 0 0 5px 3%;
+}
+.bold-text {
+  font-weight: bold;
+  color: black;
+}
+/*fifth block*/
+.big-image {
+  width: 100%;
+  height: 50%;
+  background-image: url(images/quotes-bg.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.cover-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(54, 53, 53, 0.308);
+}
+.cover-text .big-text {
+  font-size: 24px;
+  text-align: center;
+}
+.cover-text .small-text {
+  text-align: center;
+  font-size: 14px;
+}
+/*six block form and visit*/
+.form-and-contact {
+  display: flex;
+  width: 100%;
+  height: 75%;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-color: tomato;
+  color: white;
+}
+.business-card {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+.contact-image {
+  width: 50%;
+  height: 100%;
+  background-image: url(images/contact-img.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-and-address {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: flex-start;
+}
+.address-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  justify-content: flex-start;
+}
+/*.contacts-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 74%;
+  justify-content: flex-start;
+}*/
+.address {
+  font-size: 14px;
+}
+.main-form {
+  display: flex;
+  width: 80%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 5% 5% 0 5%;
+}
+/*.form-field .heading
+.form-field .form-text{
+margin: 5% 5% 0 7% ;
+}*/
+.username,
+.user-email,
+.user-text {
+  border: none;
+  background-color: tomato;
+  border-bottom: 1px solid yellow;
+  padding-top: 5%;
+}
+.username::placeholder,
+.user-email::placeholder,
+.user-text::placeholder {
+  color: white;
+}
+.bottom-btn {
+  width: 180px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  border: none;
+	margin: 1.5% 6% 0 6%;
+}
+.footer {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.copyright {
+  margin: 5% 0 0 0;
+}
+.social-block {
+  display: flex;
+  width: 35%;
+  height: 17%;
+  justify-content: space-evenly;
+  margin: 2.5% 0 3% 0;
+}
+.orange-text {
+  color: orange;
+}
+.user {
+  text-decoration: none;
+}
+.text {
+  margin: 2% 5% 0 7%;
+}
+.heading {
+  font-size: 30px;
+  margin: 3% 6% 0 6%;
+}
+.my {
+  margin: 2% 5% 0 7%;
+}
+.topic {
+  font-size: 30px;
+  height: 45px;
+  margin: 6% 5% 0 7%;
+}
+
