@@ -14,9 +14,9 @@
 }
 
 .main-page {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  /*display: flex;
+  flex-direction: column;*/
+  width: 1992px;
   height: 960px;
 }
 .header {
@@ -44,10 +44,7 @@
   width: 60%;
   height: 100%;
   justify-content: center;
-  align-items: center;
-  
-  
-  
+  align-items: center;  
 }
 .nav-link {
   text-decoration: none;
@@ -125,12 +122,11 @@
   color: rgb(58, 57, 57);
 }
 .middle-skills-text{
-  height: 40px;
+  height: 50px;
   color: tomato;
 }
 .bottom-skills-text {
   color: gray;
-  margin: 0 5px 0 10px;
 }
 .scale {
   display: flex;
@@ -160,7 +156,7 @@
 }
 .skills-preview {
   font-size:26px;
-  height: 40px;
+  height: 60px;
   margin: 2% 6% 0 6%;
 }
 .my-skills {

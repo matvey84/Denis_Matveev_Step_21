@@ -1,4 +1,4 @@
-@media (min-width: 279.9px) and (max-width: 576px) {
+@media (max-width: 575.9px) {
   .main-page,
   .main-page-info {
     width: 100%;
@@ -58,7 +58,7 @@
     margin: 1% 0 0 6%;
   }
   .middle-skills-text{
-    height: 40px;
+    height: 60px;
    
   }
   
@@ -176,7 +176,7 @@
   .footer {
     height: 20%;
   }
-}
+}/*
 @media (min-width: 280px) and (max-width: 293px) {
   .btn {
     width: 120px;
@@ -186,7 +186,7 @@
     margin: 3% 6% 0 6%;
   }
   .middle-skills-text{
-    height: 40px;
+    height: 60px;
     
-  }
+  }*/
 }

@@ -1,9 +1,16 @@
 @media (min-width: 576px) and (max-width: 992px) {
-  .main-page {
-    width: 992px;
-    height: 100%;
+  
+	.wrapper{
+		width: 100%;
+	
+	}
+	.main-page {
+    width: 100%;
+    height: 992px;
   }
   .header {
+    width: 100%;
+    height: 95px;
     justify-content: space-between;
   }
   .header-logo {
@@ -16,44 +23,48 @@
   .about,
   .experiences,
   .testimonial {
-    font-size: 22px;
+    font-size: 20px;
     margin: 0 4% 0 0;
   }
   .main-page-info {
     display: flex;
     flex-direction: column;
+		height: 992px;
   }
   .main-image {
     width: 100%;
-    height: 58%;
+    height: 517px;
   }
   .main-text {
     width: 100%;
-    height: 42%;
+    height: 475px;
   }
-  
   .text {
     margin: 1% 6% 0 6%;
   }
+	
   /*---------*/
   .skills-block {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 846px;
   }
   .skills-text {
     width: 100%;
-    height: 32%;
-    justify-content: center;
+    height: 351px;
+    justify-content: flex-start;
     align-items: cente;
   }
-  .skills-text .top-skills-text {
-    margin: 0 0 0 7%;
+  .skills-text .heading {
+		
+    margin: 0 6% 0 6%;
+		height: 63px;
   }
-  
+
   .scale {
+		flex-direction: column;/*сделать этот блок вертикальным*/
     width: 100%;
-    height: 68%;
+    height: 496px;
   }
   .skills-level {
     display: flex;
@@ -69,20 +80,24 @@
   .skill-percent {
     margin: 0;
   }
-	.my-skills{
-		font-size: 30px;
-		height: 45px;
-		margin: 3% 6% 0 6%;
-	}
+  .my-skills {
+    font-size: 40px;
+    height: 45px;
+    margin: 3% 6% 0 6%;
+  }
   /*------*/
   .skills-cards {
     flex-wrap: wrap;
-    height: 100%;
+    height: 992px;
   }
   .card {
     width: 50%;
     height: 50%;
   }
+	/*-----*/
+	.fourth-block{
+    height: 992px;
+	}
   /*-----*/
   .star {
     margin: 0 0 4% 0;
@@ -93,7 +108,7 @@
   /*----*/
   .form-and-contact {
     flex-direction: column;
-    height: 110%;
+    height: 992px;
   }
   .form-field {
     width: 100%;
@@ -120,7 +135,7 @@
     margin: 2% 6% 0 6%;
   }
   .topic {
-    font-size: 30px;
+    font-size: 50px;
     height: 45px;
     margin: 3% 6% 0 6%;
   }
@@ -128,14 +143,53 @@
     height: 20%;
   }
 }
-@media (min-width:576px) and (max-width:715px){
- .header-nav{
-  flex-wrap: wrap;
+@media (min-width: 576px) and (max-width: 715px) {
+  .header-nav {
+    flex-wrap: wrap;
   }
- .home,
- .about,
- .experiences,
- .testimonial {
-   font-size: 25px;
- }
+  .home,
+  .about,
+  .experiences,
+  .testimonial {
+    font-size: 20px;
+  }
+	.heading,
+	.middle-text,
+	.topic,
+	.skills-card-topic{
+		font-size:40px;
+	}
+	.middle-skills-text{
+		height: 60px;
+		margin: 0.5% 6% 20 6%;
+  }
+	.skills-text .heading {
+		justify-content: flex-start;
+    		height: 50px;
+  }
+	.experience-info,
+	.education-info{
+		justify-content: space-between;
+	}
+	.period{
+		height: 70%;
+		font-size: 24px;
+	}
+	.experience-text,
+	.education-text,
+	.some-text{
+	  font-size: 24px;
+	}
+	.expirience-text,
+	.education-text{
+		height: 85px;
+	}
+	
 }
+
+
+	
+	
+		
+
+
