@@ -2,11 +2,10 @@
   
 	.wrapper{
 		width: 100%;
-	
 	}
 	.main-page {
     width: 100%;
-    height: 992px;
+    height: 1058px;
   }
   .header {
     width: 100%;
@@ -29,11 +28,11 @@
   .main-page-info {
     display: flex;
     flex-direction: column;
-		height: 992px;
+		height: 1058px;
   }
   .main-image {
     width: 100%;
-    height: 517px;
+    height: 583px;
   }
   .main-text {
     width: 100%;
@@ -47,7 +46,7 @@
   .skills-block {
     display: flex;
     flex-direction: column;
-    height: 846px;
+    height: 1334px;
   }
   .skills-text {
     width: 100%;
@@ -56,24 +55,34 @@
     align-items: cente;
   }
   .skills-text .heading {
-		
     margin: 0 6% 0 6%;
 		height: 63px;
   }
-
   .scale {
 		flex-direction: column;/*сделать этот блок вертикальным*/
     width: 100%;
-    height: 496px;
+    height: 983px;
   }
+	.skills-image{
+		width: 100%;
+		height: 583px;
+	}
+	.scale-block{
+		width: 100%;
+		height: 400px;
+	}
   .skills-level {
     display: flex;
     flex-direction: column;
     width: 90%;
     height: 60%;
     align-items: center;
-    margin: 7% 6% 0 6%;
+    margin: 2% 6% 0 6%;
   }
+	.skills-preview{
+		height: 50px;
+		font-size: 28px;
+	}
   .degree {
     width: 100%;
   }
@@ -81,9 +90,9 @@
     margin: 0;
   }
   .my-skills {
-    font-size: 40px;
+    font-size: 50px;
     height: 45px;
-    margin: 3% 6% 0 6%;
+    margin: 1% 6% 0 6%;
   }
   /*------*/
   .skills-cards {
@@ -99,6 +108,9 @@
     height: 992px;
 	}
   /*-----*/
+	.big-image{
+		height: 590px;
+	}
   .star {
     margin: 0 0 4% 0;
   }
@@ -108,11 +120,11 @@
   /*----*/
   .form-and-contact {
     flex-direction: column;
-    height: 992px;
+    height: 1422px;
   }
   .form-field {
     width: 100%;
-    height: 50%;
+    height: 496px;
   }
   .form-field .heading {
     margin: 1% 6% 1% 6%;
@@ -122,29 +134,40 @@
     margin: 0 6% 0 6%;
   }
   .business-card {
+		flex-wrap: wrap;
     width: 100%;
-    height: 50%;
+    height: 926px;
   }
-  .user-name,
-  .user-email,
-  .user-tex {
-    padding-top: 3.5%;
-  }
-
+	.contact-image{
+		width: 100%;
+		height: 517px;
+	}
+	.contact-and-address{
+		width: 100%;
+		height: 409px;
+	}
+	.address-list{
+		width: 100%;
+		height: 100%;
+	}
   .bottom-btn {
-    margin: 2% 6% 0 6%;
+    margin: 1% 6% 0 6%;
   }
   .topic {
     font-size: 50px;
-    height: 45px;
-    margin: 3% 6% 0 6%;
+    height: 60px;
+    margin: 1.5% 6% 0 6%;
   }
   .footer {
-    height: 20%;
+    height: 200px;
   }
 }
-@media (min-width: 576px) and (max-width: 715px) {
-  .header-nav {
+@media (min-width: 576px) and (max-width: 712px) {
+  .main-page,
+	.main-page-info{
+		height: 1058px;
+	}
+	.header-nav {
     flex-wrap: wrap;
   }
   .home,
@@ -153,11 +176,11 @@
   .testimonial {
     font-size: 20px;
   }
-	.heading,
-	.middle-text,
-	.topic,
-	.skills-card-topic{
-		font-size:40px;
+	.main-image{
+		height: 550px;
+	}
+	.main-text{
+		height: 508px;
 	}
 	.middle-skills-text{
 		height: 60px;
@@ -186,10 +209,14 @@
 	}
 	
 }
+  @media (min-width: 576px) and (max-width: 612px){
+	.main-image{
+		height: 520px;
+	}
+	.main-text{
+		height: 538px;
+	}
+  }
 
-
-	
-	
-		
 
 

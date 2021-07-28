@@ -448,7 +448,7 @@ margin: 5% 5% 0 7% ;
   border: none;
   background-color: tomato;
   border-bottom: 1px solid yellow;
-  padding-top: 5%;
+  height: 32px;
 }
 .username::placeholder,
 .user-email::placeholder,
