@@ -207,13 +207,9 @@
   }
 
 }
-@media (min-width: 280px) and (max-width: 355px){
-	.card.design .skills-card-topic,
-	.card.media .skills-card-topic{
-		align-text: center;
-	}
 
-}
+
+
 
 /*
 @media (min-width: 280px) and (max-width: 293px) {
