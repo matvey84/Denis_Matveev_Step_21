@@ -53,10 +53,9 @@ let result = String(numberOne)+String(numberTwo)+String(numberThree);
 alert(`${result}`);*/
 
 // Задача №10
-let number = +prompt('Проверка числа: ');
-let even = (number%2)===0 || 'Нечетное!';
-let odd = (number%2) !== 0 || 'Четное!';
-alert(`${even}||${odd}`);
+let number = +prompt('Проверка числа:');
+let result = ((number%2)===0 && 'Четное!') || ((number%2)!==0 && 'Нечетное!');
+alert(`${result}`);
 
 
 /*if (even) {
