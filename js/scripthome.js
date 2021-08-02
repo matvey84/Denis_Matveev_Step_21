@@ -52,13 +52,68 @@ let numberThree = ((numberZero-numberOne)-((numberZero-numberOne)%100))/100;// �
 let result = String(numberOne)+String(numberTwo)+String(numberThree);
 alert(`${result}`);*/
 
-// Задача №10
+/*// Задача №10
 let number = +prompt('Проверка числа:');
 let result = ((number%2)===0 && 'Четное!') || ((number%2)!==0 && 'Нечетное!');
-alert(`${result}`);
-
-
+alert(`${result}`);*/
 /*if (even) {
 alert(`Четное!`)
 }else { alert(`Нечетное!`)};*/
-//kmjkdpkjf[pasokf[pas]]
+//-----------------------------------------------------------------------------------------------------------
+//В классе! 02.08.21
+//Switch
+//Задача № 1
+/*let month = +prompt('Порядковый номер месяца:');
+switch (month) {
+    case 1:
+        alert('Январь');
+    break;
+    case 2:
+        alert('Февраль');
+    break;
+    case 3:
+        alert('Март');
+    break;
+    case 4:
+        alert('Апрель');
+    break;
+    case 5:
+        alert('Май');
+    break;
+    case 6:
+        alert('Июнь');
+    break;
+    case 7:
+        alert('Июль');
+    break;
+    default:
+        alert('Год закончлся!')
+}*/
+ /*//Задача №2
+ let num1 = +prompt('Введите первое число: ');
+ let sign =  prompt('Введите знак:');
+ let num2 = +prompt('Введите второе число:');
+ 
+switch (sign) {
+case '+':
+alert(num1+num2);
+break;
+case '-':
+alert(num1-num2);
+break;
+case '*':
+alert(num1*num2);
+break;
+case '/':
+alert(num1/num2);
+break;
+default:
+    alert('end')
+
+}*/
+//Задания с тернарным оператором
+
+ //Задача №3
+ //Задача №4
+ //Задача №5
+ //Задача №6
