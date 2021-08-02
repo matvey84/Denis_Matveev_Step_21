@@ -54,12 +54,11 @@ alert(`${result}`);*/
 
 // Задача №10
 let number = +prompt('Проверка числа: ');
-let even = (number%2)===0||'Нечетное!';
-let odd = (number%2)!==0||'Четное!';
-alert(`${even}|| ${odd}`);
+let even = (number%2)===0 || 'Нечетное!';
+let odd = (number%2) !== 0 || 'Четное!';
+alert(`${even}||${odd}`);
 
-//alert(`Нечетное!${odd}`);
 /*if (even) {
-	alert(`Четное!`)
+alert(`Четное!`)
 }else { alert(`Нечетное!`)};*/
 
