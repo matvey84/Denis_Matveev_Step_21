@@ -58,7 +58,8 @@ let even = (number%2)===0 || 'Нечетное!';
 let odd = (number%2) !== 0 || 'Четное!';
 alert(`${even}||${odd}`);
 
+
 /*if (even) {
 alert(`Четное!`)
 }else { alert(`Нечетное!`)};*/
-
+//kmjkdpkjf[pasokf[pas]]
