@@ -300,16 +300,44 @@ if (squareSide>=diametr){
 }else {alert('Okruzhnost slishkom bolshaya!');
 }
 */
-	//ЗАДАЧА №9---- ispolzovat confirm!!!!!!!!!!!!!!!
+//----------------------------------------------ЗАДАЧА №9
+/*
 let question1 = prompt('sKOLKO BUDET 1+1?');
-if (question1){
-	let answer = confirm(2);
-	confirm(3);
-	confirm(4);
+
 
 }
 let question2 = prompt('sKOLKO BUDET 1+2?');
 let question3 = prompt('sKOLKO BUDET 1+3?');
-
+*/
 
 	//ЗАДАЧА №10
+
+
+
+    //Домашняя работа
+	//ЗАДАЧА №1
+/*
+	let num = +prompt('Chislo 1');//2
+	let num2 = +prompt('Chislo2');//5
+	let start =num>num2 ? num2 : num1//==2
+	let finish = num<num2 ? num2 : um1;//==5
+	let reult = 0;
+	while(start!==fiish) {
+		result = result+start;// 0+2
+		start = start+1
+	}*/
+	//ЗАДАЧА №2
+	let num = +prompt('Chislo 1');//20
+	let num2 = +prompt('Chislo 2');//40
+
+	let small = num<num2 ? num : num2;
+	while (big>=1){
+    if (num%small===0) {
+	  if (num2%sall===0) {
+     document.write(small);
+	 break;
+	}
+
+   }
+    small--;
+  }
