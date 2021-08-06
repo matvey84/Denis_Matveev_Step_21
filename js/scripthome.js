@@ -300,21 +300,22 @@ if (squareSide>=diametr){
 }else {alert('Okruzhnost slishkom bolshaya!');
 }
 */
-	//ЗАДАЧА №9---- ispolzovat confirm!!!!!!!!!!!!!!!
+//----------------------------------------------ЗАДАЧА №9
+/*
 let question1 = prompt('sKOLKO BUDET 1+1?');
-if (question1){
-	let answer = confirm(2);
-	confirm(3);
-	confirm(4);
+
 
 }
 let question2 = prompt('sKOLKO BUDET 1+2?');
 let question3 = prompt('sKOLKO BUDET 1+3?');
-
+*/
 
 	//ЗАДАЧА №10
 
- //-----------------------------------Домашняя работа
+
+
+
+ //-----------------------------------Домашняя работа#3
 	//ЗАДАЧА №1
 /*
 	let num = +prompt('Chislo 1');//2
