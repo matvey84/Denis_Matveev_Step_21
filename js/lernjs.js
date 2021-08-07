@@ -1,6 +1,6 @@
 //let number = +prompt(`Введите пятизначное число`);
 //Задания из Lern.JavaScript
-
+/*
 let enter = prompt('login:');
 if (enter==='Админ'){
 enter = prompt('Введите пароль:');
@@ -17,3 +17,4 @@ if(enter === 'Я главный'){
 } else {
 	alert('Я вас не знаю!');
 }
+*/
