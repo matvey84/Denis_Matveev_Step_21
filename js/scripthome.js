@@ -302,21 +302,108 @@ if (squareSide>=diametr){
 */
 //----------------------------------------------ЗАДАЧА №9
 /*
-let question1 = prompt('sKOLKO BUDET 1+1?');
+let ask1 = confirm('Vopros#1: Skolko budet 1+1?');
+let result = 1;
+let ans = +'';
 
+//Question#1
+if (ask1===true){
+ans = +prompt('Varianty otveta:  1, 2 ili 3')
+if (ans===2){
+	  result+=result;
+	    alert(`'Vy pravy:+2 balla. U vas:${result} balla'`);
+}else{
+	 alert('Vy ne pravy!');
+}
+}else {
+	alert('Vy ne sdelali vybor');
+}
+// Question# 2
+let ask2 = confirm('Vopros#2: Skolko budet 1+2?');
+if (ask2===true){
+	ans = +prompt('Varianty otveta:  1, 2 ili 3');
+	if (ans===3){
+			result+=result;
+				alert(`'Vy pravy:+2 balla. U vas:${result} balla'`);
+	}else{
+		 alert('Vy ne pravy!');
+	}
+	}else {
+		alert('Vy ne sdelali vybor');
+	}
+//Question# 2
+let ask3 = confirm('Vopros#2: Skolko budet 2+2?');
+if (ask3===true){
+	ans = +prompt('Varianty otveta:  7, 8 ili 4');
+	if (ans===4){
+			result+=(result-2);
+				alert(`'Vy pravy:+2 balla. U vas:${result} balla'`);
+	}else{
+		alert('Vy ne pravy!');
+	}
+	}else {
+		alert('Vy ne sdelali vybor');
+	}
+	*/
+	//ЗАДАЧА №10
+	
+  let date = +prompt('Vvedite datu:');
+	let month = +prompt('Vvedite mesyac:');
+	let year = +prompt('Vvedite god:');
+	let cuerrentDate =(`${date} ${month} ${year}`);
+	let newDate = (`${(date+1)} ${month} ${year}`);
+	let monthRate = (month===4||month===6||month===9||month===11);
+	let february = 2;
+	let leapYear = (year%4==0)&&(year%100==0)&&(year%400==0);
+	let anotherMonthRate = (month===1||month===3||month===5||month===7||month===8||month===10||month===12); 
+	
+if (cuerrentDate){
+	if ((month===12)&&(date===31)){// go to new year
+	  date = 1
+	  month = 1;	
+	  newDate = (`${date} ${month} ${year+1}`);
+	  alert(`'Sleduyuschaya data:'${newDate}`);
+  }else if ((date===31)&&anotherMonthRate){//month with 31 days-> next month
+		date = 1;
+		newDate = (`${date} ${month+1} ${year}`);
+		alert(`'Sleduyuschaya data:'${newDate}`);
+	} else if ((date<31)&&anotherMonthRate){// month with 31days where 28,29,30th day ->next day 
+		newDate = (`${(date+1)} ${month} ${year}`);
+		alert(`'Sleduyuschaya data:'${newDate}`);
+	}
+		
+  if((date===30)&&(monthRate)){// month with 30 days -> new month;
+	  date = 1;
+	  newDate = (`${(date)} ${month+1} ${year}`);		
+	  alert(`'Sleduyuschaya data:'${newDate}`);
+  } else if((date<30)&&(monthRate)){// month with 30 days 28,29th day ->30 
+	  newDate = (`${(date+1)} ${month} ${year}`);		
+    alert(`'Sleduyuschaya data:'${newDate}`);
+  }
+
+	if ((date===29)&&(month===2||february)&&leapYear) {//leap year: 29->new month
+		date=1;
+		newDate = (`${(date)} ${month+1} ${year}`);
+		alert(`'Sleduyuschaya data:'${newDate}`);
+  }
+
+  if ((date===28)&&(month===2||february)&&leapYear) {		//leap year: 28->29
+	newDate = (`${(date+1)} ${month} ${year}`);
+	alert(`'Sleduyuschaya data:'${newDate}`)
+  } else if((date===28)&&(month===2||february)){//month with 28 days-> next month
+	  date=1;
+	  newDate = (`${(date)} ${month+1} ${year}`);
+	  alert(`'Sleduyuschaya data:'${newDate}`);
+  }
+		
+  alert(`'Tekuschaya data:' ${cuerrentDate}`);
 
 }
-let question2 = prompt('sKOLKO BUDET 1+2?');
-let question3 = prompt('sKOLKO BUDET 1+3?');
-*/
-
-	//ЗАДАЧА №10
-
-
+	
 
 
  //-----------------------------------Домашняя работа#3
-	//ЗАДАЧА №1
+	//-------------------------------------ЗАДАЧА №1
 /*
 	let num = +prompt('Chislo 1');//2
 	let num2 = +prompt('Chislo2');//5
@@ -327,7 +414,8 @@ let question3 = prompt('sKOLKO BUDET 1+3?');
 		result = result+start;// 0+2
 		start = start+1
 	}*/
-	//ЗАДАЧА №2
+	//---------------------------------------ЗАДАЧА №2
+	/*
 	let num = +prompt('Chislo 1');//20
 	let num2 = +prompt('Chislo 2');//40
 
@@ -335,10 +423,9 @@ let question3 = prompt('sKOLKO BUDET 1+3?');
 	while (big>=1){
     if (num%small===0) {
 	  if (num2%sall===0) {
-     document.write(small);
-	 break;
-	}
-
-   }
+    document.write(small);
+	  break;
+	  }
+  }
     small--;
-  } 
+  } */
