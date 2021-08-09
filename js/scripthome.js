@@ -407,10 +407,10 @@ if (cuerrentDate){
 /*
 	let num = +prompt('Chislo 1');//2
 	let num2 = +prompt('Chislo2');//5
-	let start =num>num2 ? num2 : num1//==2
-	let finish = num<num2 ? num2 : um1;//==5
-	let reult = 0;
-	while(start!==fiish) {
+	let start =num>num2 ? num2 : num//==2
+	let finish = num<num2 ? num2 : num;//==5
+	let result = 0;
+	while(start!==finish) {
 		result = result+start;// 0+2
 		start = start+1
 	}*/
@@ -422,7 +422,7 @@ if (cuerrentDate){
 	let small = num<num2 ? num : num2;
 	while (big>=1){
     if (num%small===0) {
-	  if (num2%sall===0) {
+	  if (num2%small===0) {
     document.write(small);
 	  break;
 	  }
@@ -430,6 +430,7 @@ if (cuerrentDate){
     small--;
   } */
 	//--------------------------------------ЗАДАЧА №3
+	/*
 let a = +prompt('1');
 let b = a;
 while(b>=1) {
@@ -438,4 +439,71 @@ while(b>=1) {
   }
   b--;
 }
+*/
+//--------------------------------------ЗАДАЧА №4
+/*let num = +prompt('Vvedite chislo:');
 
+
+//--------
+//num=123; let result = num/10 =12.3
+//result = 12.3 result= 12.3/10=1.23
+//num = 1.23 result = 1.23/10=0.123
+//num = 0.123 => num !=0 stop
+// i=>3; otvet 3 cifry!!!!!
+//----------
+for(;num>0; ++num){
+	num =num/10;
+alert(Math.trunc(num));
+}
+/*while(num!=0){
+	num =num/10;
+	alert(Math.trunc(num));
+++num;
+
+} */   //kak pschitati iteracii kolichestvo iteraciy == koliches iteracii == rjkbxtcndj cifr
+
+
+//--------------------------------------ЗАДАЧА №4
+/*
+let a = +pronmpt('Chislo#1');
+let query =+prompt('Vvedite 10 chisel:')
+query = Number;
+alert(query);
+*/
+
+//--------------------------------------ЗАДАЧА №5
+/*
+let a = +prompt('Chislo#1');
+let sign = prompt('Znak');
+let b = +prompt('Chislo#2');
+let calc = (`${a} ${sign} ${b}`);
+
+
+while(sign){
+	 switch(sign){
+		 case '-':
+			 alert(a-b);
+			 break;
+		case '+':
+			alert(a+b);
+			break;
+		case '*':
+			alert(a*b);
+			break
+			case'/':
+			alert(a/b);
+			break;
+ }
+	confirm('Prodolzhim?');
+	if(false){
+		break;
+	}
+	calc++;
+		}
+*/		
+	
+//--------------------------------------ЗАДАЧА №6
+ let num = +prompt('Chislo');
+ let shift = ++prompt('Chislo2');
+
+ 
