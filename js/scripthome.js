@@ -451,25 +451,34 @@ while(b>=1) {
 //num = 0.123 => num !=0 stop
 // i=>3; otvet 3 cifry!!!!!
 //----------
+/*
 for(;num>0; ++num){
 	num =num/10;
 alert(Math.trunc(num));
-}
-/*while(num!=0){
-	num =num/10;
-	alert(Math.trunc(num));
-++num;
+}*/
 
-} */   //kak pschitati iteracii kolichestvo iteraciy == koliches iteracii == rjkbxtcndj cifr
 
 
 //--------------------------------------ЗАДАЧА №4
-/*
-let a = +pronmpt('Chislo#1');
-let query =+prompt('Vvedite 10 chisel:')
-query = Number;
-alert(query);
-*/
+
+
+
+let pol = 0;
+let otr = 0;
+let noll = 0;
+let even = 0;
+let odd = 0;
+let i=10;
+while(i==0){
+ let num = +prompt('chislo');
+ num>0 ? pol++:pol;
+ num >0? otr++:otr;
+ num===0 ?noll:noll;
+ num%2 === 0 ? even++ : even; 
+ num%2 !== 0 ? odd++:odd:
+  i--;
+alert(`${pol}${otr}${noll}${even}${odd}`);
+} //proverit zadachu
 
 //--------------------------------------ЗАДАЧА №5
 /*
@@ -503,7 +512,7 @@ while(sign){
 */		
 	
 //--------------------------------------ЗАДАЧА №6
- let num = +prompt('Chislo');
+ /*let num = +prompt('Chislo');
  let shift = ++prompt('Chislo2');
-
+*/
  
