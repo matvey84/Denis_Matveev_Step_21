@@ -440,25 +440,33 @@ while(b>=1) {
   b--;
 }
 */
-//--------------------------------------ЗАДАЧА №4
-/*let num = +prompt('Vvedite chislo:');
-
-
+//--------------------------------------ЗАДАЧА №4 
+/*
+let num = +prompt('Vvedite chislo:');
+let i = 10;//i=10 nachalo cikla,shag iterciya kazhdiy cikl uvelichivat na 10(i*10)
+let count = 1; 
 //--------
 //num=123; let result = num/10 =12.3
 //result = 12.3 result= 12.3/10=1.23
 //num = 1.23 result = 1.23/10=0.123
-//num = 0.123 => num !=0 stop
+//result = 0.123 => num !=0 stop
 // i=>3; otvet 3 cifry!!!!!
 //----------
-/*
-for(;num>0; ++num){
-	num =num/10;
-alert(Math.trunc(num));
-}*/
 
 
 
+if (num < i) {
+document.write(` Number of sign = 1`);
+} else {
+for (i; Math.trunc(num / i) != 0; i = i * 10) {
+ result = i / i;
+ count = (count + result);
+ 
+ console.log(result);
+}
+document.write(` Number of sign = ${count}`);
+}
+*/
 //--------------------------------------ЗАДАЧА №4
 
 /*
@@ -472,14 +480,14 @@ let i=10;
 while(i==0){
  let num = +prompt('chislo');
  num>0 ? pol++:pol;
- num >0? otr++:otr;
- num===0 ?noll:noll;
+ num >0 ? otr++:otr;
+ num===0 ? noll++:noll;
  num%2 === 0 ? even++ : even; 
- num%2 !== 0 ? odd++:odd:
+ num%2 !== 0 ? odd++:odd;
   i--;
 alert(`${pol}${otr}${noll}${even}${odd}`);
 } //proverit zadachu
-
+*/
 //--------------------------------------ЗАДАЧА №5
 /*
 let a = +prompt('Chislo#1');
@@ -515,4 +523,38 @@ while(sign){
  /*let num = +prompt('Chislo');
  let shift = ++prompt('Chislo2');
 */
- 
+ //--------------------------------------ЗАДАЧА №9
+ /*let multipl = 3;множитель
+
+let result = 0; запсывает сюда результат
+let i = 1; цфра которую умножают
+while (i<10) {
+   result = i*multipl;
+   i++;
+  
+  document.write(result);
+}
+*/
+//--------------------------------------ЗАДАЧА #7
+/*
+let num = +prompt('Chislo');
+ let shift = ++prompt('Chislo2');
+*/
+ //--------------------------------------ЗАДАЧА №9
+ /*
+let result= '*';
+for (let i = 1; i <=10; i++) {
+
+    for (let num = 2; num <=9; num++) {
+      
+        if(i>=1 && num>=2){
+       result += (i*num)  +  ' ' ;
+       }
+    }
+    result += ','
+}
+
+console.log(result);
+	*/
+
+
