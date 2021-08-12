@@ -461,7 +461,7 @@ alert(Math.trunc(num));
 
 //--------------------------------------ЗАДАЧА №4
 
-
+/*
 
 let pol = 0;
 let otr = 0;
@@ -486,8 +486,8 @@ let a = +prompt('Chislo#1');
 let sign = prompt('Znak');
 let b = +prompt('Chislo#2');
 let calc = (`${a} ${sign} ${b}`);
-
-
+*/
+/*
 while(sign){
 	 switch(sign){
 		 case '-':

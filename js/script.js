@@ -92,6 +92,7 @@ for(a;a<b;a++){// vedenie kazdogo 4go chisla
    count++;
 }
 */
+/*
 let num = +prompt('chislo');
 let prostoe = true;
 for(let i=2;i<num;i++){
@@ -102,3 +103,65 @@ if (num%i ===0){
 };
 }
 prostoe? alert('prostoe')('neprostoe')
+*/
+
+
+
+//----------------------------------------------12/08/2021
+// ---------------------------------------Практическое задание № 4
+//---------------------------------------Задача №1
+/*
+function calculator(num1,num2){
+  // let result = Math.min(num1,num2);
+  //return result//или
+  return Math.min(num1,num2);
+}
+console.log(calculator(5,7)); //передавать данне через имя функции
+*/
+//---------------------------------------Задача №2
+/*
+function calculator(num1,stepen){
+   // let result = Math.pow(num1,num2);
+   //return result//или
+   return Math.pow(num1,stepen);
+}
+   console.log(calculator(5,7));
+   */
+  //---------------------------------------Задача №3 // zapolnit pozhe
+  /*
+  function calculator(num1,num2, znak){
+   switch (znak){
+
+   }
+}
+   console.log(calculator(5,7,'+'));
+   */
+
+   //---------------------------------------Задача №4
+  /*
+     function calculator(num){
+      for(let i=2;i<num;i++){
+       
+       if(num%i===0){
+            return true;
+       };
+      } return false;
+   }    
+   console.log(calculator(6));
+  */
+//---------------------------------------Задача №5 таблица умножения
+/*
+function calculator(num1){
+   
+   for(let i=2; i<=9;i++){
+     
+   let result = num1*i;
+   document.write(`${result} `);      
+    
+    
+   }
+}    
+console.log(calculator(2));
+  */    
+   //---------------------------------------Задача №5
+   
