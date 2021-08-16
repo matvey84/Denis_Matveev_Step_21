@@ -603,9 +603,9 @@ function calcSum(num1=0, num2=0){
 
 console.log(calcSum(6,));
 */
-//--------------------------------------Задача №5
+//--------------------------------------Задача №5(ok!)
+/*
 function calcSum(num){
-	
 	/*
 	let result=0;
 	for(let i=1;i<num;i++){ //рАБОЧАЯ НАХОДИТТ ОБЩИЕ ДЕЛЕИТЕЛИ
@@ -615,30 +615,27 @@ function calcSum(num){
 			 //document.write(`${i}  ` );
 		}//return(`${i}`);
 	}	
-	*/
-	//##################################
+	/*
+///#################################################################
+	/*
+	let isPerfect;
+	//let count=i;
 	
-	//let isPerfect=0;
 	let result=0;
 	for(let i=1;i<num;i++){
 		if(num%i===0){
-		
-		document.write(`${i}  ` );
-		}
-	  result=i;
-			
-	
-			
-		
-		
-		
-		}console.log(result);
-	
-		} //isPerfect = result ? document.write('Cовершенное'):document.write('Несовершенное');
-	 
-		
-	console.log(calcSum(10));
-	
+		///document.write(`${i}  ` );
+		result=result+i;
+		}  
+	}//console.log(result);
+		if (result===num){
+			document.write('Cовершенное')
+		  }else{
+			document.write('Несовершенное');	
+		  }
+		} //isPerfect ? document.write('Cовершенное'):document.write('Несовершенное');		
+	     calcSum(7);
+	*/
 	//--------------------------------------Задача №6
 	//--------------------------------------Задача №7(ok!)
 
@@ -654,8 +651,8 @@ function calcSum(num){
 		*/	
 		
 //--------------------------------------Задача №8(ok!)
-/*
 
+/*
 function getTimeToSec(hour,min,sec){
 	let minToSec =min*60;
 	let hourToSec = hour*(60**2); 
@@ -666,10 +663,9 @@ function getTimeToSec(hour,min,sec){
 	document.write(`Текущее время в сек.: ${toSec} секунд. `);
 	 return toSec;
 }
-	console.log(getTimeToSec(12,30,45));
-	*/	
+	getTimeToSec(12,30,45);
+		
 				//--------------------------------------Задача №9(ok!)
-/*				
 function secToTime(num){		
 	let result=num/3600;
 	let hour= Math.floor(result);
@@ -678,5 +674,5 @@ function secToTime(num){
 	return console.log(isTime = (`${hour}:${min}:${second} `));
   
 }
-secToTime(10000)
+secToTime(toSec)
 */

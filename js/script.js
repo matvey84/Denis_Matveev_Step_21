@@ -434,3 +434,172 @@ return newDate = (`${(date+1)} ${month} ${year}`);
 }
 console.log(getNextDate(13,08,2021));
 */
+//------------------------------------------------Практические заятия от 16.08.2021
+//------------------------------------------------Практические задания №5(Рекурсия)
+
+//----------------------------------------------Задача № 1
+/*
+function factorial(n){
+//let result = n;
+//let count =n;
+//result=result*n--;
+return n ? n * factorial(--n):1;
+
+}
+console.log(factorial(5));
+*/
+//----------------------------------------------Задача № 2 напсать числа в диапозоне от меньшего к большего и а оборот
+/*
+function otMinToMax(min,max){
+   document.write(min);
+   return min===max ?1:otMinToMax(++min,max)
+   }
+   function otMaxToMin(min,max){
+      document.write(max);
+      return min===max ? 1:otMinToMax(min,--max) 
+   }
+   console.log(otMinToMax(5,10));
+   console.log(otMaxToMin(5,10));
+   */
+   //----------------------------------------------Задача № 3 вывести число задом на перед
+   /*
+   function zadomNaPered(n){
+      document.write(n ? n%10:' ');
+      if(n>1){
+         
+         zadomNaPered(Math.floor(n*0.1));
+      }
+      
+      }
+      console.log(zadomNaPered(12345));
+      */
+      //--------------------------------------------Задача № 4 фунция которая будет считать сумму введеных цифр
+
+
+      //--------------------------------------------Задача № 5  скобки
+    /*  
+      let a='()';
+      function skobki(n){
+           
+   if(n!=1) {a='('+ a +')';
+   skobki(--n);
+   }
+    // while(n!=1){
+    //n--;
+    //a='('+ a +')';
+    //}
+   return a;
+}
+  console.log(skobki(3));
+ */
+  //------------------------------------------           ОБЪЕКТЫ 
+  //--------------------------------------------- Задача №1
+  /*
+  let koordinaty =  {//obekt s koordinatami
+    ax: 5,
+     ay: 20,
+     bx:40,
+     by:5
+  }    
+  function pryamoug (a){
+    console.log(`verxn ${a,ax}, nizhn ${b,bx}`)
+  }
+  pryamoug (koordinty);
+*/
+  //--------------------------------------------- Задача №2 (ширина)
+  /*
+  let koordinaty =  {//obekt s koordinatami
+    ax: 5,
+     ay: 20,
+     bx:40,
+     by:5
+  }    
+  function pryamoug (a){ //найти ширину прямоугольника
+    console.log(`ширина ${a.bx-a.ax}`)
+  }
+  pryamoug (koordinty);
+  */
+ //--------------------------------------------- Задача №3 (высота)не рабоает
+/*
+ let koordinaty =  {//obekt s koordinatami
+   ax: 5,
+   ay: 20,
+   bx:40,
+   by:5
+}    
+function pryamoug (a){ //найти ширину прямоугольника
+  console.log(`${a.ay - a.by}`);
+}
+pryamoug (koordinty);
+*/
+//--------------------------------------------- Задача №4(площадь)
+//--------------------------------------------- Задача №5(периметр)
+//--------------------------------------------- Задача №6(изменит ширину
+/*)
+let koordinaty = {//obekt s koordinatami
+  ax: 5,
+  bx:40,
+  ay: 20,
+  by:5
+}    
+function pryamoug (a,b){ //найти ширину прямоугольника
+  let height = a.ay-a.by;
+  console.log(height);//15
+  let width = a.bx-a.ax;//35
+  console.log(width);
+  console.log(`Shirina:${height-b}`);//15-5=10
+}
+pryamoug (koordinaty,5);
+*/
+//----------------------------------------------Задача №7(изменить высоту)
+/*
+let koordinaty = {//obekt s koordinatami
+  ax: 5,
+  bx:40,
+  ay: 20,
+  by:5
+}    
+function pryamoug (a,b){ //найти ширину прямоугольника
+  let height = a.ay-a.by;
+  console.log(height);//15
+  let width = a.bx-a.ax;//35
+  console.log(width);
+  console.log(`Vysota:${width-b}`);//35-5=30
+}
+pryamoug (koordinaty,5);
+*/
+//----------------------------------------------Задача №8(изменить высоту и ширину)
+/*
+let koordinaty = {//obekt s koordinatami
+  ax: 5,
+  bx:40,
+  ay: 20,
+  by:5
+}    
+function pryamoug (a,b,c){ //найти ширину прямоугольника
+  let height = a.ay-a.by;//15
+ 
+  let width = a.bx-a.ax;//35
+  
+  console.log(`Shirina:${width-b}`);//35-5=30
+  console.log(`Visota:${height-c}`);//15-6=9
+}
+pryamoug (koordinaty,5,6);
+*/
+//----------------------------------------------Задача №10(смещеи е по оси Х)
+/*
+let koordinaty = {//obekt s koordinatami
+  ax: 5,
+  bx:40,
+  ay: 20,
+  by:5
+}    
+function pryamoug (a,shift){ //найти ширину прямоугольника
+  a.ax= a.ax+shift;//10
+  a.bx= a.bx+shift;//45
+  
+  console.log(`ax:${a.ax}`);//35-5=30
+  console.log(`bx:${a.bx}`);//15-6=9
+}
+pryamoug (koordinaty,5);
+*/
