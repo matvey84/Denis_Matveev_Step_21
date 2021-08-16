@@ -556,5 +556,127 @@ for (let i = 1; i <=10; i++) {
 
 console.log(result);
 	*/
+//###############################################################################################
+//-------------------------------------------Домашнее задание № 4 (Функции)
+//--------------------------------------Задача №1(ок!)
+/*
+function calcSum(num1,num2){
+if (num1<num2){
+	return ('-1')
+} else if(num1>num2){
+	return ('1')
+} else{
+	return('0')
+}
+}
+console.log(calcSum(4,4));
+*/
+//--------------------------------------Задача №2(ок!)
+/*
+function calcSum(num){
+	result =1;
+for(let i=1;i<=num;i++){
+result*=i;
+}
+return (`${result}`)
+}
+console.log(calcSum(4));
+*/
+//--------------------------------------Задача №3(ok!)
+/*
+function calcSum(num1, num2,num3){
+return result=(String(num1)+String(num2)+String(num3));
+}
+console.log(calcSum(5,4,4));
+*/
+//--------------------------------------Задача №4(ок!)
+/*
+function calcSum(num1=0, num2=0){
+	if(num1&&num2){
+		result=num1*num2;
+		return (`'пЛОЩАДЬ ПРЯМОУГОЛНИКА:' ${result}`);
+	}else	{
+	result=(num1+num2);// yне возводило в степень!!!
+	return (`'пЛОЩАДЬ квадрата: ${(result)**2}'`);
+	}
+ }
 
+console.log(calcSum(6,));
+*/
+//--------------------------------------Задача №5
+function calcSum(num){
+	
+	/*
+	let result=0;
+	for(let i=1;i<num;i++){ //рАБОЧАЯ НАХОДИТТ ОБЩИЕ ДЕЛЕИТЕЛИ
+		if(num%i===0){
+			result+=i;
+			
+			 //document.write(`${i}  ` );
+		}//return(`${i}`);
+	}	
+	*/
+	//##################################
+	
+	//let isPerfect=0;
+	let result=0;
+	for(let i=1;i<num;i++){
+		if(num%i===0){
+		
+		document.write(`${i}  ` );
+		}
+	  result=i;
+			
+	
+			
+		
+		
+		
+		}console.log(result);
+	
+		} //isPerfect = result ? document.write('Cовершенное'):document.write('Несовершенное');
+	 
+		
+	console.log(calcSum(10));
+	
+	//--------------------------------------Задача №6
+	//--------------------------------------Задача №7(ok!)
 
+/*
+	function getTime(hour='00',min='00',sec='00'){//рабочая
+		let timer = (`${hour}:${min}:${sec}`);
+		console.log(`Текущее время: ${timer}`);
+
+		return 
+		
+			}
+			getTime(12,30,45);
+		*/	
+		
+//--------------------------------------Задача №8(ok!)
+/*
+
+function getTimeToSec(hour,min,sec){
+	let minToSec =min*60;
+	let hourToSec = hour*(60**2); 
+	//timer = (` ${hour}:${min}:${sec}`);
+	//document.write(timer)
+	//document.write(`Текущее время в сек.: ${toSec} секунд. `);
+	toSec=(`${hourToSec+minToSec+sec}`);
+	document.write(`Текущее время в сек.: ${toSec} секунд. `);
+	 return toSec;
+}
+	console.log(getTimeToSec(12,30,45));
+	*/	
+				//--------------------------------------Задача №9(ok!)
+/*				
+function secToTime(num){		
+	let result=num/3600;
+	let hour= Math.floor(result);
+	let min= Math.floor((result-hour)*60);
+	let second= Math.ceil((((result-hour)*60)-min)*60)
+	return console.log(isTime = (`${hour}:${min}:${second} `));
+  
+}
+secToTime(10000)
+*/

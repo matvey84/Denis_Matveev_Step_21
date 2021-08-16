@@ -256,14 +256,13 @@ for(let i=1;i<=num2;i++){
 }
 result ? document.write('neprostoe'):document.write('prostoe');
 	*/
-
+//############################################################################################################
 //----------------------------------------------12/08/2021
 // ---------------------------------------Практическое задание № 4
 //---------------------------------------Задача №1
 /*
 function calculator(num1,num2){
-  // let result = Math.min(num1,num2);
-  //return result//или
+  
   return Math.min(num1,num2);
 }
 console.log(calculator(5,7)); //передавать данне через имя функции
@@ -323,8 +322,115 @@ function calculator(num1,num2){
 calculator(4,3);
 */
 //---------------------------------------Задача №7
-function calculator(num1=0,num2=0,num3=0,num4=0,num=0){
+/*
+function calculator(num1=0,num2=0,num3=0,num4=0,num5=0){
 let sum =+(num1+num2+num3+num4+num5);
 return alert(sum);
 }
-calculator(1,2,3,4,5);
+calculator(1,2,250,);
+*/
+//---------------------------------------Задача №8(ok!)
+/*
+function calculator(num1=0,num2=0,num3=0,num4=0,num5=0){
+	let big =Math.max(num1,num2,num3,num4,num5);
+	return alert(big);
+	}
+	calculator(1,425,250,);
+	*/
+	//---------------------------------------Задача №9
+/*	
+function defenisionEven(num1,num2){
+let i = num1<num2 ? num1:num2;
+let result=0;
+for (i; i<=num2;i++){
+	if(i%2===0){
+	document.write(`${i} `);	
+  }else if(i%2===0){
+		document.write(`${i} `);	
+	}
+ }
+} 
+ defenisionEven(1,15);
+*/
+//-------------------------------------------- добавление третьено оператора (надо разбиратся)
+	/*
+	function defenisionEven(num1,num2,isEven){
+		let i = num1<num2 ? num1:num2;
+	   let result=0;
+     let isEven=true;
+  for(i;i<=num2;i++){
+   //isEven=(true||false) ? document.write(`${i%2===0}`):document.write(`${i%2!=0}`);
+		if (isEven=true){
+		result=i%2===0;
+		document.write(`${result}`);
+   } else {
+		result=i%2!=0;
+		document.write(`${result}`);
+   }
+  }
+}
+	defenisionEven(5,25,true);
+*/
+//---------------------------------------Задача №10
+/*
+  let date = +prompt('Vvedite datu:');
+	let month = +prompt('Vvedite mesyac:');
+	let year = +prompt('Vvedite god:');
+	let cuerrentDate =(`${date} ${month} ${year}`);
+	let newDate = (`${(date+1)} ${month} ${year}`);
+	let monthRate = (month===4||month===6||month===9||month===11);
+	let february = 2;
+	let leapYear = (year%4==0)&&(year%100==0)&&(year%400==0);
+	let anotherMonthRate = (month===1||month===3||month===5||month===7||month===8||month===10||month===12); 
+	
+if (cuerrentDate){
+	if ((month===12)&&(date===31)){// go to new year
+	  date = 1
+	  month = 1;	
+	  newDate = (`${date} ${month} ${year+1}`);
+	  alert(`'Sleduyuschaya data:'${newDate}`);
+  }else if ((date===31)&&anotherMonthRate){//month with 31 days-> next month
+		date = 1;
+		newDate = (`${date} ${month+1} ${year}`);
+		alert(`'Sleduyuschaya data:'${newDate}`);
+	} else if ((date<31)&&anotherMonthRate){// month with 31days where 28,29,30th day ->next day 
+		newDate = (`${(date+1)} ${month} ${year}`);
+		alert(`'Sleduyuschaya data:'${newDate}`);
+	}
+		
+  if((date===30)&&(monthRate)){// month with 30 days -> new month;
+	  date = 1;
+	  newDate = (`${(date)} ${month+1} ${year}`);		
+	  alert(`'Sleduyuschaya data:'${newDate}`);
+  } else if((date<30)&&(monthRate)){// month with 30 days 28,29th day ->30 
+	  newDate = (`${(date+1)} ${month} ${year}`);		
+    alert(`'Sleduyuschaya data:'${newDate}`);
+  }
+
+	if ((date===29)&&(month===2||february)&&leapYear) {//leap year: 29->new month
+		date=1;
+		newDate = (`${(date)} ${month+1} ${year}`);
+		alert(`'Sleduyuschaya data:'${newDate}`);
+  }
+
+  if ((date===28)&&(month===2||february)&&leapYear) {		//leap year: 28->29
+	newDate = (`${(date+1)} ${month} ${year}`);
+	alert(`'Sleduyuschaya data:'${newDate}`)
+  } else if((date===28)&&(month===2||february)){//month with 28 days-> next month
+	  date=1;
+	  newDate = (`${(date)} ${month+1} ${year}`);
+	  alert(`'Sleduyuschaya data:'${newDate}`);
+  }
+		
+  alert(`'Tekuschaya data:' ${cuerrentDate}`);
+
+}
+*/
+
+/*
+function getNextDate(date,month,year){
+
+return newDate = (`${(date+1)} ${month} ${year}`);
+}
+console.log(getNextDate(13,08,2021));
+*/
