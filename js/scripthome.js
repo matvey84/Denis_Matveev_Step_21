@@ -346,7 +346,7 @@ if (ask3===true){
 	}
 	*/
 	//ЗАДАЧА №10
-	
+/*	
   let date = +prompt('Vvedite datu:');
 	let month = +prompt('Vvedite mesyac:');
 	let year = +prompt('Vvedite god:');
@@ -397,7 +397,7 @@ if (cuerrentDate){
   }
 		
   alert(`'Tekuschaya data:' ${cuerrentDate}`);
-
+*/
 }
 	
 
