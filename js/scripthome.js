@@ -54,7 +54,7 @@ alert(`${result}`);*/
 
 /*// Задача №10
 let number = +prompt('Проверка числа:');
-let result = ((number%2)===0 && 'Четное!') || ((number%2)!==0 && 'Нечетное!');
+let result = (number%2===0 && 'Четное!') || ((number%2)!==0 && 'Нечетное!');
 alert(`${result}`);*/
 /*if (even) {
 alert(`Четное!`)
@@ -345,7 +345,7 @@ if (ask3===true){
 		alert('Vy ne sdelali vybor');
 	}
 	*/
-	//ЗАДАЧА №10
+	//-------------------------------------------------------ЗАДАЧА №10
 	/*
   let date = +prompt('Vvedite datu:');
 	let month = +prompt('Vvedite mesyac:');
@@ -410,7 +410,7 @@ if (cuerrentDate){
 	let start =num>num2 ? num2 : num//==2
 	let finish = num<num2 ? num2 : num;//==5
 	let result = 0;
-	while(start!==finish) {
+	while(start!=finish) {
 		result = result+start;// 0+2
 		start = start+1
 	}*/
@@ -698,7 +698,7 @@ getAtuoInfo (autoInfo);
 */
 
 //-------------------------------------Задание №1 Задача №2 (рассчитать времяб каждые 4 часа добаить 1 час)
-
+/*
 let autoInfo = {
 	brand : 'Skoda' ,
 	model : 'Oktavia' ,
@@ -706,22 +706,22 @@ let autoInfo = {
 	speed : 100 ,
 	
 	}    
-	/*function travelTime () { //параметр/внутренняя переменая с данными равными 5
-	 for (let i =1; i == timeResult; i++)
-		console.log(i);
-	}
-	travelTime ();*/
+	
 	 	function travelTime (a,km) {
 		let finishTime = 0;
 		let time = km / a.speed;
-		console.log(time);
-		for(let i = 1; i <= time; i++){
-			if(i%2===0){
-        finishTime = time+i;
-				return finishTime;
+		let count = 0;
+		//console.log(time);
+		for ( let i = 1; i < time; i++ ) {
+			count += i;
+		    if(i%4===0){
+				
+            finishTime = time+i;
+			console.log(i);
+				//return finishTime;
 			 }		
-	  	}console.log(finishTime);
+	  	}
 		}
  	travelTime(autoInfo, 900);
-	console.log(finishTime);
+	*/
 

@@ -690,3 +690,105 @@ function pryamoug (a,cx,dy){ //параметр/внутренняя перем�
 }
 pryamoug (koordinaty,6,6);
 */
+//#############################################################################
+//-----------------------------------------19.08.2021
+//-----------------------------------------практическе занятия 
+//------------------------------------------Массивы
+//-------------------------------------------Задание №1
+//-------------------------------------------Задача №1
+
+//-------------------------------------------Задача №2
+/*
+let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54]
+
+function arrayOnDisplay(array) {
+ for (let i = 0; i < array.length; i++) {
+   if (array[i] % 2 === 0) {
+document.write ( ` ${array[i]}, ` )
+  }
+ }
+}
+arrayOnDisplay(arr);
+*/
+
+//-------------------------------------------Задача №3
+/*
+let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54]
+
+function arrayOnDisplay(array) {
+ let result = 0;// хранит сумму
+ for (let i = 0; i < array.length; i++) {
+  result += array[i];// выводит сумму эллементов
+  document.write(` ${result} `);
+ }
+}
+arrayOnDisplay(arr);
+*/
+//-------------------------------------------Задача №4
+/*
+let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54]
+
+function arrayOnDisplay(array) {
+ let maxNumber = 0;
+ for (let i = 0; i < array.length; i++) {
+  if (maxNumber < array[i]){
+      maxNumber==array[i];
+  }
+ }
+ document.write(maxNumber);
+}
+arrayOnDisplay(arr);
+*/
+//--------------------------------------------Задача №5
+/*
+let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54]
+
+function arrayOnDisplay(array,elem,index) {
+ 
+ array[index] = elem; 
+ document.write(array);
+}
+arrayOnDisplay(arr,14,20);
+/*/
+//--------------------------------------------Задача №6
+/*
+let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54]
+
+function arrayOnDisplay(array,index) {
+ 
+ array.splice(index,1)
+ document.write(array);
+}
+arrayOnDisplay(arr,3);
+*/
+//--------------------------------------------Задание №2
+//--------------------------------------------Задача №1
+/*
+let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54]
+let arr2 = [2, 5, 7, 4, 7]
+
+function arrayOnDisplay(array,array2){
+
+let newArray= array.concat(array2);
+document.write(newArray);
+// нужно еще избавится от повторяющхся элемнетов
+}
+
+arrayOnDisplay(arr, arr2);
+*/
+
+//--------------------------------------------Задача №2
+
+let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54];
+let arr2 = [2, 5, 7, 4, 7];
+function arrayOnDisplay(array1,array2) {
+let newArray= [];
+for (let i = 0; i < array1.length; i++) {
+    for (let n = 0; n < array2.length; n++) {
+      if (array1[i]===array2[n])
+      newArray.push(array1[i])
+    }
+  }
+  console.log(newArray);
+}
+arrayOnDisplay(arr, arr2);
