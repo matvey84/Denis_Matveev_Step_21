@@ -492,6 +492,7 @@ function otMinToMax(min,max){
 }
   console.log(skobki(3));
  */
+//-------------------------------------------------Модуль 2
   //------------------------------------------           ОБЪЕКТЫ 
   //--------------------------------------------- Задача №1
   /*
@@ -502,7 +503,7 @@ function otMinToMax(min,max){
      by:5
   }    
   function pryamoug (a){
-    console.log(`verxn ${a,ax}, nizhn ${b,bx}`)
+    console.log(`verx ${a,ax}, nizhn ${b,bx}`)
   }
   pryamoug (koordinty);
 */
@@ -517,7 +518,7 @@ function otMinToMax(min,max){
   function pryamoug (a){ //найти ширину прямоугольника
     console.log(`ширина ${a.bx-a.ax}`)
   }
-  pryamoug (koordinty);
+  pryamoug (koordinaty);
   */
  //--------------------------------------------- Задача №3 (высота)не рабоает
 /*
@@ -530,10 +531,41 @@ function otMinToMax(min,max){
 function pryamoug (a){ //найти ширину прямоугольника
   console.log(`${a.ay - a.by}`);
 }
-pryamoug (koordinty);
+pryamoug (koordinaty);
 */
 //--------------------------------------------- Задача №4(площадь)
+/*
+let koordinaty = {//obekt s koordinatami
+  ax: 5,
+  bx:40,
+  ay: 20,
+  by:5
+}    
+function pryamoug (a){ 
+  let height = a.ay-a.by;
+	console.log(height);
+    let width = a.bx-a.ax;
+  
+  console.log(`Ploshcad:${height*width}`);//35*15=525
+}
+pryamoug (koordinaty);
+*/
 //--------------------------------------------- Задача №5(периметр)
+/*
+let koordinaty = {//obekt s koordinatami
+  ax: 5,
+  bx:40,
+  ay: 20,
+  by:5
+}    
+function pryamoug (a){ 
+  let height = a.ay-a.by;
+  let width = a.bx-a.ax;
+  
+  console.log(`Ploshcad:${(height*2)*(width*2)}`);//(35*2)*(15*2)=2100
+}
+pryamoug (koordinaty);
+*/
 //--------------------------------------------- Задача №6(изменит ширину
 /*)
 let koordinaty = {//obekt s koordinatami
@@ -578,7 +610,6 @@ let koordinaty = {//obekt s koordinatami
 }    
 function pryamoug (a,b,c){ //найти ширину прямоугольника
   let height = a.ay-a.by;//15
- 
   let width = a.bx-a.ax;//35
   
   console.log(`Shirina:${width-b}`);//35-5=30
@@ -602,4 +633,60 @@ function pryamoug (a,shift){ //найти ширину прямоугольни�
   console.log(`bx:${a.bx}`);//15-6=9
 }
 pryamoug (koordinaty,5);
+*/
+//----------------------------------------------Задача №10(смещеи е по оси Y)
+/*
+let koordinaty = {//obekt s koordinatami
+  ax: 5,
+  bx:40,
+  ay: 20,
+  by:5
+}    
+function pryamoug (a,shift){ //параметр/внутренняя переменая с данными равными 5
+  a.by= a.by+shift;//11
+  a.ay= a.ay+shift;//26
+  
+  console.log(`by:${a.by}`);//11
+  console.log(`ay:${a.ay}`);//26
+}
+pryamoug (koordinaty,6);
+*/
+//----------------------------------------------Задача №11(смещеие по оси X и Y)(ОК!)
+/*
+let koordinaty = {//obekt s koordinatami
+  ax: 5,
+  bx:40,
+  ay: 20,
+  by:5
+}    
+function pryamoug (a,shiftX,shiftY){ //параметр/внутренняя переменая с данными равными 5
+  //-------------po Y
+	a.by= a.by+shiftY;//14
+  a.ay= a.ay+shiftY;//29
+//---------------po X	
+	a.ax= a.ax+shiftX;//14
+  a.bx= a.bx+shiftX;//49
+  
+  console.log(`Sdvig po Y - by:${a.by},ay:${a.ay}`);//14
+  console.log(`Sdvig po X - ax:${a.ax},bx:${a.bx}`);//49
+}
+pryamoug (koordinaty,6,9);
+*/
+//----------------------------------------------Задача №12(опроеделить по координатам находится ли 
+//----------------------------------------------------------точка в нутри прямоугольника)(ОК!)
+/*let koordinaty = {//obekt s koordinatami
+  ax: 5,//меньшее по Х
+  bx:40,//болшее по Х: ах(5)--------bx(40)
+  ay: 20,
+  by:5
+}    
+function pryamoug (a,cx,dy){ //параметр/внутренняя переменая с данными равными 5
+ 
+	let diapozX =  ( cx <= a.ax || cx >= a.bx )// && ( dy <= a.by || dy >= a.ay );  //false/true=false
+	let diapozY =  dy <= a.by || dy >= a.ay ;  //true/true
+
+  (diapozX||diapozY) ? console.log('не поподает'): console.log('поподает');
+ 
+}
+pryamoug (koordinaty,6,6);
 */

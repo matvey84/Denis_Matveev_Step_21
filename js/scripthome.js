@@ -676,3 +676,52 @@ function secToTime(num){
 }
 secToTime(toSec)
 */
+
+
+//###############################################################################
+//-------------------------------------------Модуль №2
+//--------------------------------------Домашнее задание №1
+//-------------------------------------Задание №1 Задача №1(ok!) dвывести инфо об автомобиле
+/*
+let autoInfo = {
+brand : 'Skoda' ,
+model : 'Oktavia' ,
+issue : 2010 ,
+speed : 100 ,
+
+}    
+function getAtuoInfo (a){ //параметр/внутренняя переменая с данными равными 5
+ console.log( `  Марка: ${a.brand}, Модель: ${a.model},
+  Год выпуска: ${a.issue},Средняя скорость: ${a.speed} ` )
+}
+getAtuoInfo (autoInfo);
+*/
+
+//-------------------------------------Задание №1 Задача №2 (рассчитать времяб каждые 4 часа добаить 1 час)
+
+let autoInfo = {
+	brand : 'Skoda' ,
+	model : 'Oktavia' ,
+	issue : 2010 ,
+	speed : 100 ,
+	
+	}    
+	/*function travelTime () { //параметр/внутренняя переменая с данными равными 5
+	 for (let i =1; i == timeResult; i++)
+		console.log(i);
+	}
+	travelTime ();*/
+	 	function travelTime (a,km) {
+		let finishTime = 0;
+		let time = km / a.speed;
+		console.log(time);
+		for(let i = 1; i <= time; i++){
+			if(i%2===0){
+        finishTime = time+i;
+				return finishTime;
+			 }		
+	  	}console.log(finishTime);
+		}
+ 	travelTime(autoInfo, 900);
+	console.log(finishTime);
+
