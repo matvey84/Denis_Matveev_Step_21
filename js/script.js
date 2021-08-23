@@ -778,7 +778,7 @@ arrayOnDisplay(arr, arr2);
 */
 
 //--------------------------------------------Задача №2
-
+/*
 let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54];
 let arr2 = [2, 5, 7, 4, 7];
 function arrayOnDisplay(array1,array2) {
@@ -792,3 +792,4 @@ for (let i = 0; i < array1.length; i++) {
   console.log(newArray);
 }
 arrayOnDisplay(arr, arr2);
+*/
