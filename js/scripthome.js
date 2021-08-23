@@ -671,10 +671,11 @@ function secToTime(num){
 	let hour= Math.floor(result);
 	let min= Math.floor((result-hour)*60);
 	let second= Math.ceil((((result-hour)*60)-min)*60)
-	return console.log(isTime = (`${hour}:${min}:${second} `));
-  
+	return isTime = (` ${hour}:${min}:${second} `);
+   
 }
-secToTime(toSec)
+secToTime(toSec);
+console.log(isTime)
 */
 
 
@@ -705,18 +706,19 @@ let autoInfo = {
 	issue : 2010 ,
 	speed : 100 ,
 }    
-	
+let finishTime	
 function travelTime (a,km) {
 	
 	let time = km / a.speed;
-	//console.log(`t${time}`);
+	//console.log(`${time}`);
   let restTime =Math.trunc(time/4);
-	//console.log(`rt${restTime}`);
-	let finishTime = time+restTime;
+	//console.log(`${restTime}`);
+	 finishTime = time+restTime;
 	//console.log(`Общее время в пути: ${finishTime}часов`);
 	return finishTime;
 }
  	travelTime(autoInfo, 1235);
+	 console.log(`Общее время в пути: ${finishTime}часов`);
 */	 
 
 //-------------------------------------Задание №2 Задача №1(ok! 1/2)
@@ -819,5 +821,81 @@ function multipleFrac (fr,chisl2,znam2) {
 	 multipleFrac(fraction, 10, 12);
 	 */
 
-	 //-----------------------------------Задание № 3 Задача № 1
-	 
+	 //-----------------------------------Задание № 3 Задача № 1(ok!)
+/*	 
+let timer = {
+hour: '00' ,
+minut: '00' ,
+sec: '00',
+}
+let clock;
+ function getClock (t){
+  return clock = (`${t.hour}:${t.minut}:${t.sec}`);
+  
+ }
+getClock(timer);
+console.log(clock)
+*/
+
+//-----------------------------------Задание № 3 Задача № 2
+// let timer = {
+// 	hour: 0 ,
+// 	minut: 0 ,
+// 	sec: 0,
+// 	} 
+// 	let clock;
+//     function getClock (t, h, m, s){
+// 	 console.log(`часы: ${h}`)
+// 	 console.log(`мнуты: ${m}`)
+// 	 console.log(`секунды: ${s}`)
+     
+// 	 if ( h > 0 && m > 0 && s > 0  ) {
+// 	 clock = (`${(t.hour=h)}:${(t.minut=m)}:${+(t.sec=s)}`);
+
+// 	   if (s > 59 || s < 1 ) {
+// 		clock = (`${+(t.hour=h)}:${+(t.minut= m+1)}:${+(t.sec=00)}`);
+// 	   }
+
+// 		 if ( m > 59 || m < 1) {
+// 		 clock = (`${+(t.hour=h+1)}:${(t.minut = 00)}:${(t.sec=00)}`)
+// 		}
+		
+// 	 }
+//   return clock 
+  
+//  }
+// getClock(timer, 3,2,2);
+// console.log(clock);
+// console.log(timer);
+
+//#########################
+let timer = {
+	hour: 12 ,
+	minutes: 50 ,
+	second: 30,
+	} 
+let clock;
+let secInMin= 60;
+let minInHour = 60;
+let secInHour = minInHour*secInMin; 
+console.log(secInHour);
+	function getClock(t, sec){
+	let h = Math.floor(sec/secInHour);
+	let min = h*60;
+
+    console.log(min);
+	}
+	getClock(timer, 500);
+	//console.log(clock);
+//################################################	
+	function secToTime(num){		
+		let result=num/3600;
+		let hour= Math.floor(result);
+		let min= Math.floor((result-hour)*60);
+		let second= Math.ceil((((result-hour)*60)-min)*60)
+		return isTime = (` ${hour}:${min}:${second} `);
+	   
+	}
+	secToTime(4900);
+	console.log(isTime)
+	
