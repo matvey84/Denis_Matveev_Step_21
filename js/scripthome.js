@@ -704,24 +704,120 @@ let autoInfo = {
 	model : 'Oktavia' ,
 	issue : 2010 ,
 	speed : 100 ,
+}    
 	
-	}    
+function travelTime (a,km) {
 	
-	 	function travelTime (a,km) {
-		let finishTime = 0;
-		let time = km / a.speed;
-		let count = 0;
-		//console.log(time);
-		for ( let i = 1; i < time; i++ ) {
-			count += i;
-		    if(i%4===0){
-				
-            finishTime = time+i;
-			console.log(i);
-				//return finishTime;
-			 }		
-	  	}
-		}
- 	travelTime(autoInfo, 900);
-	*/
+	let time = km / a.speed;
+	//console.log(`t${time}`);
+  let restTime =Math.trunc(time/4);
+	//console.log(`rt${restTime}`);
+	let finishTime = time+restTime;
+	//console.log(`Общее время в пути: ${finishTime}часов`);
+	return finishTime;
+}
+ 	travelTime(autoInfo, 1235);
+*/	 
 
+//-------------------------------------Задание №2 Задача №1(ok! 1/2)
+
+/*
+let fraction = {
+	chisl: 1 ,
+	znam: 2,
+};     
+
+ function computationFrac (fr,chisl2,znam2) {//дляд одинаковых знаменателей
+	 let drob= 0;
+	 let drobString = '/';
+	 let znaminatel;
+	 let chislitel;
+	 let drob10;
+
+   if (fr.znam === znam2){
+		 chislitel = fr.chisl+chisl2;
+		 znaminatel = fr.znam||znam2;
+		 drob = (` ${chislitel} ${drobString} ${znaminatel} `);
+		 console.log(`Дробь обычная: ${drob}`);
+		  if (chislitel>znaminatel||chislitel === znaminatel) {
+			  drob10 = chislitel / znaminatel;
+				console.log(`Дробь обычная: ${drob} --> Дробь десятичная: ${drob10}`);
+		  }
+	} else {
+		console.log('Дробь не правитльная, измените условия!');
+	}//дописать код для решения дробей с разныим знаменителями!!!!!!!!!!!!!!!!!
+}
+ 
+ computationFrac(fraction, 1, 2);
+*/
+ //-----------------------------------Задание № 2 Задача № 2 вычитание
+ /*
+ let fraction = {
+	chisl: 12 ,
+	znam: 15,
+};
+
+function subtractFrac (fr,chisl2,znam2) {// вычитание
+	let drob = 0;
+	let drobString = '/';
+	let znaminatel;
+	let chislitel;
+	let drob10 = chislitel / znaminatel;
+	let min = (fr.znam > znam2) ? znam2 : fr.znam;
+	//let max = (fr.znam < znam2) ? znam2 : fr.znam;
+	let minOd=0;
+
+if (fr.znam === znam2){
+	chislitel = fr.chisl - chisl2;
+		znaminatel = fr.znam || znam2;
+		drob = (` ${chislitel} ${drobString} ${znaminatel} `);
+  	console.log(`Дробь обычная: ${drob}`);
+}
+/*if (fr.znam != znam2){
+	for (let i = 2; i <= min; i++)  {
+	
+		if (min%i===0) {
+			minOd -=i;				
+		
+		console.log(`${minOd}`);
+	}  
+	}
+	
+		//	console.log(`${i}`);
+}
+}
+subtractFrac(fraction, 8, 15 );
+*/
+//-----------------------------------Задание № 2 Задача № 3 умножение
+/*
+ let fraction = {
+	chisl: 12 ,
+	znam: 15,
+};
+function multipleFrac (fr,chisl2,znam2) {
+	let drob = 0;
+	let drobString = '/';
+	let znaminatel;
+	let chislitel;
+	let drob10 = chislitel / znaminatel;
+	if (fr.chisl<fr.znam && chisl2<znam2){
+		chislitel = fr.chisl * chisl2;
+		znaminatel = fr.znam * znam2 ;
+		let cheslitelMod = 0;
+		drob = (` ${chislitel} ${drobString} ${znaminatel} `);
+		console.log(`Дробь обычная: ${drob}`);
+		} 
+		/*if (fr.chisl > fr.znam||chisl2>znam2){
+		for (let i = chislitel; i>=1;i--){
+			if (chislitel>1)
+			cheslitelMod =(chislitel / i);
+				console.log(cheslitelMod);
+			}
+  }
+}
+	
+	 multipleFrac(fraction, 10, 12);
+	 */
+
+	 //-----------------------------------Задание № 3 Задача № 1
+	 
