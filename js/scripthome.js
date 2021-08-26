@@ -920,7 +920,7 @@ console.log(purchList);
 */
 
 //-------------------------------------Задание №1 Задача №2()
-
+/*
 let purchList = [
 	{ name : 'Молоко', amount : 2, buy : true, },
 	{	name : 'Мясо', amount : 2, buy : true, },
@@ -937,20 +937,21 @@ function addProuct(arr, name, am=0){
 	});
 	console.log(result);
 
-arr[0].name === name ? arr[0].amount = arr[0].amount+am : arr[0].amount;
-arr[1].name === name ? arr[1].amount = arr[1].amount+am : arr[1].amount;
-arr[2].name === name ? arr[2].amount = arr[2].amount+am : arr[2].amount; 
-arr[3].name === name ? arr[3].amount = arr[3].amount+am : arr[3].amount;  
-console.log(arr[0].name != name);
-console.log(arr);
+// arr[0].name === name ? arr[0].amount = arr[0].amount+am : arr[0].amount;
+// arr[1].name === name ? arr[1].amount = arr[1].amount+am : arr[1].amount;
+// arr[2].name === name ? arr[2].amount = arr[2].amount+am : arr[2].amount; 
+// arr[3].name === name ? arr[3].amount = arr[3].amount+am : arr[3].amount;  
+// console.log(arr[0].name != name);
+//console.log(arr);
 
-// result.name === name ? arr[0].amount = result.amount+am : result.amount;
-// result.name === name ? arr[1].amount = arr[1].amount+am : arr[1].amount;
-// result.name === name ? arr[2].amount = arr[2].amount+am : arr[2].amount; 
-// result.name === name ? arr[3].amount = arr[3].amount+am : arr[3].amount;  
-console.log(arr.amount);
+result.name === name ? arr[0].amount = result.amount+am : result.amount;
+result.name === name ? arr[1].amount = arr[1].amount+am : arr[1].amount;
+result.name === name ? arr[2].amount = arr[2].amount+am : arr[2].amount; 
+result.name === name ? arr[3].amount = arr[3].amount+am : arr[3].amount;  
+console.log(arr);
 
 }
 addProuct(purchList, 'Масло', 2);
-
+addProuct(purchList, 'Молоко', 2);
+*/
 
