@@ -822,80 +822,135 @@ function multipleFrac (fr,chisl2,znam2) {
 	 */
 
 	 //-----------------------------------Задание № 3 Задача № 1(ok!)
-/*	 
-let timer = {
-hour: '00' ,
-minut: '00' ,
-sec: '00',
-}
-let clock;
- function getClock (t){
-  return clock = (`${t.hour}:${t.minut}:${t.sec}`);
-  
- }
-getClock(timer);
-console.log(clock)
-*/
-
-//-----------------------------------Задание № 3 Задача № 2
-// let timer = {
-// 	hour: 0 ,
-// 	minut: 0 ,
-// 	sec: 0,
-// 	} 
-// 	let clock;
-//     function getClock (t, h, m, s){
-// 	 console.log(`часы: ${h}`)
-// 	 console.log(`мнуты: ${m}`)
-// 	 console.log(`секунды: ${s}`)
-     
-// 	 if ( h > 0 && m > 0 && s > 0  ) {
-// 	 clock = (`${(t.hour=h)}:${(t.minut=m)}:${+(t.sec=s)}`);
-
-// 	   if (s > 59 || s < 1 ) {
-// 		clock = (`${+(t.hour=h)}:${+(t.minut= m+1)}:${+(t.sec=00)}`);
-// 	   }
-
-// 		 if ( m > 59 || m < 1) {
-// 		 clock = (`${+(t.hour=h+1)}:${(t.minut = 00)}:${(t.sec=00)}`)
-// 		}
-		
-// 	 }
-//   return clock 
-  
-//  }
-// getClock(timer, 3,2,2);
-// console.log(clock);
-// console.log(timer);
-
-//#########################
-let timer = {
-	hour: 12 ,
-	minutes: 50 ,
-	second: 30,
+	 /*
+let timer = {// Objekt
+	hour: 9 ,
+	minutes: 10 ,
+	second: 1,
 	} 
-let clock;
+
 let secInMin= 60;
 let minInHour = 60;
-let secInHour = minInHour*secInMin; 
-console.log(secInHour);
-	function getClock(t, sec){
-	let h = Math.floor(sec/secInHour);
-	let min = h*60;
+let secInHour = minInHour*secInMin; //3600
+//-------------------
+function getTime(t) {// this function show cuerrent time
+let time = (` ${t.hour}:${t.minutes}:${t.second} `);
 
-    console.log(min);
-	}
-	getClock(timer, 500);
-	//console.log(clock);
-//################################################	
-	function secToTime(num){		
+  return time;
+}
+let cuerTimeFromTimer = getTime(timer);
+console.log(`1. Текущее время по таймеру: ${cuerTimeFromTimer} `);
+
+//----------------------------------Задание 3 задача 2,3,4(изменение аремени при передачи времени)
+function sumTimerToSec (t) {// this func sum values from timer to second
+let timeSumm1 = (t.hour * secInHour) + (t.minutes * secInMin) + t.second;
+  
+return timeSumm1;
+}
+let resultTimer = sumTimerToSec(timer);
+console.log(`2. Время Timera: ${resultTimer} секунд`);
+
+//---------------------------------------------------------------
+function sumGeneralSecond (h, m, s) {// this func summarizes and get general ammount of second
+	
+	result = (h > 0) ? (h * secInHour) + resultTimer: 
+	(m > 0) ? (m * secInMin) + resultTimer : 
+	(s > 0) ? s + resultTimer  : 
+	resultTimer;
+	(h + m + s) != 0 ? (((h * secInHour)+(m * secInMin)+s )+ resultTimer): 
+	resultTimer;
+
+   return result;
+}
+let generalTimeToSec = sumGeneralSecond(3,10,10);
+console.log(`3. Общее время в сек: ${generalTimeToSec} секунд`)
+
+//--------------------------------------------------------
+	 function secToTime(num){// this func takes values from sumDifferenсe() and sumGeneralSecond() and returns change time
+    
+		function sumDifferenсe(){//this func calculate differece between f sumTimerToSec and f sumGeneralSecond  
+			generalTimeToSec > resultTimer ? differ = generalTimeToSec-resultTimer:
+			differ = resultTimer-generalTimeToSec;
+			console.log(`5. ${differ}`);
+			}
+			sumDifferenсe();		
+
+		 if (generalTimeToSec > 86399 ) {
+			 num = differ;
+		 } else{
+			num = generalTimeToSec
+		 }
+		 
 		let result=num/3600;
 		let hour= Math.floor(result);
 		let min= Math.floor((result-hour)*60);
-		let second= Math.ceil((((result-hour)*60)-min)*60)
-		return isTime = (` ${hour}:${min}:${second} `);
-	   
+		let second= ((((result-hour)*60)-min)*60);
+		second = Math.ceil((second.toFixed(2)));
+
+		return (` ${hour}:${min}:${second} `);
 	}
-	secToTime(4900);
-	console.log(isTime)
+	let newTime = secToTime(generalTimeToSec);
+	console.log(`4. Измененное время: ${newTime}`)
+*/
+
+	//----------------------------------------Модуль №2
+//-------------------------------------------Массивы
+//--------------------------------------Домашнее задание №2
+//-------------------------------------Задание №1 Задача №1(ok!) 
+/* 
+let purchList = [
+    { name : 'Молоко', amount : 2, buy : true, },
+		{	name : 'Мясо', amount : 2, buy : true, },
+	  { name : "Хлеб", amount : 2, buy : false,	},
+		{	name : "Масло",	amount : 2, buy : true,	},
+	];
 	
+let result = purchList.find(function(item,index,array) {
+	return item.buy === false;
+});
+
+let result2 = purchList.findIndex(function(item,index,array) {
+	return item.buy === false;
+});
+
+purchList.splice(result2,1);
+purchList.unshift(result); 
+
+console.log(purchList);
+*/
+
+//-------------------------------------Задание №1 Задача №2()
+
+let purchList = [
+	{ name : 'Молоко', amount : 2, buy : true, },
+	{	name : 'Мясо', amount : 2, buy : true, },
+	{ name : "Хлеб", amount : 2, buy : false,	},
+	{	name : "Масло",	amount : 2, buy : true,	},
+];
+
+
+function addProuct(arr, name, am=0){
+
+	let result = arr.find(function(item,index,array) {
+		return item.name === name;
+		
+	});
+	console.log(result);
+
+arr[0].name === name ? arr[0].amount = arr[0].amount+am : arr[0].amount;
+arr[1].name === name ? arr[1].amount = arr[1].amount+am : arr[1].amount;
+arr[2].name === name ? arr[2].amount = arr[2].amount+am : arr[2].amount; 
+arr[3].name === name ? arr[3].amount = arr[3].amount+am : arr[3].amount;  
+console.log(arr[0].name != name);
+console.log(arr);
+
+// result.name === name ? arr[0].amount = result.amount+am : result.amount;
+// result.name === name ? arr[1].amount = arr[1].amount+am : arr[1].amount;
+// result.name === name ? arr[2].amount = arr[2].amount+am : arr[2].amount; 
+// result.name === name ? arr[3].amount = arr[3].amount+am : arr[3].amount;  
+console.log(arr.amount);
+
+}
+addProuct(purchList, 'Масло', 2);
+
+
