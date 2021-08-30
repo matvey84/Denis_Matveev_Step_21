@@ -892,12 +892,12 @@ console.log(`3. Общее время в сек: ${generalTimeToSec} секун�
 	let newTime = secToTime(generalTimeToSec);
 	console.log(`4. Измененное время: ${newTime}`)
 */
-
+//#####################################################################################
 	//----------------------------------------Модуль №2
 //-------------------------------------------Массивы
 //--------------------------------------Домашнее задание №2
 //-------------------------------------Задание №1 Задача №1(ok!) 
-/* 
+/*
 let purchList = [
     { name : 'Молоко', amount : 2, buy : true, },
 		{	name : 'Мясо', amount : 2, buy : true, },
@@ -917,40 +917,211 @@ purchList.splice(result2,1);
 purchList.unshift(result); 
 
 console.log(purchList);
+
 */
-
-//-------------------------------------Задание №1 Задача №2()
-
+//-------------------------------------Задание №1 Задача №2(ок!)
+/*
 let purchList = [
 	{ name : 'Молоко', amount : 2, buy : true, },
 	{	name : 'Мясо', amount : 2, buy : true, },
 	{ name : "Хлеб", amount : 2, buy : false,	},
 	{	name : "Масло",	amount : 2, buy : true,	},
-];
-
+]
 
 function addProuct(arr, name, am=0){
-
 	let result = arr.find(function(item,index,array) {
 		return item.name === name;
 		
 	});
-	console.log(result);
+	//console.log(result);
 
 arr[0].name === name ? arr[0].amount = arr[0].amount+am : arr[0].amount;
 arr[1].name === name ? arr[1].amount = arr[1].amount+am : arr[1].amount;
 arr[2].name === name ? arr[2].amount = arr[2].amount+am : arr[2].amount; 
 arr[3].name === name ? arr[3].amount = arr[3].amount+am : arr[3].amount;  
-console.log(arr[0].name != name);
-console.log(arr);
 
-// result.name === name ? arr[0].amount = result.amount+am : result.amount;
-// result.name === name ? arr[1].amount = arr[1].amount+am : arr[1].amount;
-// result.name === name ? arr[2].amount = arr[2].amount+am : arr[2].amount; 
-// result.name === name ? arr[3].amount = arr[3].amount+am : arr[3].amount;  
-console.log(arr.amount);
+//console.log(arr[0].name != name);
+return arr;
+//console.log(arr.amount);
 
 }
-addProuct(purchList, 'Масло', 2);
+let addPurch = addProuct(purchList, 'Масло', 4);
+console.log(addPurch);
+*/
+//-------------------------------------Задание №1 Задача №3(ок!)
+/*
+let purchList = [
+	{ name : 'Молоко', amount : 2, buy : false, },
+	{	name : 'Мясо', amount : 2, buy : true, },
+	{ name : "Хлеб", amount : 2, buy : false,	},
+	{	name : "Масло",	amount : 2, buy : true,	},
+];
+
+function payCheck(arr, name){
+
+	arr[0].name === name ? arr[0].buy =  true : arr[0].buy;
+	arr[1].name === name ? arr[1].buy =  true : arr[1].buy;
+	arr[2].name === name ? arr[2].buy =  true : arr[2].buy;
+	arr[3].name === name ? arr[3].buy =  true : arr[3].buy;
+
+	console.log(arr[0].buy);
+	console.log(arr);
+}
+payCheck(purchList, 'Хлеб');
+*/
+//-------------------------------------Задание №2 Задача №1(ок!)
+/*
+let purchList =  [
+{name: 'Хлеб', amount: 2, price: 1.40,},
+{name: 'Мясо', amount: 1, price: 15.00},
+{name: 'Молоко', amount: 3, price: 1.50},
+{name: 'Помидор', amount: 2, price: 2.90},
+{name: 'Масло', amount: 1, price: 3.50},
+];
+let lengthList = purchList.length;
+let sumResult; 
+console.log(lengthList);
+
+function sumCheck(arr) {// стоимость покупок по позициям
+	let sum0 = arr[0].amount * (arr[0].price).toFixed(2);
+	let sum1 = arr[1].amount * (arr[1].price).toFixed(2);
+	let sum2 = arr[2].amount * (arr[2].price).toFixed(2);
+	let sum3 = arr[3].amount * (arr[3].price).toFixed(2);
+	let sum4 = arr[4].amount * (arr[4].price).toFixed(2);
+  return ([sum0,sum1,sum2,sum3,sum4]);
+}
+let sumArr = sumCheck(purchList);
+
+	function totalSum(sumArr) {//общая суммма чека
+		return  sumResult = sumArr.reduce((sum, current) => sum + current, 0);
+	}
+	totalSum(sumArr);
 
 
+function getPayCheck(arr,sumArr) {//вывод чека
+	return (` Чек №00001
+
+ Количество покупок: ${lengthList};
+ 
+1.  ${arr[0].name} Бородинский 0,45 кг. :
+          кол-во: ${arr[0].amount} шт. х ${(arr[0].price).toFixed(2)} = ${sumArr[0]}
+
+2.  ${arr[1].name} "Шейная часть."
+          кол-во: ${arr[1].amount} кг. х ${(arr[1].price).toFixed(2)} = ${sumArr[1]} 
+
+3.  ${arr[2].name} Бабушкина крынка 0.9 
+          кол-во: ${arr[2].amount} шт. х ${(arr[2].price).toFixed(2)} = ${sumArr[2]}
+
+4.  ${arr[3].name} "Крупный"
+          кол-во: ${arr[3].amount} кг. х ${(arr[3].price).toFixed(2)} = ${sumArr[3]}
+
+5.  ${arr[4].name} Cливочное сладко-соленое 180 г. 
+          кол-во: ${arr[4].amount} шт. х ${(arr[4].price).toFixed(2)} = ${sumArr[4]}
+		Итого: ${sumResult.toFixed(2)}	
+`);
+}
+let check = getPayCheck(purchList,sumArr,);
+console.log(check);
+
+//-------------------------------------Задание №2 Задача №2(ок!)
+
+//  function sumCheck(arr) {
+		
+// 	let sum0 = arr[0].amount * (arr[0].price).toFixed(2);
+// 	let sum1 = arr[1].amount * (arr[1].price).toFixed(2);
+// 	let sum2 = arr[2].amount * (arr[2].price).toFixed(2);
+// 	let sum3 = arr[3].amount * (arr[3].price).toFixed(2);
+// 	let sum4 = arr[4].amount * (arr[4].price).toFixed(2);
+//   return [sum0,sum1,sum2,sum3,sum4];
+// }
+ 
+// let sumArr = sumCheck(purchList);
+// console.log(sumArr);
+//-------------------------------------Задание №2 Задача №3(ok!)
+/*
+function maxCost(sumArr) {
+//	return Math.max.apply(null, sumArr);
+return sumArr.reduce((a, b) => a > b ? a : b);
+   
+}
+let maxNum = maxCost(sumArr);
+console.log(maxNum);
+
+*/
+//-------------------------------------Задание №2 Задача №4(ок!)
+/*
+function averageCost(sumResult) {//средняя стоиммоть товара
+  return sumResult / sumArr.length;	
+	 }
+	 let average = averageCost(sumResult);
+	 console.log(`Средняя стоимость одного товара: ${average}`);
+	 */
+
+
+	 //-------------------------------------Задание №3
+
+	  //-------------------------------------Задание №4.1(OK!	)
+		
+let aud = [
+{id:400, sits:10, fak:'Математики'},
+{id:401, sits:12, fak:'Филологии'},
+{id:402, sits:15, fak:'Экономики'},
+{id:403, sits:20, fak:'Правоведения'},
+]
+let arrTwo = [];
+//console.log(arrTwo);
+ function showAudiences (arrAud) {
+	 let audiences0 = (`Аудитория № ${arrAud[0].id}:\n Количество мест: ${arrAud[0].sits},\n Факультет: ${arrAud[0].fak}\r\n`);
+	 let audiences1 = (`Аудитория № ${arrAud[1].id}:\n Количество мест: ${arrAud[1].sits},\n Факультет: ${arrAud[1].fak}\r\n`);
+	 let audiences2 = (`Аудитория № ${arrAud[2].id}:\n Количество мест: ${arrAud[2].sits},\n Факультет: ${arrAud[2].fak}\r\n`);
+	 let audiences3 = (`Аудитория № ${arrAud[3].id}:\n Количество мест: ${arrAud[3].sits},\n Факультет: ${arrAud[3].fak}`);
+	 arrTwo.splice(0,0, audiences0, audiences1, audiences2, audiences3);
+	  return (`\n ${audiences0}\n ${audiences1}\n ${audiences2}\n ${audiences3}`) ;
+	}
+ let auditList = showAudiences(aud);
+ //console.log(auditList);
+ 
+ 
+
+//-------------------------------------Задание №4.2(ok!)
+ 
+ function choisAudit(arrAud, faculty){
+ let resultOne = arrAud.find(function(item,index,array) {
+	//console.log(item.fak === faculty);
+	return item.fak === faculty;
+	});
+	
+	return result = arrAud[0] == resultOne ? console.log(`${arrTwo[0]}`) :
+	result = arrAud[1] == resultOne ? console.log(`${arrTwo[1]}`) :
+	result = arrAud[2] == resultOne ? console.log(`${arrTwo[2]}`) :
+	result= arrAud[3] == resultOne ? console.log(`${arrTwo[3]}`) :
+	console.log('Не подходит!');
+		
+	}
+//choisAudit(aud,'Математики');
+//choisAudit(aud,'Филологии');
+//-------------------------------------Задание №4.3
+
+//-------------------------------------Задание №4.4,5(есть вопросы как выдрать данные ииз объекта)
+
+function sortSits(arrAud){
+	sitsArr = arrAud.forEach(function(item,index,array){
+	console.log(item.sits);
+ 	
+	});	
+}
+sortSits(aud);
+console.log(sitsArr);
+
+
+
+// console.log(sitsArr);
+// console.log(fakArr);
+
+sortSits(aud);
+let sitsArr= [];
+aud.forEach(function(item,index,array){
+return sitsArr = (`${item.fak}`);
+
+});
+console.log(sitsArr);
