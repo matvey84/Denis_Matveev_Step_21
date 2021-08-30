@@ -793,3 +793,89 @@ for (let i = 0; i < array1.length; i++) {
 }
 arrayOnDisplay(arr, arr2);
 */
+
+// -------------------------------28/08/2021
+// ---------------------------Практические Задаия
+// -----------------------------  Строки
+/*
+
+//--------------------------------Задача 1
+function strLength(str1,str2) {// доработать не работает
+return str1.length === str2.length ? ravny : neravny;
+//return str1.trim()length === str2.trim()length;//метод .trim() удаляет пробелы
+}
+console.log(strLength('cow','car'));
+*/
+//--------------------------------Задача 2 (поменять первую букву на заглавную)
+/*function strLength(str) {
+  return str[0].toUpperCase() + str.slice(1);
+ 
+  }
+  console.log(strLength('car'));
+  */
+  //--------------------------------Задача 3 (поменять первую букву на за
+  /*
+  let glasnie = ['а', 'у', 'о', 'ы', 'и', 'э','я','ю', 'ё', 'е'];
+  function strCount(str) {
+    let count= 0;
+   let newStr = str.toLowerCase();//'машина едет'
+   let arr = newStr.split('');// разделили предложения на буквы и заесл в массив
+   
+     for (i = 0; i < arr.length; i++) {
+       for (j = 0; j < glasnie.length; j++) {
+         arr[i] === glasnie[j] ? count++ : count;
+       }
+     }
+       return count;
+  }
+    console.log(strCount('машина едет'));
+    */
+   //--------------------------------Задача 4 (поменять первую букву на за (перечитать условие!)
+/*
+   let spam = ['100% бесплатно','увеличение продаж','только сегодня','не удаляйте','ххх'];
+  function strCount(str) {
+   let count = 0;
+   let newStr = str.toLowerCase().split('');//переводим ctroku в нижний регистр
+   
+   console.log(newStr);
+       for (i = 0; i < spam.length; i++) {
+        for (j = 0; j < newStr.length; j++) {
+            newStr[j].includes(spam[i]) ? count++ : count;
+         //console.log(newStr.includes(spam[i]));
+         
+        }
+        return !!count;
+       }
+     
+  }
+    console.log(strCount('100%  бесплатно проверь закачаешься!'));
+    */
+
+   //--------------------------------Задача 5
+
+   //--------------------------------Задача 6
+
+
+    //--------------------------------Задача 7(ок?????)на до проверки на налчие знаков принания!
+
+    function calcWord (str) {
+      let newStr = str.toLowerCase();
+      //newStr.split('');
+      
+      // str.toLowerCase().split(', ') ? console.log(newStr.length):
+      // console.log(newStr.length);
+
+      //  if (newStr.split(' ')){
+      //   console.log(newStr.length);
+      //  }
+
+      console.log(newStr.split(' '));
+    
+    
+    }
+    calcWord ('Привет, я Вася! GHbdtn ghbdtn ghbdtn');
+
+
+//--------------------------------Задача 7
+
+
