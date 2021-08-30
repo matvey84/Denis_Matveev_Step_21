@@ -1080,10 +1080,10 @@ function averageCost(sumResult) {//средняя стоиммоть товар�
 	  //-------------------------------------Задание №4.1(OK!	)
 		
 let aud = [
-{id:400, sits:10, fak:'Математики'},
-{id:401, sits:12, fak:'Филологии'},
-{id:402, sits:15, fak:'Экономики'},
-{id:403, sits:20, fak:'Правоведения'},
+{id:80,  sits:35, fak:'Математики'},
+{id:310, sits:18, fak:'Филологии'},
+{id:102, sits:20, fak:'Экономики'},
+{id:453, sits:17, fak:'Правоведения'},
 ]
 let arrTwo = [];
 //console.log(arrTwo);
@@ -1119,26 +1119,53 @@ let arrTwo = [];
 //choisAudit(aud,'Филологии');
 //-------------------------------------Задание №4.3
 
-//-------------------------------------Задание №4.4,5(есть вопросы как выдрать данные ииз объекта)
+//-------------------------------------Задание №4.4,5()
 
-function sortSits(arrAud){
-	sitsArr = arrAud.forEach(function(item,index,array){
-	console.log(item.sits);
- 	
-	});	
+function sortSits(arrAud){	
+	function sort1(arrAud){//создали массив с сидячми месятами
+	return arrAud.map(item => item.sits)			
+    }; 
+ let sitsArr = sort1(arrAud);
+ 
+  console.log( sitsArr.sort( (a, b) => a > b) );
 }
 sortSits(aud);
-console.log(sitsArr);
+
+// function sortFak(arrAud){	
+// 	function sort2(arrAud){//создали массив с сидячми месятами
+// 	return arrAud.map(item => item.fak).toLawerCase			
+//     };
+
+//  let fakArr = sort2(arrAud);
+//  console.log(fakArr);
+//   console.log( fakArr.sort( (a, b) => a - b) );
+// }
+// sortFak(aud);
 
 
-
+//###################################################################
+// function sortSits(arrAud){//создали массив с сидячми месятами
+// 	return arrAud.map(
+// 	item => item.sits // стрелоная функция	
+// 	);			
+// }
+// let sitsArr = sortSits(aud);
 // console.log(sitsArr);
+
+function sortId(arrAud){//создали массив с аудииториями
+	return arrAud.map(
+	item => item.id	// стрелоная функция
+	);			
+}
+let idArr = sortId(aud);
+console.log(idArr);
+
+// function sortFak(arrAud){//создали массив с факультетами
+// 	return arrAud.map(
+// 	item => item.fak // стрелоная функция	
+// 	);			
+// }
+// let fakArr = sortFak(aud);
 // console.log(fakArr);
 
-sortSits(aud);
-let sitsArr= [];
-aud.forEach(function(item,index,array){
-return sitsArr = (`${item.fak}`);
 
-});
-console.log(sitsArr);
