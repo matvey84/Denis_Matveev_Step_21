@@ -857,7 +857,7 @@ console.log(strLength('cow','car'));
 
 
     //--------------------------------Задача 7(ок?????)на до проверки на налчие знаков принания!
-
+/*
     function calcWord (str) {
       let newStr = str.toLowerCase();
       //newStr.split('');
@@ -877,5 +877,5 @@ console.log(strLength('cow','car'));
 
 
 //--------------------------------Задача 7
-
+*/
 
