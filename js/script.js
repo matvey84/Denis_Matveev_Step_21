@@ -749,7 +749,7 @@ function arrayOnDisplay(array,elem,index) {
  document.write(array);
 }
 arrayOnDisplay(arr,14,20);
-/*/
+*/
 //--------------------------------------------Задача №6
 /*
 let arr = [9, 1, 10, 4, 5, 12, 13, 25, 100, 54]
@@ -985,3 +985,32 @@ news.tagsFormation();
 news.dateFormation();
 news.print();
 */
+
+
+//---------------------------------------------------Пактиеское задание от 03.09.2021
+// --              -------------------------------------------Модуль 2
+//------------------------------------------------------------Классы продолжение (ДЗ4)
+//----------------------------------------------------------------зАДАЧА 2
+class Circle {
+  constructor () {
+    this.radius = 5;
+  }
+
+  get radiuss() {
+    return this.radius;
+
+  }
+  set radiuss(rad) {
+    return this.radius = rad;
+  }
+  get diametr() {
+  return this.radius + this.radius;
+  }
+
+   ploshchad() {
+
+    console.log(2 * Math.Pi * Math.pow(this.radius,2))
+  }
+}
+let c = new Circle();
+

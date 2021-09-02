@@ -1175,14 +1175,25 @@ sortFak(aud);
 
 //--------------------------------------------------Домашнее задание №3 
 //----------------------------------------------------Строки
+/*
 let sign = [',', '!', '?', '>', '.', ':', '/'];
 let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function stat(str) {
-let arr = [...str]// str.split('');
-console.log(arr);
-i
+	let count = 0;
+	let newStr = str.toLowerCase();
+let arr = [...newStr]// str.split('');
+for (i = 0; i < arr.length; i++) {
+	for (j = 0; j < sign.length; j++) {
+	  arr[i] === sign[j] ? count++ : count;
+	}
+	
+}
+	//return count;
+
+
 
 }
 
-stat('gigeluiwhc/egjkajga!676233');
+console.log(stat('gigelui.whc!/egjka>jga!676233'));
+*/
