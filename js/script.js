@@ -829,7 +829,7 @@ console.log(strLength('cow','car'));
        return count;
   }
     console.log(strCount('машина едет'));
-    */
+   */ 
    //--------------------------------Задача 4 (поменять первую букву на за (перечитать условие!)
 /*
    let spam = ['100% бесплатно','увеличение продаж','только сегодня','не удаляйте','ххх'];
@@ -860,30 +860,128 @@ console.log(strLength('cow','car'));
 /*
     function calcWord (str) {
       let newStr = str.toLowerCase();
-      //newStr.split('');
-      
-      // str.toLowerCase().split(', ') ? console.log(newStr.length):
-      // console.log(newStr.length);
-
-      //  if (newStr.split(' ')){
-      //   console.log(newStr.length);
-      //  }
-
-      console.log(newStr.split(' '));
-    
-    
+      console.log(newStr.split(' '));  
     }
     calcWord ('Привет, я Вася! GHbdtn ghbdtn ghbdtn');
 */
 
-//--------------------------------Задача 7
+//--------------------------------            Задача 7(ok!)
+function amountWord(text) { //вывести количество слов в предложении
+	let newText = text.split(' ');
+	//console.log(newText);
+	//console.log(newText.length);
+}
+amountWord('Привет, меня зовут Вася')
+//--------------------------------            Задача 8()большее слово
+
+function maxWord(text) {
+	let arr = text.split(' ');
+	let newWord = arr[0].split('').splice(0,6).join('');//удалил запятую
+  arr.splice(0,1,newWord,)
+	
+	let numberArr = arr.map(item => item.length);//.sort((a,b) => a - b).reverse();
+	let maxNum = Math.max(...numberArr);
+	// console.log(arr); 
+	// 	console.log(numberArr);
+	// 	console.log(numberArr.length===arr.length);
+	// 	console.log(maxNum);
+		
+}
+maxWord('Привет меня зовутhhhhh Вася')
+//--------------------------------            Задача 9(ok!)средняя длинна слов впредложении
+function averWord(text) {
+	let newArr = text.split(' ');
+	let numberArr = newArr.map(item => item.length);//.sort((a,b) => a - b).reverse();
+	let sumNum = numberArr.reduce((sum, current) => sum + current, 0);
+	let averSum = sumNum/newArr.length;
+	//console.log(`Средняя длина слова в предложении: ${averSum} символа(ов).`);
+ return  averSum;
+}
+averWord('Привет, меня зовут Вася')
+
+
+//-----------------------------------Задача 10() квк вывести все позиции на которых стоит sign
+let newArr;
+let findSign;
+function findAndShowSign(text, sign) {
+	newArr = text.toLowerCase().split('');
+  //console.log(newArr.length)
+  findSign = newArr.indexOf(sign);// нашло индекс но только один
+//console.log(`Порядковый индекс элемента: ${findSign+1}`);
+}
+findAndShowSign('Привет, меня, зовут Вася', ',');
+// -----
+// let sign = ','
+// let result;
+// for (let i = 0; i < newArr.length; i++){
+// result = [newArr[i]];
+// //console.log(result.length)
+// 	let indexces = result.filter(function(item,index,arrai){
+// return item==sign;
+// 	});
+	
+// console.log(indexces)
+// }
+
+
+//--------------------------------------------Пракические занятия № 4 от 30.08.2021
+//-------------------------------------------------Классы
+//------------------------------------------------Задание 1
+/*
+class PrintMaсhine {
+  constructor(color, fontSize, fontFamily) {
+      this.color = color;
+      this.fontSize = fontSize;
+      this.fontFamily = fontFamily;
+  }
+
+  print(text) {
+    //document.write(`<p style="color:${this.color}; font-size:${this.fontSize}; font-family:${this.fontFamily};">${text}</p>`);
+  }
+}
+
+let print = new PrintMaсhine('red', '24px', 'cursive');
+let print2 = new PrintMaсhine('blue', '14px', 'auto');
+
+print.print('qwerttd asd adas');
+print2.print('1235423423 42413');
 */
+//------------------------------------------------Задание 2
+/*
+class createNews {
+  constructor(header, text, tags, date) {
+      this.header = header;
+      this.text = text;
+      this.tags = tags;
+      this.date = date;
+  }
 
+  tagsFormation() {
+    this.tags = this.tags.map(tag => '#' + tag);
+    this.tags = this.tags.join(' ');
+  }
 
+  dateFormation() {
+    if (this.date.getDate() === new Date().getDate() && this.date.getMonth() === new Date().getMonth()) {
+      this.date = 'сегодня';
+    } else if ((new Date().getDate() - this.date.getDate()) < 7) {
+      this.date = `${new Date().getDate() - this.date.getDate()}` //дней назад;
+    } else {
+      
+      this.date = `${this.date.getDate()} : ${this.date.getMonth()} : ${this.date.getFullYear()}`
+    }
+  }
 
+  print() {
+  //   document.write(`<h1>${this.header}</h1>`);
+  //   document.write(`<div>${this.date}</div>`);
+  //   document.write(`<div>${this.text}</div>`);
+  //   document.write(`<div>${this.tags}</div>`);
+  }
+}
 
-
-//--------------------------------------------Пракические занятия 30.08.2021
-//-------------------------------------------------
-
-
+let news = new createNews('Whats new?', 'qweqw asdasdas as as as as as  as as', ['meta', 'lena', 'car'], new Date(2021, 8, 3));
+news.tagsFormation();
+news.dateFormation();
+news.print();
+*/

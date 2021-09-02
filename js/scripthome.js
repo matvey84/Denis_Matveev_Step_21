@@ -1113,36 +1113,41 @@ let arrTwo = [];
 	result = arrAud[2] == resultOne ? console.log(`${arrTwo[2]}`) :
 	result= arrAud[3] == resultOne ? console.log(`${arrTwo[3]}`) :
 	console.log('Не подходит!');
-		
 	}
-//choisAudit(aud,'Математики');
+//choisAudit(aud,'Математики');//вызов фуекций
 //choisAudit(aud,'Филологии');
 //-------------------------------------Задание №4.3
 
+
+
+
+
+
 //-------------------------------------Задание №4.4,5()
 
-function sortSits(arrAud){	
+function sortSits(arrAud){	// Задание 4.4(ок!) отсортировали
 	function sort1(arrAud){//создали массив с сидячми месятами
 	return arrAud.map(item => item.sits)			
     }; 
  let sitsArr = sort1(arrAud);
  
-  console.log( sitsArr.sort( (a, b) => a > b) );
+  //console.log( sitsArr.sort( (a, b) => a - b) );// сортировка от меньшего к большему
 }
 sortSits(aud);
 
-// function sortFak(arrAud){	
-// 	function sort2(arrAud){//создали массив с сидячми месятами
-// 	return arrAud.map(item => item.fak).toLawerCase			
-//     };
-
-//  let fakArr = sort2(arrAud);
-//  console.log(fakArr);
-//   console.log( fakArr.sort( (a, b) => a - b) );
-// }
-// sortFak(aud);
-
-
+function sortFak(arrAud){ // Задание 4.4(ок!)	отсортировать по алфавиту
+	function sort2(arr){// massiv with name fak
+	return arr.map(item => item.fak)
+			 
+    };
+ let fakArr = sort2(arrAud) ;
+  // console.log( fakArr.sort( (a, b) => { //сортировка по алфавиту
+	// 	if  (a > b) return 1;
+	// 	if  (a == b) return 0;
+	// 	if  (a < b) return -1; 
+	// } ) );
+}
+sortFak(aud);
 //###################################################################
 // function sortSits(arrAud){//создали массив с сидячми месятами
 // 	return arrAud.map(
@@ -1152,13 +1157,13 @@ sortSits(aud);
 // let sitsArr = sortSits(aud);
 // console.log(sitsArr);
 
-function sortId(arrAud){//создали массив с аудииториями
-	return arrAud.map(
-	item => item.id	// стрелоная функция
-	);			
-}
-let idArr = sortId(aud);
-console.log(idArr);
+// function sortId(arrAud){//создали массив с аудииториями
+// 	return arrAud.map(
+// 	item => item.id	// стрелоная функция
+// 	);			
+// }
+// let idArr = sortId(aud);
+// //console.log(idArr);
 
 // function sortFak(arrAud){//создали массив с факультетами
 // 	return arrAud.map(
@@ -1168,4 +1173,16 @@ console.log(idArr);
 // let fakArr = sortFak(aud);
 // console.log(fakArr);
 
+//--------------------------------------------------Домашнее задание №3 
+//----------------------------------------------------Строки
+let sign = [',', '!', '?', '>', '.', ':', '/'];
+let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+function stat(str) {
+let arr = [...str]// str.split('');
+console.log(arr);
+i
+
+}
+
+stat('gigeluiwhc/egjkajga!676233');
