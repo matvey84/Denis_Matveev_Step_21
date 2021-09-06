@@ -1175,25 +1175,175 @@ sortFak(aud);
 
 //--------------------------------------------------Домашнее задание №3 
 //----------------------------------------------------Строки
-/*
+//----------------------------------------------------Задача1(ок!) вывести статистику цифрбсимволов и букв
+
 let sign = [',', '!', '?', '>', '.', ':', '/'];
 let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let stringg = '0123456789qwertyuiop;llkkjhggffdsazxccvbnm,.';
+  
+function statSign(str1) {
+	let countSign = 0;
+	let newStr = str1.toLowerCase();
+	let arr = [...newStr]// str.split('');
 
-function stat(str) {
-	let count = 0;
-	let newStr = str.toLowerCase();
-let arr = [...newStr]// str.split('');
-for (i = 0; i < arr.length; i++) {
-	for (j = 0; j < sign.length; j++) {
-	  arr[i] === sign[j] ? count++ : count;
-	}
+for (let i = 0; i < arr.length; i++) {
+	for (let j = 0; j < sign.length; j++) {
+	 arr[i] === sign[j] ? countSign++ : countSign;
+	} 
+}
+//	return countSign;
+}
+let sStatistic = (statSign(stringg));
+///console.log(`Количество Знаков: ${sStatistic}`)
+
+//----вЫЧИСЛЕНИЕ КОЛИЧЕСТВА ЦИФР
+function statNum (str2){
+	let newStr = str2.toLowerCase();//в нижний регистр
+	let arr1 = [...newStr];//делаем массив из стр
+	let newNum = num.join('').split('');// массив цифр-> массив строк '1'
+// цикл на сравтенение строк цифр и строки основной
+
+let countNum = 0;
+for (let i = 0; i < arr1.length; i++) {
+	for (let n = 0; n < newNum.length; n++) {
+	  arr1[i] === newNum[n] ? countNum++ : countNum;
+		}
+}
+//return countNum;
+}
+let nStatistic = (statNum (stringg))
+//console.log(`Количество цифр: ${nStatistic}`)
+
+function generalStat(str){
+	let strlength=str.length
+	let leterStatistic = strlength-( sStatistic+nStatistic);
+	// return console.log( `
+	// Строка состоит из: ${strlength} символов, из них:
+	// букв: ${leterStatistic},
+	// цифр:${nStatistic} ,
+	// символов: ${sStatistic}.` )
 	
+	}
+	generalStat(stringg);
+
+//-----------------------Задача№ 2(в нтеренете)
+function textNumber(number) {
+  let first = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'];
+  let second = ['Десять', 'Одинадцать', 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семьнадцать', 'Восемьнадцать', 'Девяднадцать', 'Двадвать'];
+  let third = ['Двадцать', 'Тридцать', 'Сорок', 'Пятьдесят', 'Шестьдесят', 'Семьдесят', 'Восемьдесят', 'Девяносто'];
+  if (number > 0 && number <= 9) {
+		console.log(first[number])
+    return first[number - 1];
+
+  }
+  if (number >= 10 && number <= 20) {
+    return second[number - 10];
+  }
+  if (number > 20 && number <= 99) {
+    let str = `${number}`;
+    str = str.split('');
+    let firstNumber = str[0];
+    let secondNumber = str[1];
+   
+    // return `${third[firstNumber - 2]} ${first[secondNumber - 1]}`;
+  }
 }
-	//return count;
+// console.log(textNumber(8));
+// console.log(textNumber(20));
+// console.log(textNumber(55));
+
+//-----------------------Задача№ 3
+//-----------------------Задача№ 4(ok!) css стиль в строоку camelCase
+function changrStile(text){
+  let newArr = text.split('-');//массив из строки без "-"
+
+  let secWord = newArr.splice(1,1).join(''); //втоорое слово
+ 
+  let secondHalf =  secWord.split('');//массив из второго слоува
+ 
+  let firstLetterToUpp = secondHalf.splice(0,1).join('').toUpperCase();//1я буква 2го слова в верхнем регистпе
+ 
+   let result = newArr.join('')+(firstLetterToUpp + secondHalf.join(''));//складываем строки
+   //console.log(result);
+  // return result
+}
+changrStile('background-color');
+
+//-----------------------Задача№ 5(ok!)ПРЕВЕСТИ СТРОКУ В АБРЕВИАТУРУ
+function toAbreviatur(str){
+let abreviatur= str.split(' ').map(item => item[0]).join('').toUpperCase();
+//console.log(abreviatur);
+//return console.log(`${str} -> ${abreviatur}`)
+}
+toAbreviatur('cascading style sheets');
 
 
+
+//-----------------------Задача№ 6(ok!)
+function calcStr(str, ...other) {//отткуда взялась запятая?
+let strArr = str.split(' ') + [...other];
+//console.log(strArr);
 
 }
+calcStr('привет', 'как дела', 'все хорошо');
 
-console.log(stat('gigelui.whc!/egjka>jga!676233'));
-*/
+
+//-----------------------Задача№ 7(ok!) КАЛЬКУЛЯТОР
+function calc(str){
+let arr = str.split(' ');
+//console.log(arr);
+let sign = arr.splice(1,1).join('');
+//console.log(sign);
+let num1 = Number(arr.splice(0,1).join(''));
+let num2 = Number(arr.join(''));
+
+// switch(sign) {
+// case '+':
+//   return console.log(num1 + num2);
+
+// case '-':
+// 	return console.log(num1 - num2);
+
+// case '*':
+// 	return console.log(num1 * num2);
+	 
+// case '/':
+// 	return console.log(num1 /num2);
+// }
+}
+calc('2 / 6');
+
+
+
+//-----------------------Задача№ 8(ok!)
+function urlInfo(str){
+let protocol = str.protocol;
+//console.log(protocol);//протокол
+let hosName = str.hostname;//домен
+//console.log(hosName);
+let portt = str.port;//порт
+//console.log(portt);
+let pName = str.pathname;
+//console.log(pName);
+let search = str.search;
+//console.log(search);
+let hash = str.hash;
+//console.log(hash);
+return console.log(`Протокол: ${protocol},\nДоменное имя: ${hosName}, 
+Порт: ${portt}, \nПуть: ${pName},\nПараметры: ${search},\nХэш: ${hash}
+`)
+
+}
+//let url = new URL('https://ru.stackoverflow.com/questions/1058780/%D0%A1%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D1%8B-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81%D0%BE-%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0%D0%BC%D0%B8') 
+//urlInfo(url);
+//-----------------------Задача№ 9(ок!)
+function changeStr(str,del,ins) {
+	
+	let strArr = [...str.replaceAll(del,ins)];//работает
+	let newStr = [...strArr].join('');//работает
+	//return console.log(newStr)
+}
+changeStr('"20/08/20"','/','" "');
+//-----------------------Задача№ 10
+
+
