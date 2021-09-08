@@ -1226,7 +1226,8 @@ function generalStat(str){
 	}
 	generalStat(stringg);
 
-//-----------------------Задача№ 2(в нтеренете)
+//--------------------------------------------------------------Задача№ 2(в нтеренете)
+
 function textNumber(number) {
   let first = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'];
   let second = ['Десять', 'Одинадцать', 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семьнадцать', 'Восемьнадцать', 'Девяднадцать', 'Двадвать'];
@@ -1252,8 +1253,46 @@ function textNumber(number) {
 // console.log(textNumber(20));
 // console.log(textNumber(55));
 
-//-----------------------Задача№ 3
-//-----------------------Задача№ 4(ok!) css стиль в строоку camelCase
+//-------------------------------------------------------------Задача№ 3(ok!)
+
+let nuM = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let stringG = '6645пагРРПе';
+
+function changeNum_(str) {
+let arr = str.split('');//массив из строки
+let nuMarr = nuM.join('').split('');// массив цифр-> '1'(строки)
+let newStr = ''; //новая строка с '_' вместо цифр
+
+  for(let i = 0; i < arr.length; i++) {// цикл для перебора двух масисвов и потска совподений
+    for(let x = 0; x < nuMarr.length; x++) {
+	    arr[i] == nuMarr[x] ? arr[i] = '_' : arr[i];
+	  }
+	newStr += arr[i];
+  }
+
+function reverseUpperToLower (newString) {// функция для замкны регистров 
+
+	let chengeUpperLetter =  newString.split('').map(letter =>{
+
+    if(letter === letter.toUpperCase()){
+	   return  letter.toLowerCase();
+    }
+
+    if (letter === letter.toLowerCase()) {
+    return letter.toUpperCase()
+    } 
+	})
+	.join(' ');
+	return chengeUpperLetter
+ }
+
+ return reverseUpperToLower(newStr);
+}
+let genChenge = changeNum_(stringG);
+//console.log(`${stringG}  --->  ${genChenge}`)
+
+//----------------------------------------------------------Задача№ 4(ok!) css стиль в строоку camelCase
+
 function changrStile(text){
   let newArr = text.split('-');//массив из строки без "-"
 
@@ -1269,16 +1308,15 @@ function changrStile(text){
 }
 changrStile('background-color');
 
-//-----------------------Задача№ 5(ok!)ПРЕВЕСТИ СТРОКУ В АБРЕВИАТУРУ
+//------------------------------------------------------------Задача№ 5(ok!)ПРЕВЕСТИ СТРОКУ В АБРЕВИАТУРУ
+
 function toAbreviatur(str){
 let abreviatur= str.split(' ').map(item => item[0]).join('').toUpperCase();
 //console.log(abreviatur);
 //return console.log(`${str} -> ${abreviatur}`)
 }
 toAbreviatur('cascading style sheets');
-
-
-
+//-----------------------------------------------------------------
 //-----------------------Задача№ 6(ok!)
 function calcStr(str, ...other) {//отткуда взялась запятая?
 let strArr = str.split(' ') + [...other];
