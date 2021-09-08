@@ -1382,6 +1382,7 @@ function changeStr(str,del,ins) {
 	//return console.log(newStr)
 }
 changeStr('"20/08/20"','/','" "');
+
 //-----------------------Задача№ 10
 
 

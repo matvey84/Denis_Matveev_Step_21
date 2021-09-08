@@ -1014,3 +1014,108 @@ class Circle {
 }
 let c = new Circle();
 
+
+//------------------------------------Практическое задание#5
+//----------------------------------------06.08.21
+//-----------------------------------------Классы
+
+//-----------------------------------Задача №1
+/*
+class Button{
+constructor() {
+this.text = 'Button';
+this.height = '100px';
+this.width = '200px';
+}
+
+showBtn() {
+  let button = document.createElement('Button')
+  button.id = 'qwe';
+  console.log(button);
+  button.innerHTML = this.text;
+  document.body.append(button);
+  button.style.height = this.height;
+  button.style.width = this.width;
+
+document.write(`<button id ="btn" style = "height: ${this.height}; width:${this.width}">${this.text}</button>`)
+ }
+hideBtn() {
+let element = document.querySelector('#btn');
+element.style.backgroundColor = 'red'
+ }
+}
+let btn = new Button();
+
+class BootsrapButton extends Button{
+construtor(){
+  super();
+  this.color = 'red';
+}
+showBtn() {
+  document.write(`<button style = "height:${this.height}; width:${this.width}>${this.text}</button>`)
+   }
+
+}
+let btn1 = new BootsrapButton();
+*/
+
+//--------------------------------------------Задача №2
+
+class Figure {
+constructor (nameFig, storonaA, storonaB, storonaC) {
+ this.nameFig = nameFig; 
+ this.storonaA = storonaA;
+ this.storonaB = storonaB;
+ this.storonaC = storonaC;
+
+}
+get getNameOfFigure() {
+return this.nameFig;
+}
+
+showInfo() {
+  document.write('Информация о фигуре: ');
+ }
+perimetr() { 
+  document.write('Периметр фигуры: ');
+ }
+ploshad() {
+  document.write('Площадь фигуры: ');
+ }
+}
+//-----------------------
+class Kvadrat extends Figure {
+showInfo() {
+  super.showInfo();
+  document.write('Сторона:', this.storonaA, 'mm');
+}
+perimetr(){
+  super.perimetr();
+  document.write(this.storonaA + this.storonaA, 'mm');
+}
+ploshad() {
+  super.ploshad();
+  document.write(this.storonaA * this.storonaA, 'mm');
+}
+
+}
+let kvadr = new Kvadrat('Квадрат', 20, 30, 40);
+//------------------------
+
+class Prymoug extends Figure {
+  showInfo() {
+    super.showInfo();
+    document.write('Сторона A: ', this.storonaA, ' mm.', ' Сторона B: ', this.storonaB, ' mm');
+  }
+  perimetr(){
+    super.perimetr();
+    document.write(this.storonaA + this.storonaB, 'mm');
+  }
+  ploshad() {
+    super.ploshad();
+    document.write(this.storonaA * this.storonaB, 'mm');
+  }
+  
+}
+let prym = new Prymoug('Прямоугольик', 20, 30);
+
