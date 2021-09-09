@@ -907,7 +907,7 @@ function findAndShowSign(text, sign) {
 	newArr = text.toLowerCase().split('');
   //console.log(newArr.length)
   findSign = newArr.indexOf(sign);// нашло индекс но только один
-//console.log(`Порядковый индекс элемента: ${findSign+1}`);
+//console.log(`Порядковый индекс элемента: ${findSign}`);
 }
 findAndShowSign('Привет, меня, зовут Вася', ',');
 // -----
@@ -1008,9 +1008,12 @@ class Circle {
   }
 
    ploshchad() {
-
-    console.log(2 * Math.Pi * Math.pow(this.radius,2))
+    document.write(2 * Math.Pi * Math.pow(this.radius* 2));
   }
+   widthCircle() {
+   document.write((2 * Math.Pi ) * this.radius);
+  }
+
 }
 let c = new Circle();
 
@@ -1119,3 +1122,13 @@ class Prymoug extends Figure {
 }
 let prym = new Prymoug('Прямоугольик', 20, 30);
 
+
+
+
+
+
+
+
+//--------------------------------------------------09.09.21
+//----------------------------------------------Практческое задаие №6
+//--------------------------------------------------Классы
