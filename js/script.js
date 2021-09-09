@@ -1020,7 +1020,7 @@ let c = new Circle();
 //-----------------------------------------Классы
 
 //-----------------------------------Задача №1
-/*
+
 class Button{
 constructor() {
 this.text = 'Button';
@@ -1057,10 +1057,10 @@ showBtn() {
 
 }
 let btn1 = new BootsrapButton();
-*/
+
 
 //--------------------------------------------Задача №2
-
+/*
 class Figure {
 constructor (nameFig, storonaA, storonaB, storonaC) {
  this.nameFig = nameFig; 
@@ -1074,20 +1074,20 @@ return this.nameFig;
 }
 
 showInfo() {
-  document.write('Информация о фигуре: ');
+  document.write(' Информация о фигуре: ');
  }
 perimetr() { 
-  document.write('Периметр фигуры: ');
+  document.write(' Периметр фигуры: ');
  }
 ploshad() {
-  document.write('Площадь фигуры: ');
+  document.write(' Площадь фигуры: ');
  }
 }
 //-----------------------
 class Kvadrat extends Figure {
 showInfo() {
   super.showInfo();
-  document.write('Сторона:', this.storonaA, 'mm');
+  document.write(this.nameFig, ' Сторона:', this.storonaA, 'mm');
 }
 perimetr(){
   super.perimetr();
@@ -1099,13 +1099,13 @@ ploshad() {
 }
 
 }
-let kvadr = new Kvadrat('Квадрат', 20, 30, 40);
+// let kvadr = new Kvadrat('Квадрат', 20, 30, 40);
 //------------------------
 
 class Prymoug extends Figure {
   showInfo() {
     super.showInfo();
-    document.write('Сторона A: ', this.storonaA, ' mm.', ' Сторона B: ', this.storonaB, ' mm');
+    document.write(this.nameFig, ' Сторона A: ', this.storonaA, ' mm.', ' Сторона B: ', this.storonaB, ' mm');
   }
   perimetr(){
     super.perimetr();
@@ -1117,5 +1117,49 @@ class Prymoug extends Figure {
   }
   
 }
+//let prym = new Prymoug('Прямоугольик', 20, 30);
+
+class Treugolnik extends Figure {
+	
+showInfo() {
+super.showInfo();
+document.write(this.nameFig,  ' Сторона A: ', this.storonaA, ' mm.', ' Сторона B: ', this.storonaB, 'mm. ', 'Сторона C: ', this.storonaC, 'mm.')
+}
+perimetr(){
+	super.perimetr();
+	document.write(this.storonaA + this.storonaB + this.storonaC, ' mm.');
+}
+ploshad() {
+	super.ploshad();
+	if(this.storonaA===this.storonaB && this.storonaB===this.storonaC && this.storonaC===this.storonaA) {
+	document.write((((this.storonaA**2) * Math.sqrt(3))/4).toFixed(2), ' mm');
+	}
+}
+
+}
+let figures = [];
+let kvadr = new Kvadrat('Квадрат ', 20, 30, 40);
+
 let prym = new Prymoug('Прямоугольик', 20, 30);
 
+let treug = new Treugolnik(' Треугольник ', 20, 20, 20)
+ 
+figures.push(kvadr)
+figures.push(prym)
+figures.push(treug)
+//console.log(figures);
+
+//  for(let i = 0; i < figures.length; i++) {
+// //console.log(figures[i]);
+// figures[i].showInfo();
+// figures[i].ploshad();
+// figures[i].perimetr();
+
+//  }
+ figures.map(item => {
+	//  console.log(item.showInfo());
+	//  console.log(item.ploshad());
+	//  console.log(item.perimetr());
+})
+
+*/
