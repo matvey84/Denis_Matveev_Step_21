@@ -1396,3 +1396,92 @@ changeStr('"20/08/20"','/','" "');
 //-----------------------Задача№ 10
 
 
+//--------------------------------------------дОМАШНЕЕ ЗАДАНИЕ №4
+//-------------------------------------------------Классы
+//-------------------------------------------------Задача № 1
+/*
+class Circle {
+	constructor () {
+	  this.radius = 5;
+	}
+  
+	get radiuss() {
+	  return this.radius;
+  
+	}
+	set radiuss(rad) {
+	  return this.radius = rad;
+	}
+	get diametr() {
+	return this.radius + this.radius;
+	}
+  
+	 ploshchad() {
+	  document.write(2 * Math.Pi * Math.pow(this.radius* 2));
+	}
+	 widthCircle() {
+	 document.write((2 * Math.Pi ) * this.radius);
+	}
+  
+  }
+  let c = new Circle();
+*/
+
+  //------------------------------------------------Задача № 2
+let textH3 = `What is Loren Ipsum`;
+let textA = `More...`;
+let textP = `Lorem Ipsum is simply dummy text of the printing and 
+typesetting industry. Lorem Ipsum has been the industry's standard 
+dummy text ever since the 1500s, when an unknown printer took a galley 
+of type and scrambled it to make a type specimen book.`
+
+ let tagArr = ['div', 'h3', 'p', 'img',]; 
+
+ let styleArr = [
+  { id:1, name:`display `,	value:`flex` },
+  { id:2, name:`width `,	value:`300px` },
+  { id:3, name:`margin`, value:`10px` },
+  { id:4, name:`width`,	value:`100%` },
+  { id:5, name:`text-align`, value:`justify` },      
+ ]
+ let atributArr = [
+	{ id:1, name:` id `,	value:` wrapper ` },
+	{ id:2, name:` src `,	value:` "lipsum.jpg" ` },
+	{ id:3, name:` alt `, value:` "Loren Ipsum" ` },
+	{ id:4, name:` href `,value:` "https://www.lipsum.com" ` },
+	{ id:5, name:` target `, value:`_blank` },
+
+ ];
+
+  class HtmlElement {
+
+  constructor(tags, style, atrib, h3Text, aText, pText) {
+
+  this.tags = tags;
+  this.style = style;
+  this.atrib = atrib;
+  this.h3Text = h3Text;
+  this.aText = aText;
+  this.pText = pText;
+  }
+  
+  closeTagOrNot() {
+	if (this.tags === this.tags[3]){
+		 console.log('не закрывающийся');
+
+
+
+	}
+
+}
+  }
+
+  let element = new HtmlElement(tagArr, styleArr, atributArr, textP, textA, textH3);
+
+console.log(tagArr[3]);
+console.log(tagArr.forEach(item => item.length === tagArr[3]));
+
+
+	
+
+ 
