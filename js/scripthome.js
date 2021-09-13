@@ -1075,7 +1075,20 @@ function averageCost(sumResult) {//средняя стоиммоть товар�
 	 */
 
 
-	 //-------------------------------------Задание №3
+	 //-------------------------------------Задание №3(ok!)
+	 let styleArr = [
+		{name: 'color', value: 'red'},
+		{name: 'font-weight', value: '700'},
+		{name: 'font-size', value: '26px'},
+	]
+	
+	let stri = 'hjhdfhjjkuuurjfhhfh';
+	function typeText(text,arr){
+	//document.write( ` <p style = " ${arr[0].name}: ${arr[0].value}; ${arr[1].name}: ${arr[1].value};${arr[2].name}: ${arr[2].value} "> ${text} </p> `);
+	}
+	typeText(stri, styleArr); 
+	
+	
 
 	  //-------------------------------------Задание №4.1(OK!	)
 		
@@ -1116,10 +1129,7 @@ let arrTwo = [];
 	}
 //choisAudit(aud,'Математики');//вызов фуекций
 //choisAudit(aud,'Филологии');
-//-------------------------------------Задание №4.3
-
-
-
+//-------------------------------------Задание №4.3(ok!)
 
 
 

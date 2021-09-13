@@ -936,7 +936,7 @@ class PrintMaсhine {
   }
 
   print(text) {
-    //document.write(`<p style="color:${this.color}; font-size:${this.fontSize}; font-family:${this.fontFamily};">${text}</p>`);
+    document.write(`<p style="color:${this.color}; font-size:${this.fontSize}; font-family:${this.fontFamily};">${text}</p>`);
   }
 }
 
@@ -1020,7 +1020,7 @@ let c = new Circle();
 //-----------------------------------------Классы
 
 //-----------------------------------Задача №1
-
+/*
 class Button{
 constructor() {
 this.text = 'Button';
@@ -1037,14 +1037,14 @@ showBtn() {
   button.style.height = this.height;
   button.style.width = this.width;
 
-document.write(`<button id ="btn" style = "height: ${this.height}; width:${this.width}">${this.text}</button>`)
+//document.write(`<button id ="btn" style = "height: ${this.height}; width:${this.width}">${this.text}</button>`)
  }
 hideBtn() {
 let element = document.querySelector('#btn');
 element.style.backgroundColor = 'red'
  }
 }
-let btn = new Button();
+//let btn = new Button();
 
 class BootsrapButton extends Button{
 construtor(){
@@ -1052,12 +1052,12 @@ construtor(){
   this.color = 'red';
 }
 showBtn() {
-  document.write(`<button style = "height:${this.height}; width:${this.width}>${this.text}</button>`)
+  //document.write(`<button style = "height:${this.height}; width:${this.width}>${this.text}</button>`)
    }
 
 }
-let btn1 = new BootsrapButton();
-
+//let btn1 = new BootsrapButton();
+*/
 
 //--------------------------------------------Задача №2
 /*
