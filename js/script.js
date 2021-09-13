@@ -1132,3 +1132,33 @@ let prym = new Prymoug('Прямоугольик', 20, 30);
 //--------------------------------------------------09.09.21
 //----------------------------------------------Практческое задаие №6
 //--------------------------------------------------Классы
+
+
+
+//---------------------------------------------- 13/09/21
+//-----------------------------------------------Модуль №3(ок!)
+//--------------------------------------------Пактичеое задание № 1
+//--------------------------------------------- Обработчик событий
+
+/*//------HTML КОД
+<div class = "random" style = "display: block; background: green; width:400px; height:300px">
+    <span class = "random-number">Random umber : <span id = "number"> 0 </span><br></span>
+    <button id = btn style = "width:200px; 
+    height:100px; 
+    background-color: blue;
+    margin: auto">
+    Нажми меня!
+</button>
+</div>
+//--------------- решение
+let elem = document.getElementById('btn');
+function random(min, max) {
+return Math.floor(Math.random() * 100);
+}
+
+elem.onclick = function(event) {
+if (event.which == 1){
+   document.getElementById("number").innerHTML = random();
+  }
+}
+*/

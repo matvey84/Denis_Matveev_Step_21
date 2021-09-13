@@ -1426,6 +1426,7 @@ dummy text ever since the 1500s, when an unknown printer took a galley
 of type and scrambled it to make a type specimen book.`
 
  let tagArr = ['div', 'h3', 'p', 'img',]; 
+
  let styleArr = [
   { id:1, name:`display `,	value:`flex` },
   { id:2, name:`width `,	value:`300px` },
@@ -1455,15 +1456,20 @@ of type and scrambled it to make a type specimen book.`
   }
   
   closeTagOrNot() {
-	//this.tags.forEach(item => item.length)
-  console.log(this.tags);
-  }
+	if (this.tags === this.tags[3]){
+		 console.log('не закрывающийся');
+
+
+
+	}
 
 }
+  }
 
-  let element = new Element(tagArr, styleArr, atributArr, textP, textA, textH3);
+  let element = new HtmlElement(tagArr, styleArr, atributArr, textP, textA, textH3);
 
-
+console.log(tagArr[3]);
+console.log(tagArr.forEach(item => item.length === tagArr[3]));
 
 
 	
