@@ -1185,25 +1185,25 @@ figures.push(treug)
 /*//------HTML КОД
 <div class = "random" style = "display: block; background: green; width:400px; height:300px">
     <span class = "random-number">Random umber : <span id = "number"> 0 </span><br></span>
-    <button id = btn style = "width:200px; 
+    <button id = 'btn' style = "width:200px; 
     height:100px; 
     background-color: blue;
     margin: auto">
     Нажми меня!
 </button>
 </div>
-//--------------- решение
-let elem = document.getElementById('btn');
-function random(min, max) {
-return Math.floor(Math.random() * 100);
-}
-
-elem.onclick = function(event) {
-if (event.which == 1){
-   document.getElementById("number").innerHTML = random();
-  }
-}
 */
+//--------------- решение
+/*
+let button = document.getElementById('btn');
+let num = document.getElementById('number');
+function generateRandom() {
+num.innerHTML =  Math.random() * 100;
+
+}
+ button.addEventListener('click', generateRandom)
+*/
+
 //-------------------------------------------------Задача № 2(ок!)
 
 /*
@@ -1242,7 +1242,7 @@ function getKoord(event) {
 /*
 <div class = "wrapper" style = "width: 400px; height: 200px; background-color: antiquewhite;">
 <input  id= "btn" type = "button" name="button"  value = "Hide/Show text" ><br>
-<div id = "text" style = "width: 100%; height: 300px; padding-top:20px">
+<div id = "text main-text" style = "width: 100%; height: 300px; padding-top:20px">
 `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -1250,21 +1250,23 @@ when an unknown printer took a galley of type and scrambled it to make a type sp
   remaining essentially unchanged.`
 
 </div>
-
 </div>
-//---------------
-let button = document.querySelector('#btn');
-let text = document.querySelector('#text')
-//console.log(button);
-
- function togg() {
-if(button.click){
-	text.hidden = true;
- }
- 
-}
-button.addEventListener('click', togg );
 */
+//---------------
+// let button = document.querySelector('#btn');
+// let text = document.querySelector('#text');
+// //console.log(button);
+
+//  function togg() {
+// if(button.click){
+// 	text.hidden = true;
+  
+//  }
+
+ 
+// }
+// button.addEventListener('click', togg );
+
 //-----------------------------------------------------Задaча № 4
 /*
 <div class = "container" style = "width:400px; height:150px; background-color :aqua; display: flex;" >
