@@ -1203,6 +1203,111 @@ if (event.which == 1){
    document.getElementById("number").innerHTML = random();
   }
 }
+*/
+//-------------------------------------------------Задача № 2(ок!)
 
+/*
+<div id = "field" style = "width: 500px; height: 400px; background-color:gray; border: 1px solid black">
+<div class = result-field stile ="width:200px;
+ heght:200px; position: center"> 
+<span class = "posX"> X = <span id = "posX"> </span> , </span>
+<span class = "posY"> Y = <span id = "posY"> </span> </span><br>
+<span class = "click"> Нажата: <span id = "click"> </span> </span>
+</div>
+</div>
+*/ 
+
+let field = document.querySelector('#field');
+let posX = document.querySelector('#posX');
+let posY = document.querySelector('#posY');
+let clickBut = document.querySelector('#click');
+
+function getKoord(event) {
+	posX.innerHTML = event.clientX;
+	posY.innerHTML = event.clientY;
+	
+	if(event.which == 1){
+		clickBut.innerHTML = 'Левая кнопка'
+	} 
+	if(event.which == 3) {
+		clickBut.innerHTML = 'Правая кнопка'
+	}
+}
+
+//field.addEventListener('click', getKoord);
+//field.addEventListener('contextmenu', getKoord);
+
+//-------------------------------------------------Задача № 3
+
+/*
+<div class = "wrapper" style = "width: 400px; height: 200px; background-color: antiquewhite;">
+<input  id= "btn" type = "button" name="button"  value = "Hide/Show text" ><br>
+<div id = "text" style = "width: 100%; height: 300px; padding-top:20px">
+`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+ It has survived not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged.`
+
+</div>
+
+</div>
+//---------------
+let button = document.querySelector('#btn');
+let text = document.querySelector('#text')
+//console.log(button);
+
+ function togg() {
+if(button.click){
+	text.hidden = true;
+ }
+ 
+}
+button.addEventListener('click', togg );
+*/
+//-----------------------------------------------------Задaча № 4
+/*
+<div class = "container" style = "width:400px; height:150px; background-color :aqua; display: flex;" >
+  <div class = "menu" style = "width:80px; height: 100%; border-right: 1px solid black; display:flex; flex-direction: column; justify-content: space-around;">
+    <a href = "#html-text" class = "html">HTML</a>
+    <a href = "#css-text" class = "css">CSS</a>
+    <a href = "#js-text" class = "js">JS</a>
+  </div>
+  <div class = "text-field" style = "width: 320px; height: 100%; display: flex; background-color: beige; ">
+    
+		
+		  <p id = "html-text" style = "color: blue; display:none" > Для того, чтобы наследовать класс от другого, мы должны использовать ключевое слово "extends" и указать название родительского класса перед {..}. </p>
+		   
+		  <p id = "css-text" style = "color: red; display:none"  >Но мы хотим, чтобы Rabbit расширял Animal. Другими словами, кролики должны происходить от животных, т.е. иметь доступ к методам Animal и расширять функциональность Animal своими методами.  </p>
+		
+			<p id = "js-text" style = "color: green " >Здесь вы можете изучить JavaScript, начиная с нуля и заканчивая продвинутыми концепциями вроде ООП.</p>
+		
+
+  </div>
+</div>
 
 */
+
+
+let htmlText = document.getElementById('#html-text');
+let cssText = document.getElementById("#css-text");
+let jsText = document.getElementById("#js-text");
+// let html = document.getElementById("html");
+// let css = document.getElementById("css");
+// let js= document.getElementById("js");
+//console.log(htmlText, cssText, jsText)
+let html = document.querySelector('.html')
+let css = document.querySelector('.css')
+let js = document.querySelector('.js')
+//console.log(html,css,js);
+
+// function letHide() {
+// 	if(html.click) {
+// 		js.style.display=none;
+// 	}
+
+// }
+//document.addEventListener('click', letHide);
+
+
+

@@ -1428,28 +1428,29 @@ class Circle {
 */
 
   //------------------------------------------------Задача № 2
-let textH3 = `What is Loren Ipsum`;
+/*
+	let textH3 = `What is Loren Ipsum`;
 let textA = `More...`;
 let textP = `Lorem Ipsum is simply dummy text of the printing and 
 typesetting industry. Lorem Ipsum has been the industry's standard 
 dummy text ever since the 1500s, when an unknown printer took a galley 
 of type and scrambled it to make a type specimen book.`
 
- let tagArr = ['div', 'h3', 'p', 'img',]; 
+ let tagArr = ['div', 'h3', 'p', 'img', 'a',]; 
 
  let styleArr = [
-  { id:1, name:`display `,	value:`flex` },
-  { id:2, name:`width `,	value:`300px` },
-  { id:3, name:`margin`, value:`10px` },
-  { id:4, name:`width`,	value:`100%` },
-  { id:5, name:`text-align`, value:`justify` },      
+  { name:`display `,	value:`flex` },
+  { name:`width `,	value:`300px` },
+  { name:`margin`, value:`10px` },
+  { name:`width`,	value:`100%` },
+  { name:`text-align`, value:`justify` },      
  ]
  let atributArr = [
-	{ id:1, name:` id `,	value:` wrapper ` },
-	{ id:2, name:` src `,	value:` "lipsum.jpg" ` },
-	{ id:3, name:` alt `, value:` "Loren Ipsum" ` },
-	{ id:4, name:` href `,value:` "https://www.lipsum.com" ` },
-	{ id:5, name:` target `, value:`_blank` },
+	{ name:` id `,	value:` wrapper ` },
+	{ name:` src `,	value:` "lipsum.jpg" ` },
+	{ name:` alt `, value:` "Loren Ipsum" ` },
+	{ name:` href `,value:` "https://www.lipsum.com" ` },
+	{ name:` target `, value:`_blank` },
 
  ];
 
@@ -1469,8 +1470,6 @@ of type and scrambled it to make a type specimen book.`
 	if (this.tags === this.tags[3]){
 		 console.log('не закрывающийся');
 
-
-
 	}
 
 }
@@ -1478,10 +1477,303 @@ of type and scrambled it to make a type specimen book.`
 
   let element = new HtmlElement(tagArr, styleArr, atributArr, textP, textA, textH3);
 
-console.log(tagArr[3]);
-console.log(tagArr.forEach(item => item.length === tagArr[3]));
+//console.log(tagArr[3]);
+//console.log(tagArr.forEach(item => item.length === tagArr[3]));
+*/
 
+	//----решение не мое
 
 	
 
- 
+// Task 2
+/*
+arrAtribut = [
+
+  { name: id, value: wrapper, },
+
+  { name: style, value: ``, },
+
+  { name: src, value: 'lipsum.jpg',},
+
+  { name: alt, value: 'Lorem Ipsum',},
+
+  { name: href, value: 'https://www.lipsum.com/', },
+
+  { name: target, value: _blank, },
+
+];
+
+
+arrStyles = [
+
+  { name: display, value: flex,},
+
+  {name: width, value: '100%', },
+
+  { name: width, value: '300px',},
+
+  { name: margin, value: '10px',},
+
+  { name: text-align, value: justify,},
+
+];
+
+
+arrHtmlTegs = ['div', 'h3', 'p', 'a', 'img',];
+
+
+let text1 = 'What is Lorem Ipsum?';
+
+let text2 = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.';
+
+let text3 = 'More...';
+
+
+class HtmlElement {
+
+  constructor(name, tegClose) {
+
+    this.nameTeg = name;
+
+    this.tegClose = tegClose;
+
+    this.text = ``;
+
+    this.arrAtribut=[];
+
+    this.arrStyles=[];
+
+    this.arrHtmlTegs=[];
+
+  }; 
+
+
+  SetAtribut2(_name, _value) {
+
+    let tmpAttr = {
+
+          name: _name,
+
+          value: _value,
+
+    };
+
+    this.SetAtribut(tmpAttr);
+
+  }
+
+
+  SetAtribut(tmpAttr) {
+
+    for(let i=0; i<this.arrAtribut.length; i++) {
+
+      if (this.arrAtribut[i].name === tmpAttr.name) {
+
+            this.arrAtribut[i].value = tmpAttr.value;
+
+        return;
+
+      }
+
+    }
+
+    this.arrAtribut.push(tmpAttr);
+
+  }
+
+
+  SetStyle2(_name, _value) {
+
+    let tmpStyle = {
+
+          name: _name,
+
+          value: _value,
+
+    };
+
+    this.SetStyle(tmpStyle);
+
+  }
+
+
+  SetStyle(tmpStyle) {
+
+    let newStyle = true;
+
+
+    for(let i=0; i<this.arrStyles.length; i++) {
+
+      if (this.arrStyles[i].name === tmpStyle.name) {
+
+            this.arrStyles[i].value = tmpStyle.value;
+
+            newStyle=false;
+
+            break;
+
+      }
+
+    }
+
+    if (newStyle) {
+
+      this.arrStyles.push(tmpStyle);
+
+    }
+
+    let result = ``;
+
+    for(let i=0; i<this.arrStyles.length; i++) {
+
+      result += this.arrStyles[i].name , +this.arrStyles[i].value; //+ в конце строки
+
+    }
+
+    this.SetAtribut2(style, result);
+
+  }
+
+
+
+  SetText(text) {
+
+    this.text=text;
+
+  }
+
+
+  AddHtmlElementToEnd(element) {
+
+    this.arrHtmlTegs.push(element)
+
+  }
+
+
+  AddHtmlElementToBegin(element) {
+
+    this.arrHtmlTegs.unshift(element)
+
+  }
+
+
+  getHtml() {
+
+    let result = '<'+ this.nameTeg ;// + в концк строки
+
+    for(let i = 0; i < this.arrAtribut.length; i++) {
+
+      result += this.arrAtribut[i].name += + this.arrAtribut[i].value  ;// + в концк строки
+
+    }
+
+    if (this.tegClose) {
+
+      result += '>';
+
+      if (this.text){
+
+        result += this.text;
+
+      }
+
+      for(let i = 0; i < this.arrHtmlTegs.length; i++) {
+
+        result += this.arrHtmlTegs[i].getHtml();  
+console.log(result);
+      }
+
+      result += '</'+ this.nameTeg +'>';
+
+    } else {
+
+      result += '>';
+
+    }
+
+    return result;
+
+  }
+
+};
+
+*/
+
+
+
+// let htmlElement = new HtmlElement(arrHtmlTegs[0], true)
+
+
+// htmlElement.SetAtribut2(arrAtribut[0].name, arrAtribut[0].value);
+
+// htmlElement.SetStyle2(arrStyles[0].name, arrStyles[0].value);
+
+
+// let htmlElement2 = new HtmlElement(arrHtmlTegs[0], true);
+
+
+// htmlElement2.SetStyle2(arrStyles[2].name, arrStyles[2].value);
+
+// htmlElement2.SetStyle2(arrStyles[3].name, arrStyles[3].value);
+
+
+// let htmlElement3 = new HtmlElement(arrHtmlTegs[1], true);
+
+
+// htmlElement3.SetText(text1);
+
+
+// let htmlElement4 = new HtmlElement(arrHtmlTegs[4], false);
+
+
+// htmlElement4.SetStyle2(arrStyles[1].name, arrStyles[1].value);
+
+// htmlElement4.SetAtribut(arrAtribut[2]);
+
+// htmlElement4.SetAtribut(arrAtribut[3]);
+
+
+// let htmlElement5 = new HtmlElement(arrHtmlTegs[2], true);
+
+
+// htmlElement5.SetStyle2(arrStyles[4].name, arrStyles[4].value);
+
+// htmlElement5.SetText(text2);
+
+
+// let htmlElement6 = new HtmlElement(arrHtmlTegs[3], true);
+
+
+// htmlElement6.SetAtribut(arrAtribut[4]);
+
+// htmlElement6.SetAtribut(arrAtribut[5]);
+
+
+// htmlElement6.SetText(text3);
+
+
+// htmlElement5.AddHtmlElementToEnd(htmlElement6);
+
+// htmlElement2.AddHtmlElementToEnd(htmlElement3);
+
+// htmlElement2.AddHtmlElementToEnd(htmlElement4);
+
+// htmlElement2.AddHtmlElementToEnd(htmlElement5);
+
+// htmlElement.AddHtmlElementToEnd(htmlElement2);
+
+
+// htmlElement.AddHtmlElementToEnd(htmlElement2);
+
+
+// console.log(htmlElement.getHtml());
+
+// document.write(htmlElement.getHtml());
+
+//---------------------------------------- отступление о темы
+
+// let div = document.createElement('div');
+// div.className = 'text';
+// div.innerHTML= '<strong>jglsjglugsssssuuufuouhouaf</strong>';
+// document.body.append(div);
+//---------------------------------
