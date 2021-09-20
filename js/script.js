@@ -1203,41 +1203,55 @@ if (event.which == 1){
    document.getElementById("number").innerHTML = random();
   }
 }
+//-------------------------- в классе
+let button = document.getElementById('btn');
+let num = document.getElementById('num');
+
+function generateRandomNumber() {
+  num.innerHTML =  Math.random() * 100;
+}
+
+button.addEventListener('click', generateRandomNumber)
 */
 //-------------------------------------------------Задача № 2(ок!)
 
 /*
-<div id = "field" style = "width: 500px; height: 400px; background-color:gray; border: 1px solid black">
-<div class = result-field stile ="width:200px;
- heght:200px; position: center"> 
-<span class = "posX"> X = <span id = "posX"> </span> , </span>
-<span class = "posY"> Y = <span id = "posY"> </span> </span><br>
-<span class = "click"> Нажата: <span id = "click"> </span> </span>
-</div>
-</div>
+	<did id = "field" style = " display:flex; justify-content:center; align-items:center; width: 500px; height: 400px; background-color:gray; border: 1px solid black">
+		
+		 <div id = "coordinate"> </div>
+		
+		<div id = "clickCheck"> </div>
+	</did>
+
 */ 
 
-let field = document.querySelector('#field');
-let posX = document.querySelector('#posX');
-let posY = document.querySelector('#posY');
-let clickBut = document.querySelector('#click');
 
-function getKoord(event) {
-	posX.innerHTML = event.clientX;
-	posY.innerHTML = event.clientY;
-	
-	if(event.which == 1){
-		clickBut.innerHTML = 'Левая кнопка'
-	} 
-	if(event.which == 3) {
-		clickBut.innerHTML = 'Правая кнопка'
-	}
+//-------------------------- в классе решение
+/*
+let field = document.querySelector('#field');
+let coordinate = document.querySelector('#coordinate');
+let clickCheck = document.querySelector('#clickCheck');
+
+function checkCoordinate(event) { //dвыводи координаты
+  console.log(event)// можно посмоьтреть тип события -> type: 'click'
+
+  coordinate.innerHTML = `X: ${event.offsetX} - Y: ${event.offsetY} `;
 }
 
-//field.addEventListener('click', getKoord);
-//field.addEventListener('contextmenu', getKoord);
+function checkClick(event) {// выводит какая кнопка нажата
+  console.log(event)// можно посмоьтреть тип события -> type: 'mousemove'
+  if (event.type === 'click') {
+    clickCheck.innerHTML = 'Левая кнопка';//всегда -> type: 'click'
+  } else {
+    clickCheck.innerHTML = 'Правая кнопка';// всегда -> type: 'contextmenu'
+  }
+}
 
-//-------------------------------------------------Задача № 3
+field.addEventListener('mousemove', checkCoordinate);
+field.addEventListener('click', checkClick);
+field.addEventListener('contextmenu', checkClick);
+*/
+//-------------------------------------------------Задача № 3(ок!)
 
 /*
 <div class = "wrapper" style = "width: 400px; height: 200px; background-color: antiquewhite;">
@@ -1252,62 +1266,106 @@ when an unknown printer took a galley of type and scrambled it to make a type sp
 </div>
 
 </div>
-//---------------
-let button = document.querySelector('#btn');
-let text = document.querySelector('#text')
-//console.log(button);
 
- function togg() {
-if(button.click){
-	text.hidden = true;
- }
- 
-}
-button.addEventListener('click', togg );
 */
-//-----------------------------------------------------Задaча № 4
+//-------------------------- в классе решение
 /*
-<div class = "container" style = "width:400px; height:150px; background-color :aqua; display: flex;" >
-  <div class = "menu" style = "width:80px; height: 100%; border-right: 1px solid black; display:flex; flex-direction: column; justify-content: space-around;">
-    <a href = "#html-text" class = "html">HTML</a>
-    <a href = "#css-text" class = "css">CSS</a>
-    <a href = "#js-text" class = "js">JS</a>
-  </div>
-  <div class = "text-field" style = "width: 320px; height: 100%; display: flex; background-color: beige; ">
-    
-		
-		  <p id = "html-text" style = "color: blue; display:none" > Для того, чтобы наследовать класс от другого, мы должны использовать ключевое слово "extends" и указать название родительского класса перед {..}. </p>
-		   
-		  <p id = "css-text" style = "color: red; display:none"  >Но мы хотим, чтобы Rabbit расширял Animal. Другими словами, кролики должны происходить от животных, т.е. иметь доступ к методам Animal и расширять функциональность Animal своими методами.  </p>
-		
-			<p id = "js-text" style = "color: green " >Здесь вы можете изучить JavaScript, начиная с нуля и заканчивая продвинутыми концепциями вроде ООП.</p>
-		
+let text = document.querySelector('#text');
+let btn = document.querySelector('#btn');
+let isShow = true;// условная переменная с булевым значением -> текст виден
 
-  </div>
-</div>
+function showHide() {
+  if (isShow) {//если текст виден то....
+    text.style.display = 'none';// меняем значение display на  none,isShow все ще true 
+    isShow = false;// переписываем  на  false, т.е если false то текст не виден
+  } else {//другое
+      text.style.display = 'block'; // меняем значение display на 'block',isShow все ще false
+    isShow = true;//переписываем  на  true, т.е если true текст виден(зацикливаем)
+  }
+}
 
+btn.addEventListener('click', showHide);
 */
+//-----------------------------------------------------Задaча № 4(ок!)
+/*<div class = "container" style = "width:400px; height:150px; background-color :aqua; display: flex;" >
+		<div id = "menu" style = "width:80px; height: 100%; border-right: 1px solid black; display:flex; flex-direction: column; justify-content: space-around;">
+			<button  class = "btn" style = "height: 50px " id = "html">HTML</button>
+			<button class = "btn" style = "height: 50px " id = "css">CSS</button>
+			<button  class = "btn" style = "height: 50px " id = "js">JS</button>
+		</div>
+		<div class = "text-field" style = "width: 320px; height: 100%; display: flex; background-color: beige; ">
+			
+			
+				<p id = "text1" class= "text" style = "color: blue; display:none" > Для того, чтобы наследовать класс от другого, мы должны использовать ключевое слово "extends" и указать название родительского класса перед {..}. </p>
+				 
+				<p id = "text2" class= "text" style = "color: red; display:none"  >Но мы хотим, чтобы Rabbit расширял Animal. Другими словами, кролики должны происходить от животных, т.е. иметь доступ к методам Animal и расширять функциональность Animal своими методами.  </p>
+			
+				<p id = "text3" class= "text" style = "color: green " >Здесь вы можете изучить JavaScript, начиная с нуля и заканчивая продвинутыми концепциями вроде ООП.</p>
+			
+	
+		</div>
+	</div>
+*/
+// let text1 = document.querySelector('#text1');
+// let text2 = document.querySelector('#text2');
+// let text3 = document.querySelector('#text3');
+// let menu = document.querySelector('#menu');
 
 
-let htmlText = document.getElementById('#html-text');
-let cssText = document.getElementById("#css-text");
-let jsText = document.getElementById("#js-text");
-// let html = document.getElementById("html");
-// let css = document.getElementById("css");
-// let js= document.getElementById("js");
-//console.log(htmlText, cssText, jsText)
-let html = document.querySelector('.html')
-let css = document.querySelector('.css')
-let js = document.querySelector('.js')
-//console.log(html,css,js);
+// function showHide(event) {
 
-// function letHide() {
-// 	if(html.click) {
-// 		js.style.display=none;
+//   text1.style.display = 'none';
+//   text2.style.display = 'none';
+//   text3.style.display = 'none';
+//   if (event.target.id === 'html') {
+//     text1.style.display = 'block';
 // 	}
-
+//   if (event.target.id === 'css') {
+//     text2.style.display = 'block';
+//   }
+//   if (event.target.id === 'js') {
+//     text3.style.display = 'block';
+//   }
 // }
-//document.addEventListener('click', letHide);
+//menu.addEventListener('click', showHide, true);
 
 
+
+
+
+//-------------------------------------------Задача № 5
+
+
+//-------------------------------------------Задача № 6
+/*
+ <div id="progress" style="width: 100px; height: 30px; border: 1px solid black;">
+    </div>
+    <button id="btn" style="width: 100px;">[+]</button>
+*/ 
+/*
+let progress = document.querySelector('#progress');
+let btn = document.querySelector('#btn');
+
+let div = document.createElement('div');//создаем див для шкалы прогресса
+progress.append(div); //вставляем это тодив внурь div = 'progress'
+div.style.height = 'inherit';//задаем родительскую высоту
+div.style.backgroundColor = 'red';//задвем цыет фона для нового дива
+let widthB = 0;
+div.style.width = widthB;// задаем длинну дива
+function progressIn() {
+  if (widthB === 100) {//оостанавливаем движение прогресса, если достигли 100% длинны род дива
+    return;
+  }
+  if(widthB > 30 && widthB< 60) {
+    div.style.backgroundColor = 'yellow';
+  }
+  if(widthB > 60) {
+    div.style.backgroundColor = 'green';
+  }
+  widthB = widthB + 5;//задаем шаг увеличения прогресса
+  div.style.width = widthB + 'px';// вносим изменения в стили дива
+}
+
+btn.addEventListener('click', progressIn);
+*/
 

@@ -1777,3 +1777,156 @@ console.log(result);
 // div.innerHTML= '<strong>jglsjglugsssssuuufuouhouaf</strong>';
 // document.body.append(div);
 //---------------------------------
+
+
+
+//------------------------------------------------Модуль № 3
+//----------------------------------------------Домашнее задание № 1
+//------------------------------------------------События
+
+//-------------------------------------------------Задача №1
+//-------------------------------------------------Задача №2
+/*
+<div class = "container" style = "width:300px; height:180px; background-color: aquamarine;
+ display:flex; flex-direction: column; justify-content: space-around;">
+
+  <input type = "button" name=buton id="btn1" value="open modal" style="width:100px; height:25px; margin-left:15px">
+  
+	<div id = "modal" style = "width: 270px; height: 100px; background-color: bisque; 
+	display:flex; flex-direction: column; justify-content: space-around;margin-left:15px; align-items: center; display:none">
+  <span class ="text"><b>Hello from Modal Window!<b></span>
+ <input type = "button" name=buton id="btn2" value="close" style="width:230px; height:25px; margin-left:15px;">
+  </div>
+</div>
+
+*/
+/*
+let btn1 = document.querySelector('#btn1');
+let btn2 = document.querySelector('#btn2');
+let modal = document.querySelector('#modal');
+console.log(btn1);
+let isHide = true;// невиден? -> true
+
+function showModal() {
+if(isHide) {//  если модалл не виден то isHide = true -> меняем стиль на видимый 'block'
+	modal.style.display = 'block';
+	isHide = false; //теперь isHide = false т.к виден
+ }
+}
+
+function hideModal() {
+	if(!isHide) {//<- !isHide === isHide = false
+		console.log(isHide);
+		modal.style.display = 'none';
+		isHide =  true;
+ }
+
+}
+btn1.addEventListener ('click', showModal)
+btn2.addEventListener ('click', hideModal)
+*/
+//-------------------------------------------------Задача №3
+//-------------------------------------------------Задача №4
+//-------------------------------------------------Задача №5(ok!)
+
+/*
+<div class = "container" style="width: 200px; height: 100px; display: flex; 
+flex-direction: column; align-items: center; background-color: aqua;">
+	<ol id = "ol" style = "width:100%; height: 100px;">
+    <li class = "li li1">11111</li>
+    <li class= "li li2">22222</li>
+		<li class= "li li3">333333</li>
+		<li class= "li li4">444444</li>
+    
+  </ol>
+</div>
+
+*/
+
+// ----------------------Решение
+/*
+//let ol = document.querySelector('#ol');
+let allLi = document.querySelectorAll('.li')
+
+function orange(event){
+	let li;
+for(li of allLi ){
+		li.style.backgroundColor = 'inherit';
+		li.style.width = '100%';
+ }
+if ('click') {	
+	event.target.style.backgroundColor = 'orange';
+	
+ } else {
+	li.style.backgroundColor = 'inherit'
+	
+	return event.target.style.backgroundColor = 'orange';
+ }
+} 
+
+ol.addEventListener('click', orange )
+*/
+
+//-------------------------------------------------Задача №6
+//let svetofor = document.querySelector('.svetofor');
+let colors = document.querySelectorAll('.color');
+//let lighters = document.querySelectorAll('.color');
+let button = document.querySelector('#btn');
+let red = document.querySelector('.red');
+let yellow = document.querySelector('.yellow');
+let green = document.querySelector('.green');
+console.log(colors)
+let lighter;
+for ( lighter of colors){
+	sLighter.style.width = '70px';
+	sLighter.style.height = '70px';
+	sLighter.style.borderRadius = '50px';
+}
+
+
+
+function getSvetofor() {
+	
+
+function getSvetoforRed() {
+if ('click') {
+	
+		red.style.backgroundColor = 'red'
+		green.style.backgroundColor = 'white'
+		yellow.style.backgroundColor = 'white'
+} else if (lighter.style.backgroundColor = 'white') {
+	red.style.backgroundColor = 'white'
+	green.style.backgroundColor = 'green'
+	yellow.style.backgroundColor = 'white'
+
+}
+}
+getSvetoforRed()
+
+
+
+}
+
+// yellow.style.backgroundColor = 'yellow'
+	// green.style.backgroundColor = 'green'
+
+
+	button.addEventListener('click', getSvetofor)
+//	button.addEventListener('click', ofLighter)
+	//button.addEventListener('click', getSvetoforYell)
+
+//----------------------------не мое решение!!!!
+/*
+let i = -1;
+ function light(){
+  i++;
+
+  let arrColors = ['red','orange','green'],
+  color = document.querySelectorAll('.color');
+	console.log(color[i-1])
+  if(color[i-1]) color[i-1].style.backgroundColor = 'white';
+  if(i == arrColors.length) i = 0;
+  color[i].style.backgroundColor = arrColors[i];
+ }
+ button.addEventListener('click', light )
+*/
