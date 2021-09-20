@@ -1868,7 +1868,32 @@ ol.addEventListener('click', orange )
 */
 
 //-------------------------------------------------Задача №6
-//let svetofor = document.querySelector('.svetofor');
+/*
+
+<div class = "container" style="width: 310px; height: 80px; display: flex; 
+align-items: center; justify-content: space-between">
+<div class = "svetofor" style="width: 250px; height: 100%; display: flex; 
+; align-items: center; background-color: gray; border-radius: 5px;
+ justify-content: space-evenly">
+ 
+<div class = "color red" style="background-color:white"></div>
+
+<div class = "color yellow" style="background-color: white"></div>
+=======
+    
+>>>>>>> 4b8fbc19ace1c5d8b5d8e9aa585719da47fccd60
+
+<div class = "color green" style="background-color:white"></div>
+
+</div>
+<button id="btn" style="width: 50px; height: 80px; border-radius: 5px">
+	Next
+</button>
+
+*/ 
+
+
+/*
 let colors = document.querySelectorAll('.color');
 //let lighters = document.querySelectorAll('.color');
 let button = document.querySelector('#btn');
@@ -1882,8 +1907,6 @@ for ( lighter of colors){
 	sLighter.style.height = '70px';
 	sLighter.style.borderRadius = '50px';
 }
-
-
 
 function getSvetofor() {
 	
@@ -1902,19 +1925,9 @@ if ('click') {
 }
 }
 getSvetoforRed()
-
-
-
 }
-
-// yellow.style.backgroundColor = 'yellow'
-	// green.style.backgroundColor = 'green'
-
-
 	button.addEventListener('click', getSvetofor)
-//	button.addEventListener('click', ofLighter)
-	//button.addEventListener('click', getSvetoforYell)
-
+*/
 //----------------------------не мое решение!!!!
 /*
 let i = -1;
