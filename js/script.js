@@ -1381,3 +1381,67 @@ function progressIn() {
 btn.addEventListener('click', progressIn);
 */
 
+//-------------------------------------------Практические занитя
+//----------------------------------------------20.09.21
+
+
+//-------------------------------задача №1 
+//-------------------------------задача №2 
+//-------------------------------задача №3 (ok!)
+/*
+<div id ="container">
+    <div id="blue" class ="colors" style ="background-color: blue"></div>
+    <div id="red" class ="colors" style= " background-color:red"></div>
+    <div id="green" class ="colors" style= " background-color:green"></div>
+    
+  </div>
+  <div class= "text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
+    literature from 45 BC, making it over 2000 years old. Richard McClintock.
+  </div>
+
+*/
+
+/*
+let container = document.querySelector('#container');
+let text = document.querySelector('.text');
+let colors = document.querySelectorAll('.colors')
+
+
+for(let color of colors){
+color.style.width = '50px'
+color.style.height = '50px'
+
+}
+function chageColor(event) {
+console.log(event)
+if (event.target.id == 'blue'){
+text.style.color = event.target.id
+} else if (event.target.id == 'red'){
+  text.style.color = event.target.id
+}else if (event.target.id == 'green'){
+  text.style.color = event.target.id
+}
+
+}
+
+container.addEventListener('click',chageColor)
+*/
+
+
+//-------------------------------задача №4 
+let btn = document.querySelector('#btn');
+let userName = document.querySelector('#user-name');
+let commField = document.querySelector('#comment-field');
+let coment = document.querySelector('#coment-text');
+
+let arr = []
+
+function addComment(event) {
+console.log(event)
+
+}
+btn.addEventListener('click', addComment )
+
+//-------------------------------задача №5
+//-------------------------------задача №6 
+
