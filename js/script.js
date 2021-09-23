@@ -1663,9 +1663,10 @@ function calculator(event) {
   let target = event.target
  let displ = vision.innerHTML
  let arr= []
+ arr.push(event.target.id)
   vision.innerHTML += target.innerText
   //vision.valueOf().push(arr) 
-  console.log(vision.valueOf());
+  console.log(arr);
 
 
 
