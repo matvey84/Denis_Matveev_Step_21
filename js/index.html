@@ -5,20 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+	
 </head>
 <body>
-  <div class= "container" >
-<div class= "news">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
-  the cites of the word in classical literature, discovered the undoubtable source.
-</div>
-<div id ="comment-field"> </div>
-<div class ="form" style = "display: flex;flex-direction: column;">
-<input type="text" id = "user-name" name="text" placeholder="your text">
+	<style>
+.container{
+	position: fixed;
+	width:100vw;
+  height:100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: blueviolet;
 
-<textarea id = "comment-text" class = "comment" placeholder="your text"></textarea>
-<button id="btn">Send</button>
-  </div>
-  </div>
+}
+.field{
+  display: flex;
+	justify-content: space-between;
+  align-items: center;
+	position: relative;
+  width:95%;
+  height:90% ;
+	border: 1px solid white;
+	background-color: green;
+}
+.left{
+	width: 50%; 
+	height: 100%; 
+	border-right: 2px solid white;
+	display:flex; 
+	justify-content: space-between;
+}
+.left-field{
+	width: 200px;
+	height: 400px;
+	border: 2px solid white; 
+	border-left: none;
+	align-self:center ;
+}
+.left-side{
+	width: 4%;
+	height: 10%;
+	border: 2px solid white;
+	border-right: none;
+	align-self:center;
+	border-bottom-left-radius: 100px;
+	border-top-left-radius: 100px;
+}
+.right{
+	width: 50%; 
+	height: 100%; 
+	display:flex; 
+	justify-content: space-between; 
+	align-items: center;
+				
+}
+.right-field{
+  width: 200px;
+	height: 400px;
+	border: 2px solid white; 
+	border-right: none;
+	align-self:center ;
+}
+		
+.right-side{
+	width: 4%;
+	height: 10%;
+	border: 2px solid white;
+	border-left: none;
+	border-bottom-right-radius: 100px;
+	border-top-right-radius: 100px;
+	align-self:center ;
+}
+.ball{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border: 1px solid white;
+	border-radius:100px ;
+	background-color: white;
+
+				
+}
+
+	</style>	
+<div class ="container" id= "container">
+
+<div class = "field" id = "footfield" >
+
+	<div class="left" >
+	  <div class="left-field" >  </div>
+		<div class="left-side" > </div>
+	</div>
+	<div id ="ball" class="ball"></div>
+	
+	<div class="right" >
+		<div class="right-side" > </div>
+		<div class="right-field" > </div>
+	</div>
+
+</div>
+
+</div>
 
 
 

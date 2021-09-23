@@ -1784,7 +1784,42 @@ console.log(result);
 //----------------------------------------------Домашнее задание № 1
 //------------------------------------------------События
 
-//-------------------------------------------------Задача №1
+//-------------------------------------------------Задача №1(50/50)
+/*
+<div id = text-field ></div>
+<div class= "container" style = "width:250px; height:200px;
+display: flex; flex-direction: column;">
+<label for=""></label>
+<input id ="input1" type = "num" placeholder="insert text">
+<button id = "btn">Send</button>
+</div>
+*/
+/*
+let input1 = document.querySelector('#input1');
+let btn = document.querySelector('#btn');
+let textField = document.querySelector('#text-field');
+
+function send(event) {//не обязвтельное
+	console.log(event)
+ let obj = {
+	text: input1.value,
+};
+let elem = document.createElement('div');
+textField.append(elem);
+elem.innerHTML = (obj.text.valueOf())//`${obj.text}`
+input1.value = ''
+}
+ 
+function sortNum(event){
+	if(event.key >= '0' && event.key <= '9' ){//если учловие true, то 
+		input1.value = input1.value.replace(event.key, '')//заменять на ""  все символы удовлетворяющие условие (т.е цифры)
+		}
+	}
+btn.addEventListener('click', send)
+input1.addEventListener('keyup', sortNum)
+
+
+
 //-------------------------------------------------Задача №2
 /*
 <div class = "container" style = "width:300px; height:180px; background-color: aquamarine;
@@ -1825,49 +1860,39 @@ function hideModal() {
 btn1.addEventListener ('click', showModal)
 btn2.addEventListener ('click', hideModal)
 */
-//-------------------------------------------------Задача №3
+//-------------------------------------------------Задача №3 футбол
+let footfield = document.querySelector('#footfield');
+let ball = document.querySelector('#ball');
+let container = document.querySelector('#container');
+
+  
+	function football(event) {
+	let target = event.target;
+	let coordBall = ball.getBoundingClientRect();
+	let coordField = footfield.getBoundingClientRect();
+	 console.log(`${coordBall.left} `)
+
+	 ball.style.left = event.offsetX   +'px' //(coordField.right-coordField.left)/2 + 'px';
+	 ball.style.top = event.offsetY +'px' //(coordField.bottom-coordField.top)/2 + 'px';
+	 console.log('л', ball.left,'т', ball.top, 'после')
+	 //console.log(coordBall.left, coordBall.top, 'после')
+	
+		
+  //let targetCentr = ((coordField.right-coordField.left)/2)-((coordField.bottom-coordField.top)/2)
+	//console.log(`X: , ${event.offsetX}, Y :  ${event.offsetY} `)
+
+	}
+
+container.addEventListener('click', football)
+
+
+
+
+
+
+
+
 //-------------------------------------------------Задача №4
-//-------------------------------------------------Задача №5(ok!)
-
-/*
-<div class = "container" style="width: 200px; height: 100px; display: flex; 
-flex-direction: column; align-items: center; background-color: aqua;">
-	<ol id = "ol" style = "width:100%; height: 100px;">
-    <li class = "li li1">11111</li>
-    <li class= "li li2">22222</li>
-		<li class= "li li3">333333</li>
-		<li class= "li li4">444444</li>
-    
-  </ol>
-</div>
-
-*/
-
-// ----------------------Решение
-/*
-//let ol = document.querySelector('#ol');
-let allLi = document.querySelectorAll('.li')
-
-function orange(event){
-	let li;
-for(li of allLi ){
-		li.style.backgroundColor = 'inherit';
-		li.style.width = '100%';
- }
-if ('click') {	
-	event.target.style.backgroundColor = 'orange';
-	
- } else {
-	li.style.backgroundColor = 'inherit'
-	
-	return event.target.style.backgroundColor = 'orange';
- }
-} 
-
-ol.addEventListener('click', orange )
-*/
-
-//-------------------------------------------------Задача №6
 /*
 
 <div class = "container" style="width: 310px; height: 80px; display: flex; 
@@ -1942,4 +1967,129 @@ let i = -1;
   color[i].style.backgroundColor = arrColors[i];
  }
  button.addEventListener('click', light )
+*/
+
+//-------------------------------------------------Задача №5(ok!) подсветка элементов
+
+/*
+<div class = "container" style="width: 200px; height: 100px; display: flex; 
+flex-direction: column; align-items: center; background-color: aqua;">
+	<ol id = "ol" style = "width:100%; height: 100px;">
+    <li class = "li li1">11111</li>
+    <li class= "li li2">22222</li>
+		<li class= "li li3">333333</li>
+		<li class= "li li4">444444</li>
+    
+  </ol>
+</div>
+
+*/
+
+// ----------------------Решение
+/*
+//let ol = document.querySelector('#ol');
+let allLi = document.querySelectorAll('.li')
+
+function orange(event){
+	let li;
+for(li of allLi ){
+		li.style.backgroundColor = 'inherit';
+		li.style.width = '100%';
+ }
+if ('click') {	
+	event.target.style.backgroundColor = 'orange';
+	
+ } else {
+	li.style.backgroundColor = 'inherit'
+	
+	return event.target.style.backgroundColor = 'orange';
+ }
+} 
+
+ol.addEventListener('click', orange )
+*/
+
+//-------------------------------------------------Задача №6 tooltip
+/*
+	<style>
+		.container{
+			display: flex;
+			flex-wrap:wrap;
+				justify-content: space-around;
+				align-items: center;
+		width:200px;
+		height:80px ;
+		border: 1px solid black	
+	
+		}
+	</style>	
+
+<div class = "container" >
+
+	  <button class = "button" id = "btn1" data-tool="1111"> button 1</button>
+<span id = "text2" class = "forBtn" hidden>111111</span>
+
+	  <button class = "button" id = "btn2" data-tool="222"> button 2</button>	
+		<span id = "text2" class = "forBtn" hidden>2222</span>
+</div>
+*/
+/*
+let container = document.querySelector('.container')
+
+let btn1 = document.querySelector('#btn1')
+let btn2 = document.querySelector('#btn2')
+let toolElem;
+
+function showToolTip(event) {
+	console.log(event)
+		
+	let toolText = event.target.dataset.tool;
+	if(!toolText) return;
+
+	if (event.target.id = 'btn1'){
+	
+	} else if(event.target.id = 'btn2'){
+		console.log(toolText);
+	}
+	toolElem = document.createElement('div')
+  toolElem.style.cssText = `
+  width: fit-content;
+	height: fit-content;
+	position: fixed;
+	padding: 5px 10px;
+	border: 1px solid black;
+	border-radius: 4px;
+	text-align: center;				
+	color: #333;
+  background: rgb(150, 107, 107);
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+`
+	toolElem.classList.add = '.tooltip';
+	toolElem.innerHTML = toolText;
+	container.append(toolElem );
+
+	let coords = event.target.getBoundingClientRect();
+	//console.log(coords)
+	let left = coords.left + (event.target.offsetWidth - toolElem.offsetWidth) / 2;
+	if (left < 0) left = 0;
+	console.log(coords)
+	console.log(coords.left)
+
+	let top = coords.top - toolElem.offsetHeight - 9;//-5
+      if (top < 0) { // если подсказка не помещается сверху, то отображать её снизу
+        top = coords.top + event.target.offsetHeight +10;//+5
+      }
+			//console.log(coords.top)
+			toolElem.style.left = left + 'px';
+      toolElem.style.top = top + 'px';
+}
+function hideToolTip(){
+if(toolElem){
+	toolElem.remove();
+	toolElem = null
+}
+
+}
+container.addEventListener('mouseover', showToolTip );
+container.addEventListener('mouseout', hideToolTip );
 */

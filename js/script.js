@@ -1381,12 +1381,111 @@ function progressIn() {
 btn.addEventListener('click', progressIn);
 */
 
-//-------------------------------------------Практические занитя
+//-------------------------------------------Практические занитя №3
 //----------------------------------------------20.09.21
+//---------------------------------------------События
 
 
 //-------------------------------задача №1 
+/*
+<div id="block"></div>
+    <div id="btn">
+        <button id="incr">+</button>
+        <button id="deg">-</button>
+    </div>
+*/
+/*
+let block = document.querySelector('#block');
+let incr = document.querySelector('#incr');
+let deg = document.querySelector('#deg');
+let num = 0;
+
+function incre() { 
+  num = ++num;
+  block.innerHTML = num;
+}
+
+function degre() { 
+  num = --num;
+  block.innerHTML = num;
+}
+
+incr.addEventListener('click', incre);
+deg.addEventListener('click', degre);
+*/
+//--------------------------------------решение №2 с делегированием
+/*
+let block = document.querySelector('#block');
+let btn = document.querySelector('#btn');
+
+let num = 0;
+
+function incre(event) {
+  console.log(event.target.id);
+  if (event.target.id === 'incr') {
+    num = ++num;
+  } else {
+    num = --num;
+  }
+  block.innerHTML = num;
+}
+
+btn.addEventListener('click', incre);
+*/
 //-------------------------------задача №2 
+/*
+let block = document.querySelector('#block');
+let btn = document.querySelector('#btn');
+
+let num = 0;
+
+function addB() {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  let el = document.createElement('div');
+  el.style.width = '100px';
+  el.style.height = '60px';
+  el.style.backgroundColor = "#" + randomColor;
+  el.id = 'id' + num;
+  num++;
+  block.append(el);
+  el.addEventListener('click', deleteBlock);
+}
+
+function deleteBlock(event) {
+  const elId = event.target.id;
+  let el = document.querySelector(#${elId});
+  el.style.display = 'none';
+}
+
+btn.addEventListener('click', addB);
+*/
+//-------------------------------решение 2
+/*
+let block = document.querySelector('#block');
+let btn = document.querySelector('#btn');
+
+let num = 0;
+
+function addB() {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  let el = document.createElement('div');
+  el.style.width = '100px';
+  el.style.height = '60px';
+  el.style.backgroundColor = "#" + randomColor;
+  el.id = 'id' + num;
+  num++;
+  block.append(el);
+  el.addEventListener('click', deleteBlock);
+}
+
+function deleteBlock(event) {
+  const elId = event.target.id;
+  let el = document.querySelector(#${elId});
+  block.removeChild(el);
+}
+
+btn.addEventListener('click', addB);
+*/
 //-------------------------------задача №3 (ok!)
 /*
 <div id ="container">
@@ -1406,42 +1505,134 @@ let container = document.querySelector('#container');
 let text = document.querySelector('.text');
 let colors = document.querySelectorAll('.colors')
 
-
 for(let color of colors){
 color.style.width = '50px'
 color.style.height = '50px'
-
 }
+
 function chageColor(event) {
 console.log(event)
 if (event.target.id == 'blue'){
 text.style.color = event.target.id
-} else if (event.target.id == 'red'){
+ } else if (event.target.id == 'red'){
   text.style.color = event.target.id
-}else if (event.target.id == 'green'){
+  } else if (event.target.id == 'green'){
   text.style.color = event.target.id
+ }
 }
-
-}
-
 container.addEventListener('click',chageColor)
 */
 
 
-//-------------------------------задача №4 
+//-------------------------------задача №4
+//стили
+/*
+<style>
+	.container{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 470px;
+	height:250px;
+	background-color: gainsboro;
+	
+	}
+.news{
+	background-color: rgb(243, 153, 43);
+	border:2px solid black ;
+	border-radius: 2px;
+	width:470px;
+}
+.form{
+display: flex;
+flex-direction: column;
+width:470px;
+background-color: rgb(142, 131, 151);
+border:2px solid black ;
+border-radius: 5px;
+}
+.btn{
+	width: 300px;
+	border-color: gold;
+	background-color: goldenrod;
+	align-self: center;
+}
+.comment-field{
+	background-color: bisque;
+	position:relative;
+	border: 0.1px solid black;
+	border-radius: 5px;
+	width:470px;
+	height: auto;
+}
+	</style>
+<body>
+	
+<div class= "container" >
+  <div class= "news">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
+  the cites of the word in classical literature, discovered the undoubtable source.
+  </div>
+	<div class ="form">
+		<label for="user-name">User</label>
+			<input type="text" id = "user-name" name="text" placeholder="your text">
+	
+		<label for="comment-text" >Ваш комментарий:</label>
+			<input type ="text" id = "comment-text"  placeholder="your text"></input><br>
+	<button class="btn" id="btn">Send</button>
+	</div>
+</div>
+<div class = "comment-field " id ="comment-field"> </div>
+*/
+/*
 let btn = document.querySelector('#btn');
 let userName = document.querySelector('#user-name');
-let commField = document.querySelector('#comment-field');
-let coment = document.querySelector('#coment-text');
+let comField = document.querySelector('#comment-field');
+let coment = document.querySelector('#comment-text');
+let container = document.querySelector('.container')
+function addComment() {
+let obj = {
+name: userName.value,
+date: new Date(),
+com: coment.value,
+};
+//-----------------------ADD GENRAL ELEMENT elem
+let elem = document.createElement('div');
+elem.style.cssText = `
+border-bottom:2px solid black;
+display:flex;
+flex-direction:column;
+justify-content: space-around;
+align-items: left;
 
-let arr = []
-
-function addComment(event) {
-console.log(event)
-
+`;
+ comField.append(elem);
+ //----------------------ADD ELEMRNT AND INSERT AT elem
+ let elemName =document.createElement('div');
+ elem.append(elemName);
+ elemName.innerHTML = (`имя: ${obj.name}`)
+//-----------------------ADD ELEMRNT AND INSERT AT elem
+ 
+ let elemDate =document.createElement('div');
+ elem.append(elemDate);
+ elemDate.innerHTML = (`дата: ${obj.date}`);
+ 
+//-------------------------ADD ELEMRNT AND INSERT AT elem
+ let elemCom =document.createElement('div');
+ elem.append(elemCom);
+ elemCom.innerHTML = (`Ваш комментарий: ${obj.com}`);
+// elem.innerHTMLelem = (`имя пользователя: ${obj.name},
+//  дата: ${obj.date}, 
+//  текст сообщения:${obj.com}`);
+userName.value = ''
+coment.value = '';
 }
 btn.addEventListener('click', addComment )
-
+*/
 //-------------------------------задача №5
 //-------------------------------задача №6 
 
+
+//--------------------------------------------------------23.09.21
+//--------------------------------------------------Практическое занятие № 3
+//----------------------------------------------------Соьытия
