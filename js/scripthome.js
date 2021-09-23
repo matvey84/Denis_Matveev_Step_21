@@ -1809,7 +1809,6 @@ textField.append(elem);
 elem.innerHTML = (obj.text.valueOf())//`${obj.text}`
 input1.value = ''
 }
- 
 function sortNum(event){
 	if(event.key >= '0' && event.key <= '9' ){//если учловие true, то 
 		input1.value = input1.value.replace(event.key, '')//заменять на ""  все символы удовлетворяющие условие (т.е цифры)
@@ -1817,7 +1816,7 @@ function sortNum(event){
 	}
 btn.addEventListener('click', send)
 input1.addEventListener('keyup', sortNum)
-
+*/
 
 
 //-------------------------------------------------Задача №2
@@ -1861,10 +1860,104 @@ btn1.addEventListener ('click', showModal)
 btn2.addEventListener ('click', hideModal)
 */
 //-------------------------------------------------Задача №3 футбол
+/*
+<style>
+.container{
+	position: fixed;
+	width:100vw;
+  height:100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: blueviolet;
+}
+.field{
+  display: flex;
+	justify-content: space-between;
+  align-items: center;
+	position: relative;
+  width:95%;
+  height:90% ;
+	border: 1px solid white;
+	background-color: green;
+}
+.left{
+	width: 50%; 
+	height: 100%; 
+	border-right: 2px solid white;
+	display:flex; 
+	justify-content: space-between;
+}
+.left-field{
+	width: 200px;
+	height: 400px;
+	border: 2px solid white; 
+	border-left: none;
+	align-self:center ;
+}
+.left-side{
+	width: 4%;
+	height: 10%;
+	border: 2px solid white;
+	border-right: none;
+	align-self:center;
+	border-bottom-left-radius: 100px;
+	border-top-left-radius: 100px;
+}
+.right{
+	width: 50%; 
+	height: 100%; 
+	display:flex; 
+	justify-content: space-between; 
+	align-items: center;			
+}
+.right-field{
+  width: 200px;
+	height: 400px;
+	border: 2px solid white; 
+	border-right: none;
+	align-self:center ;
+}	
+.right-side{
+	width: 4%;
+	height: 10%;
+	border: 2px solid white;
+	border-left: none;
+	border-bottom-right-radius: 100px;
+	border-top-right-radius: 100px;
+	align-self:center ;
+}
+.ball{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border: 1px solid white;
+	border-radius:100px ;
+	background-color: white;	
+}
+</style>	
+<div class ="container" id= "container">
+
+<div class = "field" id = "footfield" >
+
+	<div class="left" >
+	  <div class="left-field" >  </div>
+		<div class="left-side" > </div>
+	</div>
+	<div id ="ball" class="ball"></div>
+	
+	<div class="right" >
+		<div class="right-side" > </div>
+		<div class="right-field" > </div>
+	</div>
+  </div>
+</div>
+*/ 
+
+/*
 let footfield = document.querySelector('#footfield');
 let ball = document.querySelector('#ball');
 let container = document.querySelector('#container');
-
   
 	function football(event) {
 	let target = event.target;
@@ -1884,7 +1977,7 @@ let container = document.querySelector('#container');
 	}
 
 container.addEventListener('click', football)
-
+*/
 
 
 

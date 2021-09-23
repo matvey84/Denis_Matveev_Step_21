@@ -1635,4 +1635,49 @@ btn.addEventListener('click', addComment )
 
 //--------------------------------------------------------23.09.21
 //--------------------------------------------------Практическое занятие № 3
-//----------------------------------------------------Соьытия
+//----------------------------------------------------События
+//------------------------------------------------------Задача №1
+ /*
+let container = document.querySelector('.container')
+ let td = document.querySelectorAll('td')
+ console.log(td)
+
+  function hilight(){
+    return false
+   
+   }
+  
+
+container.addEventListener('selectstart', hilight )
+*/
+//------------------------------------------------------Задача №2
+
+
+//------------------------------------------------------Задача №3(калькулятор)
+let keys = document.querySelector('#keypad')
+let vision = document.querySelector('#vision')
+
+
+function calculator(event) {
+  console.log(event);
+  let target = event.target
+ let displ = vision.innerHTML
+ let arr= []
+  vision.innerHTML += target.innerText
+  //vision.valueOf().push(arr) 
+  console.log(vision.valueOf());
+
+
+
+  if(target.id == 'ce'){
+  vision.innerHTML = ''
+}
+
+
+}
+
+keys.addEventListener('click', calculator)
+
+//------------------------------------------------------Задача №4
+//------------------------------------------------------Задача №5
+//------------------------------------------------------Задача №6
