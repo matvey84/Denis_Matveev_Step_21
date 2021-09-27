@@ -1178,7 +1178,7 @@ figures.push(treug)
 
 
 //---------------------------------------------- 13/09/21
-//-----------------------------------------------Модуль №3(ок!)
+//-----------------------------------------------Модуль №4
 //--------------------------------------------Пактичеое задание № 1
 //--------------------------------------------- Обработчик событий
 
@@ -1381,7 +1381,7 @@ function progressIn() {
 btn.addEventListener('click', progressIn);
 */
 
-//-------------------------------------------Практические занитя №3
+//-------------------------------------------Практические занитя №2
 //----------------------------------------------20.09.21
 //---------------------------------------------События
 
@@ -1524,7 +1524,7 @@ container.addEventListener('click',chageColor)
 */
 
 
-//-------------------------------задача №4
+//-------------------------------задача №4(ok!)
 //стили
 /*
 <style>
@@ -1630,7 +1630,22 @@ coment.value = '';
 btn.addEventListener('click', addComment )
 */
 //-------------------------------задача №5
-//-------------------------------задача №6 
+/*<div class = "container">
+	
+	<input type="text" id ="inp" list="character">
+  <p>
+   <datalist id="character">
+    <option value="Беларусь"></option>
+    <option value="Бельлгия"></option>
+    <option value="Бенин"></option>
+   </datalist></p>
+
+	
+</div>
+
+*/
+
+
 
 
 //--------------------------------------------------------23.09.21
@@ -1638,47 +1653,141 @@ btn.addEventListener('click', addComment )
 //----------------------------------------------------События
 //------------------------------------------------------Задача №1
  /*
-let container = document.querySelector('.container')
- let td = document.querySelectorAll('td')
- console.log(td)
+ <style>
+        .container {
+            display: flex;
+            width: 700px;
+            flex-wrap: wrap;
+        }
+        .block {
+            width: 200px;
+            height: 60px;
+            background-color: black;
+        }
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+ 
+ */
 
-  function hilight(){
-    return false
-   
-   }
-  
 
-container.addEventListener('selectstart', hilight )
+/*
+let block = document.querySelector('.container');
+
+function hoverOn(event) {
+  event.target.classList.add('red')
+}
+
+function hoverOff(event) {
+  event.target.classList.remove('red')
+}
+
+block.addEventListener('mouseover', hoverOn);
+block.addEventListener('mouseout', hoverOff);
 */
 //------------------------------------------------------Задача №2
 
 
 //------------------------------------------------------Задача №3(калькулятор)
+/* //стили
+<style>
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	align-items: center;
+width: 250px;
+height:300px;
+background-color: bisque;	
+}
+.show{
+	display:flex;
+width: 200px;
+height:40px;
+background-color: white;
+}
+.keyblock{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 205px;
+height:205px;
+}
+.key{
+width: 50px;
+height:50px;
+background-color: grey;
+}
+
+
+</style>
+<body>
+	<div class="container">
+		<div class = "show" id = "vision"></div>
+
+		<div class = "keyblock" id  = "keypad">
+		<button class="key" id = '1'>1</button>
+		<button class="key" id = '2'>2</button>
+		<button class="key" id = '3'>3</button>
+		<button class="key" id = '4'>4</button>
+		<button class="key" id = '5'>5</button>
+		<button class="key" id = '6'>6</button>
+		<button class="key" id = '7'>7</button>
+		<button class="key" id = '8'>8</button>
+		<button class="key" id = '9'>9</button>
+		<button class="key" id = '0'>0</button>
+		<button class="key" id = '+'>+</button>
+		<button class="key" id = '*'>*</button>
+		<button class="key" id = '/'>/</button>
+		<button class="key" id = '-'>-</button>
+		<button class="key" id = '//'>=</button>
+		<button class="key" id = '.'>.</button>
+		<button class="key" id = 'ce'>C</button>
+		
+		</div>		
+	</div>
+*/
+/*
 let keys = document.querySelector('#keypad')
 let vision = document.querySelector('#vision')
 
-
 function calculator(event) {
-  console.log(event);
-  let target = event.target
- let displ = vision.innerHTML
- let arr= []
- arr.push(event.target.id)
-  vision.innerHTML += target.innerText
-  //vision.valueOf().push(arr) 
-  console.log(arr);
+ 
+let target = event.target;
+vision.innerHTML +=  target.innerText;// добавляет элементы в "vision"
 
-
-
-  if(target.id == 'ce'){
-  vision.innerHTML = ''
+if(target.id == 'ce'){
+	vision.innerHTML = ''
 }
 
+let res = eval(vision.innerHTML)//.split(sign).join('')
+vision.innerHTML =  + res;
+
+if(target.id == 'ce'){
+	vision.innerHTML = ''
+}
 
 }
+
 
 keys.addEventListener('click', calculator)
-
+*/
 //------------------------------------------------------Задача №4
 //------------------------------------------------------Задача №5
 //------------------------------------------------------Задача №6

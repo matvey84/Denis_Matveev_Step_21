@@ -1780,12 +1780,12 @@ console.log(result);
 
 
 
-//------------------------------------------------Модуль № 3
+//------------------------------------------------Модуль № 4
 //----------------------------------------------Домашнее задание № 1
 //------------------------------------------------События
 
 //-------------------------------------------------Задача №1(50/50)
-/*
+/*//стили
 <div id = text-field ></div>
 <div class= "container" style = "width:250px; height:200px;
 display: flex; flex-direction: column;">
@@ -1820,7 +1820,7 @@ input1.addEventListener('keyup', sortNum)
 
 
 //-------------------------------------------------Задача №2
-/*
+/*//стили
 <div class = "container" style = "width:300px; height:180px; background-color: aquamarine;
  display:flex; flex-direction: column; justify-content: space-around;">
 
@@ -1860,7 +1860,7 @@ btn1.addEventListener ('click', showModal)
 btn2.addEventListener ('click', hideModal)
 */
 //-------------------------------------------------Задача №3 футбол
-/*
+/*//стили
 <style>
 .container{
 	position: fixed;
@@ -1978,15 +1978,8 @@ let container = document.querySelector('#container');
 
 container.addEventListener('click', football)
 */
-
-
-
-
-
-
-
 //-------------------------------------------------Задача №4
-/*
+/*//HTML
 
 <div class = "container" style="width: 310px; height: 80px; display: flex; 
 align-items: center; justify-content: space-between">
@@ -1997,15 +1990,12 @@ align-items: center; justify-content: space-between">
 <div class = "color red" style="background-color:white"></div>
 
 <div class = "color yellow" style="background-color: white"></div>
-=======
-    
->>>>>>> 4b8fbc19ace1c5d8b5d8e9aa585719da47fccd60
 
 <div class = "color green" style="background-color:white"></div>
 
 </div>
 <button id="btn" style="width: 50px; height: 80px; border-radius: 5px">
-	Next
+
 </button>
 
 */ 
@@ -2186,3 +2176,169 @@ if(toolElem){
 container.addEventListener('mouseover', showToolTip );
 container.addEventListener('mouseout', hideToolTip );
 */
+//-----------------------------------------------------------Домашнее задание № 2
+//---------------------------------------------------------------События 
+
+//--------------------------------------------------------------------задача № 1
+
+//-----------------------------------------------------------------задача№2(ok!) cскрывающийся список
+/*// стили
+
+	<style>
+		.container{
+			width: 200px;
+			height: 300px;
+			border: 1px solid black;
+			cursor: pointer;
+		}
+		.hide {
+			visibility: hidden;
+		}
+	
+		.hilight {
+    font-weight: bolder;
+		color: brown;
+		font-size: 18px;
+
+		}
+	</style>
+	<div class =  "container" id="container">
+<ul class="list" id="list">
+
+  <li class = "tittle" id ="pc">This PC
+
+		    <ul class="list" id="list2">
+
+      <li class = "tittle" id = "diskC">Local Disk(C:)
+
+        <ul class="list" id="listC">
+          <li>C</li>
+          <li>C</li>
+          <li>C</li>
+          <li>C</li>
+        </ul>
+      </li>
+			<li class = "tittle" id = "diskD">Local Disk(D:)
+
+        <ul class="list" id="listD">
+					 <li>Мармелад</li>
+          <li>Батончики</li>
+          <li>Ассорти</li>
+          <li>Карамель</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+	</ul>
+
+</div>
+*/
+/*
+let list = document.querySelector('#list');
+let pc = document.querySelector('#pc')
+let diskC = document.querySelector('#diskC')
+let diskD = document.querySelector('#diskD')
+let listD = document.querySelector('#listD')
+ let listC = document.querySelector('#listC')
+ let tittle = document.querySelector('.tittle')
+
+let target;
+function hilight(event){
+	target= event.target
+
+if (target.classList.contains('tittle')){
+target.classList.toggle('hilight')
+
+ } else {target.classList.add('hilight')}
+}
+
+function hilightOff(event){//удаляем подсветку
+	console.log(event)
+target.classList.remove('hilight')
+}
+
+function hideEl(event) {
+ if (target.id === 'diskC' ){
+	listC.classList.toggle('hide')
+
+ }
+ if (target.id === 'diskD'){
+	listD.classList.toggle('hide')
+ }
+
+  if (target.id === 'pc'){
+		
+	diskD.classList.toggle('hide')
+	diskC.classList.toggle('hide')
+	
+	}
+}
+
+list.addEventListener('mouseover', hilight)
+list.addEventListener('mouseout', hilightOff)
+list.addEventListener('click', hideEl)
+*/
+
+//--------------------------------------------Задача № 2
+
+let list = document.querySelector('#list');
+let allItem = document.querySelectorAll('.item')
+
+let el;
+let target;
+
+function orange(event){
+	target = event.target
+ for(el of allItem ){
+	el.style.color = 'black';
+		
+ }
+if (target.className == 'item') {	
+	target.style.color = 'orange';// не удалять
+
+
+ } else {
+	el.style.color = 'black'
+	
+	return target.style.color = 'orange';
+  }
+
+} 
+// вместе не работает, если закоментировать одно событие то работает
+
+function addOrdelete(event){
+	target = event.target
+if (event.ctrlKey){
+	
+	target.classList.toggle('new-color')
+	console.log(event.target, event.ctrlKey)
+	
+}
+//----------------------Диапозон
+let range = new Range();
+if(event.target.classList.contains('new-color')){
+	console.log('jjsnglkjsdldi')
+	
+	let start = event.target
+	let end = event.target
+
+	range.setStart(start, 0)
+	 range.setEnd(end,  0)
+	
+	console.log(	range.setStart(start,1))
+	console.log(range.setEnd(end,  0) )
+}
+	if (event.shiftKey){
+
+	
+		
+	}
+	
+	document.getSelection().removeAllRanges();
+		document.getSelection().addRange(range);
+
+}
+
+
+//list.addEventListener('click', orange )
+list.addEventListener('click', addOrdelete )
