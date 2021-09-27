@@ -2205,11 +2205,11 @@ container.addEventListener('mouseout', hideToolTip );
 	<div class =  "container" id="container">
 <ul class="list" id="list">
 
-  <li class = "tittle" id ="pc">This PC
+  <li class = "tittle" ><span id ="pc">This PC</span>
 
 		    <ul class="list" id="list2">
 
-      <li class = "tittle" id = "diskC">Local Disk(C:)
+      <li class = "tittle" > <span id = "diskC">Local Disk(C:)</span>
 
         <ul class="list" id="listC">
           <li>C</li>
@@ -2218,7 +2218,7 @@ container.addEventListener('mouseout', hideToolTip );
           <li>C</li>
         </ul>
       </li>
-			<li class = "tittle" id = "diskD">Local Disk(D:)
+			<li class = "tittle" ><span id = "diskD">Local Disk(D:)</span>
 
         <ul class="list" id="listD">
 					 <li>Мармелад</li>
@@ -2279,7 +2279,7 @@ list.addEventListener('mouseout', hilightOff)
 list.addEventListener('click', hideEl)
 */
 
-//--------------------------------------------Задача № 2
+//--------------------------------------------Задача № 3
 
 let list = document.querySelector('#list');
 let allItem = document.querySelectorAll('.item')
@@ -2315,27 +2315,33 @@ if (event.ctrlKey){
 	
 }
 //----------------------Диапозон
-let range = new Range();
-if(event.target.classList.contains('new-color')){
-	console.log('jjsnglkjsdldi')
-	
-	let start = event.target
-	let end = event.target
+//let range = new Range();
 
-	range.setStart(start, 0)
-	 range.setEnd(end,  0)
+let start = event.target.className == 'new-color'//('new-color')
+let end = event.target.className == 'new-color'//('new-color')
+console.log(target.classList.contains('new-color'))
+console.log(target.classList.contains('new-color'))
+// if(event.target.classList.contains('new-color')){
+// 	console.log('jjsnglkjsdldi')
 	
-	console.log(	range.setStart(start,1))
-	console.log(range.setEnd(end,  0) )
-}
-	if (event.shiftKey){
+// 	let start = event.target
+// 	let end = event.target
+// console.log(start,'start')
+// console.log(end)
+// // 	range.setStart(start, 0)
+// // 	 range.setEnd(end,  0)
+	
+// // 	console.log(range.setStart(start,1))
+// // 	console.log(range.setEnd(end,  0) )
+//  }
+// 	if (event.shiftKey){
 
 	
 		
-	}
+// 	}
 	
-	document.getSelection().removeAllRanges();
-		document.getSelection().addRange(range);
+	// document.getSelection().removeAllRanges();
+	// 	document.getSelection().addRange(range);
 
 }
 
