@@ -2280,9 +2280,36 @@ list.addEventListener('click', hideEl)
 */
 
 //--------------------------------------------Задача № 3
+/*//html
+	<style>
+.wrapper{
+width: 200px;
+height: 150px;
+display: flex;
+flex-direction: column;
+}
+.new-color{
+color:orangered
+}
 
-let list = document.querySelector('#list');
-let allItem = document.querySelectorAll('.item')
+
+</style>
+
+<div class = "wrapper">
+<ol class = "list-items" id = "list">
+<li><span class = "item" id = "1">111111111111</span></li>
+<li><span  class = "item" id = "2" >222222222222222</span></li>
+<li><span class = "item" id ="3">3333333333</span></li>
+<li><span class = "item" id ="4">444444444444444</span></liclass>
+<li><span class = "item" id ="5">55555555555555</span></lilass>
+<li><span  class = "item" id ="6">66666666666666666666</span></li>
+
+</ol>
+
+</div>
+*/
+// let list = document.querySelector('#list');
+// let allItem = document.querySelectorAll('.item')
 /*
 let listSpan = list.getElementsByTagName('span');
 let start = '';
@@ -2328,7 +2355,7 @@ function addOrDelete(event) {
 */
 //----------------------------------------------
 
-
+/*
 let target;
 
 function orange(event){
@@ -2337,10 +2364,9 @@ function orange(event){
 if (target.className == 'item') {	
 	target.style.color = 'orange';// не удалять
 
-
  } else {
 	el.style.color = 'black'
-	
+
 	return target.style.color = 'orange';
   }
 
@@ -2353,25 +2379,26 @@ if (event.ctrlKey ){
 	
 	target.classList.toggle('new-color')
 	
-	
 }
 
 //return
 let start = '';
 let contains = event.target.classList.contains('new-color')
+
+
 if (event.shiftKey ){
 	console.log('shift')
 	console.log(contains)
 	event.target.classList.add('new-color')
 
-
 	for( let el of allItem ){
 	
-		if(el.id == event.target.id ) {//el.id == event.target.id
+		if(el.id == event.target.id) {//el.id == event.target.id
 			console.log('=', contains)
-		return event.target.classList.add('new-color')//event.target.classList.add('new-color')
+		return event.target.classList.toggle('new-color')//event.target.classList.add('new-color')
 		
-	 } else if (el.id != event.target){//el.id != event.target
+	 } 
+	  if (el.id != event.target){//el.id != event.target
 		console.log('!=')
 		el.classList.toggle('new-color')
 		} else if (el.classList.contains('new-color')){
@@ -2386,8 +2413,8 @@ if (event.shiftKey ){
 }
 
 //list.addEventListener('click', orange )
-list.addEventListener('click', addOrDelete )
-
+//list.addEventListener('click', addOrDelete )
+/*
 /*
 if (event.shiftKey ){
 	console.log('111')
