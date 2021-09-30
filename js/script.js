@@ -1795,9 +1795,169 @@ keys.addEventListener('click', calculator)
 
 //-----------------------------------------практические задания
 //--------------------------------------------27.09.2021
+//----------------------------------------------Модуль 5
+//----------------------------------------------Формы
 
 //----------------------------------------Задача №1
+/*//HTML
+<style>
+body {
+    height: 100vh;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnSignIn {
+    width: 100%;
+}
+</style>
+
+<div class="container">
+      <div class="form">
+        <div class="loginContainer">
+          <label for="login">Your login:</label>
+          <input id="login" />
+        </div>
+        <div class="loginContainer">
+          <label for="password">Your password:</label>
+          <input id="password" type="password" />
+        </div>
+        <div class="rememberContainer">
+          <label for="remember">Remember me</label>
+          <input type="checkbox" id="remember" />
+        </div>
+        <button class="btnSignIn" id="btnSignIn">Sign In</button>
+      </div>
+    </div>
+*/
+
+//----------------------------------js
+/*
+let btn = document.querySelector('#btnSignIn');
+let login = document.querySelector('#login');
+let remember = document.querySelector('#remember');
+
+function signIn() {
+    let isChecked = remember.checked ? 'Я тебя запомнил' : 'Я тебя не запомнил';
+    alert(Привет, ${login.value}! ${isChecked})
+}
+
+btn.addEventListener('click', signIn);
+*/
 //----------------------------------------Задача №2
+/*//HTML
+
+<style>
+body {
+    height: 100vh;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnSignIn {
+    width: 100%;
+}
+</style>
+
+ <div class="container">
+      <div class="formleft">
+        <div class="loginContainer">
+          <label for="name1">FirstName:</label>
+          <input id="name1" />
+        </div>
+        <div class="loginContainer">
+          <label for="brth">Birthday:</label>
+          <input id="brth" type="date" />
+        </div>
+        <div class="rememberContainer">
+          <label for="country">Country</label>
+          <select id="country">
+            <option disabled selected value> -- select an option -- </option>
+              <option>Belarus</option>
+              <option>Belorus</option>
+              <option>Belarashka</option>
+          </select>
+        </div>
+      </div>
+      <div class="formleft">
+        <div class="loginContainer">
+          <label for="name2">LastName:</label>
+          <input id="name2" />
+        </div>
+        <div class="loginContainer">
+          <label for="male">male:</label>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">female:</label>
+          <input type="radio" id="female" name="gender" value="female">
+        </div>
+        <div class="rememberContainer">
+            <label for="city">city</label>
+            <select id="city" disabled>
+                <option>Mogilev</option>
+                <option>Brest</option>
+                <option>Minsk</option>
+            </select>
+        </div>
+      </div>
+    </div>
+    <div>
+        <label for="html">Html</label>
+        <input type="checkbox" id="html" value="html" />
+        <label for="css">css</label>
+        <input type="checkbox" id="css" value="css" />
+        <label for="js">js</label>
+        <input type="checkbox" id="js" value="js" />
+    </div>
+    <button class="save" id="save">Save</button>
+*/
+//-------------------------------------JS
+/*
+let btn = document.querySelector('#save');
+let nameF = document.querySelector('#name1');
+let nameL = document.querySelector('#name2');
+let birthday = document.querySelector('#brth');
+let country = document.querySelector('#country');
+let male = document.querySelector('#male');
+let female = document.querySelector('#female');
+let city = document.querySelector('#city');
+let js = document.querySelector('#js');
+let css = document.querySelector('#css');
+let html = document.querySelector('#html');
+
+function checkSelected() {
+    if(country.value) {
+        city.disabled = false;
+    }
+}
+
+function save() {
+    console.log(nameF.value, nameL.value);
+    console.log(birthday.value);
+    console.log(male.checked, female.checked)
+    console.log(js.checked, css.checked, html.checked)
+    console.log(country.value, city.value);
+}
+
+country.addEventListener('click', checkSelected);
+btn.addEventListener('click', save);
+*/ 
+
 //----------------------------------------Задача №3
 //----------------------------------------Задача №4
 //----------------------------------------Задача №5
