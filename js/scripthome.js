@@ -2292,7 +2292,6 @@ flex-direction: column;
 color:orangered
 }
 
-
 </style>
 
 <div class = "wrapper">
@@ -2310,7 +2309,82 @@ color:orangered
 */
 // let list = document.querySelector('#list');
 // let allItem = document.querySelectorAll('.item')
+
+//----------------------------------------------
+
 /*
+let target;
+
+function orange(event){
+	target = event.target
+ 
+if (target.className == 'item') {	
+	target.style.color = 'orange';// не удалять
+
+ } else {
+	el.style.color = 'black'
+
+	return target.style.color = 'orange';
+  }
+} 
+// вместе не работает, если закоментировать одно событие то работает
+
+function addOrDelete(event){
+	target = event.target
+if (event.ctrlKey ){
+	
+	target.classList.toggle('new-color')
+	
+}
+//return
+let start = '';
+let contains = event.target.classList.contains('new-color')
+
+if (event.shiftKey ){
+	console.log('shift')
+	console.log(contains)
+	event.target.classList.add('new-color')
+
+	for( let el of allItem ){
+	
+		if(el.id == event.target.id) {//el.id == event.target.id
+			console.log('=', contains)
+		return event.target.classList.toggle('new-color')//event.target.classList.add('new-color')
+		
+	 } 
+	  if (el.id != event.target){//el.id != event.target
+		console.log('!=')
+		el.classList.toggle('new-color')
+		} else if (el.classList.contains('new-color')){
+		el.classList.remove('new-color')
+		}	 
+	 }
+	}
+}
+
+//list.addEventListener('click', orange )
+//list.addEventListener('click', addOrDelete )
+/*
+/*
+if (event.shiftKey ){
+	console.log('111')
+	event.target.classList.toggle('new-color')
+	
+	
+	for( let el of allItem ){
+	
+		if(el.classList.contains('new-color') && el.id != event.target) {//el.id == event.target.id
+	el.classList.add('new-color')//event.target.classList.add('new-color')
+		//return
+	 } else if (el.id != event.target){//el.id != event.target
+		el.classList.toggle('new-color')
+		} 	else {
+			el.classList.remove('new-color')
+		}
+	}
+}
+	 */
+	/*
 let listSpan = list.getElementsByTagName('span');
 let start = '';
 for (let i = 0; i < listSpan.length; i++) {
@@ -2353,88 +2427,4 @@ function addOrDelete(event) {
    }
 } 
 */
-//----------------------------------------------
-
-/*
-let target;
-
-function orange(event){
-	target = event.target
- 
-if (target.className == 'item') {	
-	target.style.color = 'orange';// не удалять
-
- } else {
-	el.style.color = 'black'
-
-	return target.style.color = 'orange';
-  }
-
-} 
-// вместе не работает, если закоментировать одно событие то работает
-
-function addOrDelete(event){
-	target = event.target
-if (event.ctrlKey ){
-	
-	target.classList.toggle('new-color')
-	
-}
-
-//return
-let start = '';
-let contains = event.target.classList.contains('new-color')
-
-
-if (event.shiftKey ){
-	console.log('shift')
-	console.log(contains)
-	event.target.classList.add('new-color')
-
-	for( let el of allItem ){
-	
-		if(el.id == event.target.id) {//el.id == event.target.id
-			console.log('=', contains)
-		return event.target.classList.toggle('new-color')//event.target.classList.add('new-color')
-		
-	 } 
-	  if (el.id != event.target){//el.id != event.target
-		console.log('!=')
-		el.classList.toggle('new-color')
-		} else if (el.classList.contains('new-color')){
-		el.classList.remove('new-color')
-		}
-		
-	 
-	}
-	
-	 }
-
-}
-
-//list.addEventListener('click', orange )
-//list.addEventListener('click', addOrDelete )
-/*
-/*
-if (event.shiftKey ){
-	console.log('111')
-	event.target.classList.toggle('new-color')
-	
-	
-	for( let el of allItem ){
-	
-		if(el.classList.contains('new-color') && el.id != event.target) {//el.id == event.target.id
-	el.classList.add('new-color')//event.target.classList.add('new-color')
-		//return
-	 } else if (el.id != event.target){//el.id != event.target
-		el.classList.toggle('new-color')
-		} 	else {
-			el.classList.remove('new-color')
-		}
-		
-	 
-	}
-	
-	 }
-	 */
 	

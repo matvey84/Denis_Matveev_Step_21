@@ -1,0 +1,174 @@
+* {
+margin: 0;
+padding:0;
+}
+
+.container{
+width: 500px;
+height: 400px;
+margin: auto;
+background-color: aqua;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.main-title {
+width: 170px;
+height: auto;
+position: absolute;
+top:5px;
+}
+
+.todo-field{
+width: 400px;
+height: 310px;
+background-color: rgb(221, 235, 235);
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+border: 1px solid black;
+position: sticky;
+top: 35px;
+}
+
+.input-block{
+width: 350px;
+height:32px;
+display: flex;
+justify-content: space-between;
+position: absolute;
+top:51px;
+}
+
+.input-for-text{
+width:305px;
+height:30px;
+}
+
+.send-btn{
+width:34px;
+height:34px;
+}
+
+.todo-list{
+width: 350px;
+height: auto;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+position: absolute;
+top:93px;
+}
+
+.info-block{
+display: flex;
+justify-content: space-between;
+width: 350px;
+height: 30px;
+position: absolute;
+top:271px;	
+}
+
+.remove-btn{
+ width: 150px;      
+}
+
+.progress-bar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+width:150px;
+border: 1px solid black;
+}
+.progress-scale{
+	height: 10px;
+	width:110px;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	background-color: lightcoral;
+}
+.todo-amount{
+	width:20px;
+	height: inherit;
+	text-align: center;
+}
+.done{
+	width:20px;
+	height: inherit;
+	text-align: center;
+}
+
+.item {
+width:350px;
+height:25px;
+border: 1px solid black;
+background-color: azure;
+border-width:inherit;
+display:flex;
+justify-content: space-between;
+margin-bottom:3px ;
+flex-wrap: wrap;
+}
+
+.checker {
+width:25px ;
+height:26px;
+background-color:aquamarine
+}
+.block-for-text{
+	width: 258px;
+	height: 23px;
+	border: 1px solid goldenrod;
+}
+
+.text{
+width:258px ;
+height:25px;
+}
+.btnBlock{
+width: 55px;	
+height: 26px;
+display: flex;
+justify-content: space-between;
+}
+
+.change{
+width:25px ;
+height:26px;
+background-color:aquamarine
+}
+
+.delete {
+width:25px ;
+height:26px;
+background-color:aquamarine
+}
+
+.hilight{
+	background-color: orange
+}
+.block-for-change-todo{
+	width:350px;
+	height:25px;
+	margin-top: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.change-text{
+width:310px;
+height:25px;
+
+}
+.add-change{
+	width:30px ;
+	height:26px;
+	background-color:aquamarine
+
+}

@@ -866,6 +866,7 @@ console.log(strLength('cow','car'));
 */
 
 //--------------------------------            Задача 7(ok!)
+/*
 function amountWord(text) { //вывести количество слов в предложении
 	let newText = text.split(' ');
 	//console.log(newText);
@@ -889,7 +890,7 @@ function maxWord(text) {
 }
 maxWord('Привет меня зовутhhhhh Вася')
 //--------------------------------            Задача 9(ok!)средняя длинна слов впредложении
-function averWord(text) {
+/*function averWord(text) {
 	let newArr = text.split(' ');
 	let numberArr = newArr.map(item => item.length);//.sort((a,b) => a - b).reverse();
 	let sumNum = numberArr.reduce((sum, current) => sum + current, 0);
@@ -898,10 +899,10 @@ function averWord(text) {
  return  averSum;
 }
 averWord('Привет, меня зовут Вася')
-
+*/
 
 //-----------------------------------Задача 10() квк вывести все позиции на которых стоит sign
-let newArr;
+/*let newArr;
 let findSign;
 function findAndShowSign(text, sign) {
 	newArr = text.toLowerCase().split('');
@@ -922,7 +923,7 @@ findAndShowSign('Привет, меня, зовут Вася', ',');
 	
 // console.log(indexces)
 // }
-
+*/
 
 //--------------------------------------------Пракические занятия № 4 от 30.08.2021
 //-------------------------------------------------Классы
@@ -991,6 +992,7 @@ news.print();
 // --              -------------------------------------------Модуль 2
 //------------------------------------------------------------Классы продолжение (ДЗ4)
 //----------------------------------------------------------------зАДАЧА 2
+/*
 class Circle {
   constructor () {
     this.radius = 5;
@@ -1016,7 +1018,7 @@ class Circle {
 
 }
 let c = new Circle();
-
+*/
 
 //------------------------------------Практическое задание#5
 //----------------------------------------06.08.21
