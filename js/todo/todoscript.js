@@ -9,7 +9,7 @@ let remBtn = document.querySelector('#remove-btn-id')
 let scale = document.querySelector('.progress-scale');
 let progressText = document.querySelector('.progress-text');
 let done = document.querySelector('.done');
-console.log(done)
+//console.log(done)
 	//-----------------------------пременные для генерации элементов
 	var todoItem;	let buttonBlock; let textBlock; let itemText;	let check; let changeBtn; let delBtn;
 	
@@ -39,6 +39,7 @@ delBtn = document.createElement('button');// для хранения кнопк�
 //----------------------------------check-> todoItem 
 check.classList.add('checker');//создание класса для check
 check.type = 'checkbox'
+check.hasAttribute('checked', true)
 check.id += 'ch' + checkId;
 checkId++;
 todoItem.append(check);
@@ -82,7 +83,7 @@ list.append(todoItem)
 
  //--------------------------------------------------
  let todoArr = [];
- let hilightTodoArr = [];
+ let hilightTodoArr //= [];
  let items = document.querySelectorAll('.item');
  let item = document.querySelector('.item');
  let todoAmount = document.querySelector('.todo-amount');
@@ -90,45 +91,50 @@ list.append(todoItem)
  let allHilightTodo;
  let hilightTodo;
  let checked = true;
- let countSumChecked = 0;
+ let amountChecked = 0;
 
 let elements;
 for(elements of items){
 	todoArr.push(elements)
 	todoAmount.innerHTML =  `${todoArr.length}`;// вставляем количество TODO
 	}
-	done.innerHTML =  `${countSumChecked}`;//вставляем в див  начальное количество выполненых Todo
- console.log(todoArr)
- 
+	done.innerHTML =  0;//вставляем в див  начальное количество выполненых Todo
+
+
 //-------------------------------function for working with ToDo
 function todoOptions(event){// change color when click on checkbox
 	  if(event.target.classList.contains('checker') && checked ){//change color checcked Todo
     elements.classList.toggle('hilight');
+	
  }
-
- allHilightTodo = document.querySelectorAll('hilight')
-
- for(i = countSumChecked; i < todoArr.length; i++){// вставдяем данные счетчика
-	countSumChecked += elements.classList.contains('hilight');
-	done.innerHTML =  `${countSumChecked}`;
+// todoArr.filter(item => console.log(item))
+//  hilightTodo = todoArr.filter(item => item.classList.contains('hilight'))
+//  done.innerHTML =  hilightTodo.length;
+ 	
+	  for(i = amountChecked; i < todoArr.length; i++){// вставдяем данные счетчика
+	// 	let step = elements.classList.contains('hilight')
 	
-}	
-console.log(i)
+	amountChecked += todoArr[i].classList.contains('hilight');
+	done.innerHTML =  amountChecked;
 
-
-for(hilightTodo of allHilightTodo ){
-	hilightTodoArr.push(hilightTodo)
 	
-}
+		
+	}
+	
 
-	//console.log('fefrweqfweq')
-	// for(i = countSumChecked; i < items.length; i++){
-	//   countSumChecked -= elements.classList.contains('hilight');
+
+ 	
+
+
+
+
+
+	
 	
   if(event.target.classList.contains('delete') && elements.classList.contains('hilight') ){
-    elements.style.display = 'none';
-    elements = '';// как удалиь элемент  с концами
-		done.innerHTML =  `${countSumChecked-1}`;
+    //elements.style.display = 'none';
+	done.innerHTML =  `${amountChecked-1}`;
+	elements.remove();// как удалиь элемент  с концами
 }
 
 //---------------      -work with progress-bar
@@ -175,7 +181,7 @@ scale.style.width = scaleWidth;
 
  // ----------------create new input for make change -> changeBlock
   let areaForChangeToDo = document.createElement('input');
-	  areaForChangeToDo.classList.add('change-text')
+	  areaForChangeToDo.classList.toggle('change-text')
 	  areaForChangeToDo.type = 'text';
 	  areaForChangeToDo.innerHTML = itemText.texContent;
     changeBlock.append(areaForChangeToDo);
@@ -184,11 +190,13 @@ scale.style.width = scaleWidth;
 	  addChangeBtn.classList.add('add-change');
     changeBlock.append(addChangeBtn);
 	  addChangeBtn.innerText = 'Add';
+	  
 
-function addChange(event){//functoin for adding change todo
+
+function addChange(event){//function for adding change todo
   if (event.target.classList.contains('add-change')){
 	  itemText.innerHTML = areaForChangeToDo.value;
-	  changeBlock.style.display = 'none';
+	  changeBlock.remove();
     }
    }
  addChangeBtn.addEventListener('click', addChange)
@@ -196,15 +204,15 @@ function addChange(event){//functoin for adding change todo
 
 
 
- } 
-
+ }
 function removeChecked(event){//function for remove all todo with checkbox == checked
-  if(event.target.classList.contains('remove') && elements.classList.contains('hilight') ){
-	  elements.style.display = 'none';
-	  elements = ''; // как удалиь элемент  с концами
+  if(event.target.classList.contains('remove') && elements.classList.contains('hilight') && checked ){
+	  //elements.style.display = 'none';
+	  elements.remove(); // удалиь элемент  
 		
-    if(countSumChecked <= todoArr.length){
-			done.innerHTML = countSumChecked - todoArr.length
+    if(amountChecked <= todoArr.length){
+			done.innerHTML =  todoArr.length-amountChecked
+			// console.log(done.innerHTML)
 		}
 
  } 
