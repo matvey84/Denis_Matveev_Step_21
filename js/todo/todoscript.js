@@ -22,6 +22,13 @@ let textId = 0;//для запоминаия texta
 let buttonBlockId  = 0;
 let textBlockId = 0;
 //------------------------------
+  let todoArr; 
+  var items;
+ var item;
+ var isChecked 
+ var hilightTodo;
+ var notHilightTodo;
+
 
 function addToDo (event){
 
@@ -39,7 +46,7 @@ delBtn = document.createElement('button');// для хранения кнопк�
 //----------------------------------check-> todoItem 
 check.classList.add('checker');//создание класса для check
 check.type = 'checkbox'
-check.hasAttribute('checked', true)
+//check.hasAttribute('checked', true)
 check.id += 'ch' + checkId;
 checkId++;
 todoItem.append(check);
@@ -73,105 +80,73 @@ buttonBlock.id += 'bb' + buttonBlockId;
 buttonBlockId++;
 todoItem.append(buttonBlock);
 //----------------------todoItem-> list 
-todoItem.classList.add('item')//создание класса для todoItem
+todoItem.classList.add('item','not-hilight')//создание класса для todoItem
+
 todoItem.id += 'td' + itemId// добавляет id
 itemId++;// меняет при каждом клике
 list.append(todoItem)
  } 
-
-
-
+ 
  //--------------------------------------------------
- let todoArr = [];
- let hilightTodoArr //= [];
- let items = document.querySelectorAll('.item');
- let item = document.querySelector('.item');
- let todoAmount = document.querySelector('.todo-amount');
- let done = document.querySelector('.done');
- let allHilightTodo;
- let hilightTodo;
- let checked = true;
- let amountChecked = 0;
+ todoArr = [];
+ items = document.querySelectorAll('.item');
+ item = document.querySelector('.item');
+ var todoAmount = document.querySelector('.todo-amount');
+ var done = document.querySelector('.done');
+ var step;
+ //hilightTodo;
+ //isChecked = !check.checked;
+ //amountChecked = 0;
 
-let elements;
-for(elements of items){
-	todoArr.push(elements)
-	todoAmount.innerHTML =  `${todoArr.length}`;// вставляем количество TODO
-	}
-	done.innerHTML =  0;//вставляем в див  начальное количество выполненых Todo
+ let element;
+ for(element of items){
+todoArr.push(element)
 
+}
+  //todoAmount.innerHTML =  items.length//`${items.length}`;// вставляем количество TODO
+	//done.innerHTML =  0;//вставляем в див  начальное количество выполненых Todo
+	//let todoAmmountValue = Number(todoAmount.innerText)
 
+	//console.log(todoAmmountValue,'tuduAmmount')
+	scale.style.backgroundColor = 'red';
+	scale.style.width = 110 +'px';
+
+ 
+let newTodoArr;
 //-------------------------------function for working with ToDo
 function todoOptions(event){// change color when click on checkbox
-	  if(event.target.classList.contains('checker') && checked ){//change color checcked Todo
-    elements.classList.toggle('hilight');
+	newTodoArr = todoArr.filter(item => item.classList.contains('item'))
 	
- }
-// todoArr.filter(item => console.log(item))
-//  hilightTodo = todoArr.filter(item => item.classList.contains('hilight'))
-//  done.innerHTML =  hilightTodo.length;
- 	
-	  for(i = amountChecked; i < todoArr.length; i++){// вставдяем данные счетчика
-	// 	let step = elements.classList.contains('hilight')
-	
-	amountChecked += todoArr[i].classList.contains('hilight');
-	done.innerHTML =  amountChecked;
+	if(event.target.classList.contains('checker') /*&& event.target.checked != 'checked'*/){//change color checcked Todo  && isChecked
+		element.classList.toggle('not-hilight');
+		element.classList.toggle('hilight');
+		//event.target.checked
+		//console.log(item);
+		}	
 
-	
+		hilightTodo = todoArr.filter(item =>item.classList.contains('hilight'))//item => item.checked != 'checked'
+	//	done.innerHTML = hilightTodo.length;
+
+		notHilightTodo = todoArr.filter(item => item.checked != 'checked')
+		.filter(item => item.classList.contains('not-hilight'))
+	//	console.log(done.innerText)
 		
+		
+
+		function deleteTodo(){
+	
+  if(element.classList.contains('hilight') && event.target.classList.contains('delete')){
+		
+		element.classList.remove('hilight');
+		// done.innerHTML = hilightTodo.length-1;
+		// todoAmount.innerHTML = items.length-1;
+		
+		  element.remove();
+	  }	
 	}
-	
-
-
- 	
-
-
-
-
-
-	
-	
-  if(event.target.classList.contains('delete') && elements.classList.contains('hilight') ){
-    //elements.style.display = 'none';
-	done.innerHTML =  `${amountChecked-1}`;
-	elements.remove();// как удалиь элемент  с концами
-}
-
-//---------------      -work with progress-bar
-
-let scaleWidth = 0;
-
-scale.style.width = scaleWidth;
-
-// if(checked){//elements.classList.contains('hilight') 
-// 	for(i = countSumChecked; i <= todoArr.length; i++){
-// 	  countSumChecked += elements.classList.contains('hilight');
-// 		progressText.innerHTML =  `${countSumChecked} из `
-// 	}	
-// }
-//else {
-	//console.log(countSumChecked === todoArr.length)
-	//countSumChecked -= elements;
-//progressText.innerHTML =  `${countSumChecked} из `;
-//}
-
-
-//else if(elements.classList.contains('hilight') == false){
-	//countSumChecked += elements.classList.contains('hilight');
-//progressText.innerHTML =  `${countSumChecked} из `;
-//}
-
-
-// else if(!checked) {
-// 	countSumChecked -= elements.classList.contains('hilight');
-// 	 progressText.innerHTML =   `${todoArr.length-countSumChecked} из ${todoArr.length}`;
-
-// }
-
-
-
-
-//---------------------
+		deleteTodo();
+		
+		 	
 
   if(event.target.classList.contains('change')){//examination class contains
 //---------------------------create new DIV for 
@@ -201,24 +176,71 @@ function addChange(event){//function for adding change todo
    }
  addChangeBtn.addEventListener('click', addChange)
   }
-
-
-
  }
+ 
 function removeChecked(event){//function for remove all todo with checkbox == checked
-  if(event.target.classList.contains('remove') && elements.classList.contains('hilight') && checked ){
-	  //elements.style.display = 'none';
-	  elements.remove(); // удалиь элемент  
+	
+	if(event.target.classList.contains('remove') && element.classList.contains('hilight')){
+	
+		console.log(notHilightTodo.length == todoArr.length);
 		
-    if(amountChecked <= todoArr.length){
-			done.innerHTML =  todoArr.length-amountChecked
-			// console.log(done.innerHTML)
-		}
-
+		// done.innerHTML =  0
+		// todoAmount.innerHTML = notHilightTodo.length
+		element.remove();// удалиь элемент
  } 
+ 
 }
 
+
+var moveScale;
+let scaleWidth = 0;
+// let step;
+function progressBar(event){
+
+	step = parseInt(scale.style.width) / todoArr.length;
+	removeStep = step * hilightTodo.length;// рассчитать длинну дива по удаленным и отнять еей 
+	console.log(removeStep)
+	console.log(step)
+	moveScale = document.createElement('div') ;
+	moveScale.classList.toggle('scale-div');
+	moveScale.style.width =  scaleWidth;
+
+	if(event.target.checked != 'checked'  ){
+	scaleWidth += step;
+	moveScale.style.width = scaleWidth +'px';
+	return scale.append(moveScale);
+	
+	}//else if(event.target.checked == 'checked' && event.target.classList.contains('hilight')){// 
+
+	// 	console.log('-')
+	//  	moveScale.classList.toggle('scale-div');
+	// 	moveScale.remove()
+	//   scaleWidth -= step;
+	//   moveScale.style.width = scaleWidth +'px'
+	// } 
+	if (event.target.classList.contains('delete')){
+
+		moveScale.classList.toggle('scale-div');
+		moveScale.remove()
+	  scaleWidth = step;
+	 
+	 moveScale.style.width = scaleWidth +'px';
+
+	}
+	if (event.target.classList.contains('remove')){
+	 	moveScale.classList.toggle('scale-div');
+		scaleWidth = 0;
+	 
+	moveScale.style.width = scaleWidth +'px';
+	 moveScale.remove()
+	}
+	
+}
+//check.addEventListener('click',progressBar)
+
+
 todoItem.addEventListener('click', todoOptions)
+todoItem.addEventListener('click', progressBar)
 remBtn.addEventListener('click', removeChecked)
 }
 sendBtn.addEventListener('click', addToDo)
@@ -231,8 +253,8 @@ let div = document.createElement('div');//создаем див для шкал�
 progress.append(div); //вставляем это тодив внурь div = 'progress'
 div.style.height = 'inherit';//задаем родительскую высоту
 div.style.backgroundColor = 'red';//задвем цыет фона для нового дива
-let widthB = 0;
-div.style.width = widthB;// задаем длинну дива
+let widthB = 0;// задаем начальную длинну дива
+div.style.width = widthB; впиываем данные в стили
 function progressIn() {
   if (widthB === 100) {//оостанавливаем движение прогресса, если достигли 100% длинны род дива
     return;

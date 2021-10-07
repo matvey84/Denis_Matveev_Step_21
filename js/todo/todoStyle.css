@@ -85,12 +85,16 @@ width:150px;
 border: 1px solid black;
 }
 .progress-scale{
-	height: 10px;
-	width:110px;
+	height: 20px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	text-align: center;
-	background-color: lightcoral;
+	
+}
+.scale-div{
+height: 20px;
+background-color: green;
+
 }
 .todo-amount{
 	width:20px;
@@ -151,6 +155,10 @@ background-color:aquamarine
 
 .hilight{
 	background-color: orange
+}
+.not-hilight{
+	background-color: burlywood
+
 }
 .block-for-change-todo{
 	width:350px;
