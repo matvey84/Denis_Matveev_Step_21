@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+		<link rel="stylesheet" href="css/owfont-regular.css">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+	<div class = "request-area">
+		<label class = "label-name" for = "1inp">Выбрать город</label>
+		<input class = "input-city" type = "text" name = "input" id="1inp">
+		<label class = "label-date" for = "1date">Выбрать дату</label>
+		<input class = "input-date" type = "date" name = "date" id="1inp">
+		<button class = "search-btn" id="1btn" >Search</button>
+	<div class="btn-block">
+    <button class="range today" id = "1day" value = "1">Сегодня</button>
+    <button class="range tomorrow" id = "2day" value = "2">Завтра</button>
+    <button class="range weeklee" id = "7day" value = "7">на 7 дней</button>
+  </div>
+		
+	</div>
+<div class = "wrapper">
+
+<div class="display-weather">
+
+	<div class="date"></div>
+	
+	<div class = "city"></div>
+	<div class = "degree"></div>
+	<div class = "main-info"></div>
+	<div class = "description"></div>
+	<div class="icon weather-icon owf-5x"></div>
+	<!--<i class="icon weather-icon owf-5x"></i>-->
+</div>
+</div>
+
+
+
+</body>
+<script src="weather.js"></script>
+</html>
