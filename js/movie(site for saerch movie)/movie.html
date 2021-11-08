@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/movieStyle.css">
+</head>
+<body>
+	
+<div class="wrapper search-field-wrapper">
+<div class="form " id = "main-form" name="form">
+	
+	  <h2 class="form-title"> Поле для выбора фильмов </h2>
+		<div class="searh-field">
+      <label class="inp-label" for="inpSearch"><span class="inp-label"> Поиск: </span></label>
+        <input class="inp input-search" type="text" name="text" id="inpSearch" placeholder="Название фильма" autocomplete="on">
+      <label class="inp-label" for="select-type"><span class="inp-label"> Выбор категории: </span></label>
+        <select class="inp selected-type" name="inp" id="select-type">
+					<option class="sealect-option-text" value="">Все категории</option>
+          <option class="sealect-option-text" value="movie">Фильмы</option>
+					<option class="sealect-option-text" value="series">Сериалы</option>
+					<option class="sealect-option-text" value="episode">Эпизоды</option>
+				</select>
+				<label  for="inpYear"><span class="inp-label"> Год: </span></label>
+				<input class="inp input-year" type="text" id="inpYear" placeholder="Год">
+			
+			<button class="main-btn" id="search-btn">Найти</button>
+		</div>
+
+			</div>
+<div class="content">
+
+ 
+</div>
+
+
+
+  <div class="paginator">
+   <button class="btn-page arrow left-arrow"  ><span class="btn-text">&#8592</span></button>
+    <div class="btn-block-page">
+
+    </div>
+   <button class="btn-page arrow right-arrow"  ><span class="btn-text">&#8594</span></button>
+  </div>
+</div>
+
+id="previous-page"
+
+
+
+	
+</body>
+<script src="movieScript.js"></script>
+</html>
