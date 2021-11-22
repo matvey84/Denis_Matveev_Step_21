@@ -140,12 +140,12 @@ removeButton.addEventListener('click', removeExtendetFrame)
   extendetFrame.remove()
  }
  //--------------------------------------------------
-  function createButtonForPaginator(pages){
+  function createButtonForPaginator(pages,data){
 
 	for (let i = 0; i < pages /*data.Search.length || num*/; i++){
 	  pageButton = document.createElement('button');
 	  pageButton.classList.add('btn-page','page-button')
-	  pageButton.innerHTML = `<span class="btn-text">${i+1}</span>`
+	  pageButton.innerHTML = `<span class="page-button-text">${i+1}</span>`
 	  pageButton.id = `${i+1}pb`;//вставить порядковый шрвулс
 	  document.querySelector('.btn-block-page').append(pageButton)
 	  pageButton.addEventListener('click', getNextPageResponse)
@@ -163,11 +163,6 @@ removeButton.addEventListener('click', removeExtendetFrame)
 	//console.log(event.target.id, nextPageData);
   createElement(nextPageData)
   }
-
-function visiblePaginator(){
-		  setTimeout(()=>document.querySelector('.paginator').style.visibility = 'visible', 700)
-	 }
-	   btn.addEventListener('click', visiblePaginator)
 	
 	function removePaginatorButton(){
 		for(let allButtons of document.querySelectorAll('.page-button')){
@@ -182,17 +177,17 @@ function checkForTheNumberOfFiles(data){
 
 	if(totalResult <=99){
 		pages = Math.ceil(totalResult/data.Search.length);
-		createButtonForPaginator(pages)
+		createButtonForPaginator(pages,data)
 	} 
 	if(totalResult > 99 && totalResult <=999 ){
 		totalPages = Math.ceil(totalResult/data.Search.length);
 		pages = Math.ceil(totalResult/totalPages);
-		createButtonForPaginator(pages)
+		createButtonForPaginator(pages,data)
 	}
 	if(totalResult > 999 && totalResult <=9999 ){
 		totalPages = Math.ceil(totalResult/(data.Search.length));
 		pages = Math.ceil(totalResult/totalPages);
-		createButtonForPaginator(pages)
+		createButtonForPaginator(pages,data)
 	}		
 }
 
@@ -205,35 +200,57 @@ async function d(event){
 	const dataForArrow = await resp.json();
 
 	changeButtonNumberWhenClickArrow(event, dataForArrow)
-	
 }
 
 function changeButtonNumberWhenClickArrow(event, dataForArrow){
-//removePaginatorButton();
-let num = 0
-num++
+event.target = !event.target
+let total = dataForArrow.totalResults/10
+let remainder;
 
-if (event.target.classList.contains('left-arrow')){
-
-	document.querySelectorAll()
-}
-if (event.target.classList.contains('right-arrow')){
-	num+=num
-event.target.id = `${num}right`
-console.log(event.target.id)
-	document.querySelectorAll('.page-button').forEach(btn => console.log(+btn.innerText + num))
-	//console.log(event.target)
-
+if (event.target.classList.contains('right-arrow') || event.target.classList.contains('btn-text')){
+	
+	document.querySelectorAll('.page-button').forEach(pageButton => {
+	pageButton.id =`${parseInt(pageButton.id) + dataForArrow.Search.length}`
+	pageButton.innerHTML = `<span class="page-button-text">${pageButton.id}</span>`
+	remainder = `${Math.ceil((total+10) - pageButton.id)}`;
+  
+ 	if (pageButton.textContent > Math.ceil(total)){
+			pageButton.remove()
+			event.target.style.visibility = 'hidden';
+	 } else if (event.target.classList.contains('.left-arrow')) {
+		event.target.style.visibility = 'visible';
+	 }
+		visibleLeftArrow(pageButton)
+	})
  }
 
+ if (event.target.classList.contains('left-arrow') || event.target.classList.contains('btn-text')){
+	  document.querySelectorAll('.page-button').forEach(pageButton => {
+		pageButton.id =`${pageButton.id - dataForArrow.Search.length}`
+		pageButton.innerHTML = `<span class="page-button-text">${pageButton.id}</span>`
+		remainder = `${Math.ceil(remainder + dataForArrow.Search.length)}`;
+		console.log(remainder, 'total')
+
+		  if (pageButton.id <= 10){
+			event.target.style.visibility = 'hidden';
+		} 
+    })
+	 }
+
+	//  if (event.target.classList.contains('.left-arrow') && pageButton.textContent <= Math.ceil(total)) { 
+	// 	document.querySelector('.right-arrow').style.visibility = 'visible'
+	//  }
 }
-
-	
-
-
-
-
-
 let arrows = document.querySelectorAll('.arrow')
 arrows.forEach(arrow => {arrow.addEventListener('click',d)})
 
+function visibleRigthArrow(){ 
+	setTimeout(()=>document.querySelector('.right-arrow').style.visibility = 'visible', 700)
+}
+btn.addEventListener('click', visibleRigthArrow)
+
+function visibleLeftArrow(pageButton){
+	if (pageButton.id > 10){
+		document.querySelector('.left-arrow').style.visibility = 'visible'
+	 } 
+}
