@@ -1,0 +1,11 @@
+	.attr-wrapper{
+		width: 100vw;
+		height: 100vh;
+		margin: auto;
+		position: absolute;
+		top: 70px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}

@@ -1,0 +1,17 @@
+	.info-about{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 5px;
+	}
+	.info {
+		width: 98%;
+		height: auto;
+		padding: 5px;
+	}
+	.about-title{
+	text-align: left;
+	}

@@ -1,0 +1,17 @@
+.main-info{
+	width: 100vw;
+	height: 100vh;
+	margin: auto;
+	position: absolute;
+	top: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
+	}
+	.main-info img {
+	height: 100%;
+	width: auto;
+	
+	}
