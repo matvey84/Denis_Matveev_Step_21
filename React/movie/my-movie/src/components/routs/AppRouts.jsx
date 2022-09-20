@@ -6,17 +6,14 @@ import DetailPages from "../../pages/DetailPages";
 import { Layout } from "../header/Layout";
 
 
-export const AppRoutes = ()=>{
+export const AppRoutes = () => {
 return(
 <Routes>
   <Route path='/' element={<Layout/>}>
-	  <Route index element={<MainPage/>}/>
-		 {/* <Route path='searchResult' element={<SearchResult/>}/>  */}
-		<Route path='main/:title' element={<SearchMovie/>}/>
-		<Route path='DetailPages/:id' element={<DetailPages/>}/>
-		<Route path='/*' element={<NotFoundPage/>}/>
- 	</Route>
-	
+    <Route index element={<MainPage/>}/>
+    <Route path='DetailPages/:id' element={<DetailPages/>}/>
+    <Route path='/*' element={<NotFoundPage/>}/>
+   </Route>
 </Routes>
  );
 }

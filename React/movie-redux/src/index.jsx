@@ -10,11 +10,11 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-		<Provider store={store}>
-		  <PersistGate loading={null} persistor={persistor}>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
         <App />
-			</PersistGate>
-		</Provider>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

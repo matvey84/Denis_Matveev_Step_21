@@ -33,7 +33,8 @@ function SearchForm(){
 							<option value = "episode">Episode</option>
 						</select>
 					<label className="issue-inp" htmlFor="year"> Year: </label>
-						<input value={inpYear} onChange={e=> setInpYear(e.target.value)}type="text" className="form-control inp issue-inp" id="year" placeholder="year of issue" />  
+						<input value={inpYear} onChange={e=> setInpYear(e.target.value)}type="text" className="form-control inp issue-inp" id="year" placeholder="year of issue"
+						/>
 			</div>
 			
 				<button 

@@ -4,76 +4,75 @@ import ProgressBar from "../progress/ProgressBar";
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {nanoid} from 'nanoid'
-import { Alert } from "../Alert";
 
 
 export const TodoForm =()=>{
-	const [inputValue, setInputValue] = useState('');
-	const todos = useSelector(state => state.addTodoReduser.todos)
+  const [inputValue, setInputValue] = useState('');
+  const todos = useSelector(state => state.addTodoReduser.todos)
 
-	const textInput = useRef()
+  const textInput = useRef()
   const dispatch =useDispatch()
 
-	function showAlert (){
-		if(!inputValue.trim()){
-			dispatch({type:'SHOW_ALERT', payload:'Пустое поле ввода!Введите текст!',})
-		}
-		setTimeout(()=>dispatch({type:'HIDE_ALERT'}), 3000)
+  function showAlert (){
+    if(!inputValue.trim()){
+      dispatch({type:'SHOW_ALERT', payload:'Пустое поле ввода!Введите текст!',})
+    }
+    setTimeout(()=>dispatch({type:'HIDE_ALERT'}), 3000)
   }
 
-	function  submitForm (e){
-		e.preventDefault();
-		const todo = {
-		content:inputValue,
-		id: nanoid(),
-		check:false,
-	}
-		if(inputValue.trim()){
-			dispatch({type:'ADD_TODO', payload:todo,})
-			
-		}
-	  	setInputValue('');
-			showAlert ()
-		//localStorage.setItem('todo', JSON.stringify([{todos}]))
-	}
+  function  submitForm (e){
+    e.preventDefault();
+    let year = new Date().getFullYear();
+    let month = new Date().getMonth();
+    let day = new Date().getDay();
 
-	const inputFocus =()=>{
-		textInput.current.focus()
-	}
+    const todo = {
+    content: inputValue,
+    id: nanoid(),
+    check: false,
+    date: `${year}/0${month}/${day}`,
+  }
+    if(inputValue.trim()){
+      dispatch({type:'ADD_TODO', payload:todo,})
+    }
+      setInputValue('');
+      showAlert ()
+  }
 
-	 function removeAllCheckTodo (){
-		const allCheck = todos.filter(checkTodo => !checkTodo.check/*=== check.check */)
- 		 dispatch({type:'REMOVE_ALL_CHECK_TODO', payload:allCheck})
-		 
-	 }  
-	return(
-		<div className="todo-form">
-			<h2>TODOLIST</h2>
-			<form className="submit-form"  onSubmit={submitForm}>
-			
-				<input
-						ref={textInput} 
-						value={inputValue}
-						onChange={e => setInputValue(e.target.value)}
-						className="form-control main-input"
-						type="text"
-						name='mainText'
-						placeholder="Add your todo"
-				/>
-				<button 
-					onClick = {inputFocus} 
-					className="main-btn btn btn-primary"
-					type="submit">
-						Add TODO
-				</button>
-			</form>
+  const inputFocus =()=>{
+    textInput.current.focus()
+  }
 
-				<div className="progress-and-remove-block">
-						<ProgressBar /> 
-					<button 
-					onClick={removeAllCheckTodo}
-					className="btn btn-info remove-btn">Remove</button>
-				</div>
-		</div>
-	)
+  function removeAllCheckTodo (){
+    const allCheck = todos.filter(checkTodo => !checkTodo.check)
+      dispatch({type:'REMOVE_ALL_CHECK_TODO', payload:allCheck})
+  }
+  return(
+    <div className="todo-form">
+      <h2>TODOLIST</h2>
+      <form className="submit-form"  onSubmit={submitForm}>
+        <input
+            ref={textInput} 
+            value={inputValue}
+            onChange={e => setInputValue(e.target.value)}
+            className="form-control main-input"
+            type="text"
+            name='mainText'
+            placeholder="Add your todo"
+        />
+        <button 
+          onClick = {inputFocus} 
+          className="main-btn btn btn-primary"
+          type="submit">
+            Add TODO
+        </button>
+      </form>
+        <div className="progress-and-remove-block">
+            <ProgressBar /> 
+          <button 
+          onClick={removeAllCheckTodo}
+          className="btn btn-info remove-btn">Remove</button>
+        </div>
+    </div>
+  )
 }

@@ -9,33 +9,33 @@ import {Alert} from './componrnts/Alert'
 
 function App() {
   const textAlert = useSelector(state => state.alertReduser.alert)
-	const todos = useSelector(state => state.addTodoReduser.todos)
+  const todos = useSelector(state => state.addTodoReduser.todos)
   console.log(todos)
 
  const list = (
-	todos.map((todo,i)=>
-		<TodoItem 
-			key={nanoid()}
-			id={i+1}
-			todo={todo}
-		/>
-		)
+  todos.map((todo,i)=>
+    <TodoItem 
+      key={nanoid()}
+      id={i+1}
+      todo={todo}
+    />
+    )
  )
   return (
-		<div className='container'>
-		<TodoForm/> 
-	{ todos.length > 0 ?
+    <div className='container'>
+    <TodoForm/> 
+  { todos.length > 0 ?
 
-			<div className="todo-list">
-				{list}
-			</div>
-			:
-			<span className='no-todos'>
-					No todos!
-			</span>
+      <div className="todo-list">
+        {list}
+      </div>
+      :
+      <span className='no-todos'>
+          No todos!
+      </span>
   }
-	{textAlert && <Alert text={textAlert}/>}
-		</div>
+  {textAlert && <Alert text={textAlert}/>}
+    </div>
   );
 }
 

@@ -5,7 +5,7 @@ import{useSelector} from 'react-redux'
  function MainPage(){
 	const data = useSelector(state=>state.fetchRedusers.movie)
 
-	
+	console.log(data)
 	 return(
 		<>
 		

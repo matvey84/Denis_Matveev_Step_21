@@ -11,7 +11,7 @@ const defaultState = {
 			case SHOW_MAIN_ALERT:
 				return {...state,	mainPageAlert: action.payload} 
 			case HIDE_MAIN_ALERT:
-				return {...state, mainPageAlert: null}
+				return {...state, mainPageAlert: ''}
 			
 			default:
 				return state;
